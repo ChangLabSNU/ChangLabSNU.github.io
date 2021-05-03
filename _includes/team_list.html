@@ -1,0 +1,35 @@
+{% assign number_printed = 0 %}
+{% for member in member_list %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+
+{% if even_odd == 0 %}
+<div class="row">
+{% endif %}
+
+<div class="col-sm-6 clearfix">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/members/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  {% if member.link %}
+  <h4><a href="{{ member.link }}" class="member-link">{{ member.name }}</a></h4>
+  {% else %}
+  <h4>{{ member.name }}</h4>
+  {% endif %}
+  <i>{{ member.info }}</i>
+  {% if member.intro %}
+  <p class="member-intro">{{ member.intro }}</p>
+  {% endif %}
+  <p></p>
+</div>
+
+{% assign number_printed = number_printed | plus: 1 %}
+
+{% if even_odd == 1 %}
+</div>
+{% endif %}
+
+{% endfor %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+{% if even_odd == 1 %}
+</div>
+{% endif %}

@@ -1,0 +1,20 @@
+- name: Ari Hong
+  photo: arihong-thumb.jpg
+  info: "Graduate Student (Bioinformatics)"
+  email: elly924@snu.ac.kr
+  intro: Decoding the codes controlling translation
+  link: ari-hong
+
+- name: Yoojung Han
+  photo: yjhan-thumb.jpg
+  email: hanyj0823@snu.ac.kr
+  info: "Graduate Student (Bioinformatics)"
+  intro: "Developing a new nanopore sequencing technique for single-cell RNA sequencing."
+  link: yoojung-han
+
+- name: Hanju Lee
+  photo: hjlee-thumb.jpg
+  email: dlgks224@snu.ac.kr
+  info: "Graduate Student (Bioinformatics)"
+  intro: "Finding a better way to measure poly(A) lengths"
+  link: hanju-lee

@@ -1,0 +1,148 @@
+---
+layout: default
+---
+
+{% assign member = page %}
+
+<div class="bigspacer"></div>
+
+<div class="row member-pane">
+  <div class="col-md-3 col-sm-12">
+    <div class="media">
+      {% if member.image %}
+      <span class="pull-left pad-right">
+        <img class="big-member-photo" src="{{ member.image }}">
+      </span>
+      {% endif %}
+    </div>
+  </div>
+  <div class="col-md-9 col-sm-12 member-photo-title">
+    <div class="pull-left pad-right titlebox">
+      <div class="title media-heading">
+        {{ member.title }}
+      </div>
+      <div class="smallhead">
+        {{ member.position }}
+      </div>
+      <br/>
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+<div class="row member-pane">
+  <div class="col-md-3 col-sm-12">
+    {% if member.cv %}
+    <div class="smallhead">
+      CV
+    </div>
+    <div class="pad-left note">
+      <div class="smallspacer"></div>
+      <i class="fas fa-file-alt fa-fw"></i>
+      <a class="off" href="{{ member.cv }}">{{ member.cv | split: '/' | last }}</a>
+    </div>
+    <div class="bigspacer"></div>
+    {% endif %}
+    {% if member.twitter %}
+    <div class="smallhead">
+      Twitter
+    </div>
+    <div class="pad-left note">
+      <div class="smallspacer"></div>
+      <i class="fab fa-twitter fa-fw"></i>
+      <a class="off" href="https://twitter.com/{{ member.twitter }}">{{ member.twitter }}</a>
+    </div>
+    <div class="bigspacer"></div>
+    {% endif %}
+    {% if member.github %}
+    <div class="smallhead">
+      GitHub
+    </div>
+    <div class="pad-left note">
+      <div class="smallspacer"></div>
+      <i class="fab fa-github-alt fa-fw"></i>
+      <a class="off" href="https://github.com/{{ member.github }}">{{ member.github }}</a>
+    </div>
+    <div class="bigspacer"></div>
+    {% endif %}
+    {% if member.orcid %}
+    <div class="smallhead">
+      ORCID
+    </div>
+    <div class="pad-left note">
+      <div class="smallspacer"></div>
+      <i class="fab fa-orcid fa-fw"></i>
+      <a class="off" href="https://orcid.org/{{ member.orcid }}">{{ member.orcid }}</a>
+    </div>
+    <div class="bigspacer"></div>
+    {% endif %}
+    {% if member.scholar %}
+    <div class="smallhead">
+      Google Scholar
+    </div>
+    <div class="pad-left note">
+      <div class="smallspacer"></div>
+      <i class="fas fa-book fa-fw"></i>
+      <a class="off" href="http://scholar.google.com/citations?user={{ member.scholar }}">{{ member.title }}</a>
+    </div>
+    <div class="bigspacer"></div>
+    {% endif %}
+    {% if member.email %}
+    {% assign emailarray = member.email | split: '@' %}
+    <div class="smallhead">
+      Email
+    </div>
+    <div class="pad-left note">
+      <div class="smallspacer"></div>
+      <i class="fas fa-inbox fa-fw"></i>
+      {{ emailarray.first }}<span style="display:none">obfuscate</span>@{{ emailarray.last }}
+    </div>
+    <div class="bigspacer"></div>
+    {% endif %}
+  </div>
+  <div class="col-md-8 col-sm-12">
+    <div class="post">
+      {{ content }}
+    </div>
+
+    {% assign lastname = member.title | split: ' ' | last %}
+    {% for paper in site.categories.papers %}
+      {% if paper.authors contains lastname %}
+        {% assign papersq = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if papersq == true %}
+      <div class="bigspacer"></div>
+      <div class="head">Papers</div>
+      <div class="spacer"></div>
+      {% for paper in site.categories.papers %}
+        {% if paper.authors contains lastname %}
+          {% if paper.embargo %}
+          <p>{{ paper.title }}
+          {% else %}
+          <p><a href="{{ paper.url }}" class="off">{{ paper.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% for post in site.categories.blog %}
+      {% if member.handle == post.author_handle %}
+        {% assign postsq = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if postsq == true %}
+      <div class="bigspacer"></div>
+      <div class="head">Posts</div>
+      <div class="spacer"></div>
+      {% for post in site.categories.blog %}
+        {% if member.handle == post.author_handle %}
+          <p><a href="{{ post.url }}" class="off">{{ post.title }}</a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="col-md-1"></div>
+</div>

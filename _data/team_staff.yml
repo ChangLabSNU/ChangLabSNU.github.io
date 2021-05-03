@@ -1,0 +1,20 @@
+- name: Keewon Sung
+  photo: kwsung-thumb.jpg
+  email: alkwemi0429@snu.ac.kr
+  info: "Postdoctoral Fellow"
+  intro: "Inventing a breakthrough technique for nanopore RNA sequencing"
+  link: keewon-sung
+
+- name: Eun-jin Chang
+  photo: ejchang-thumb.jpg
+  info: "Research Staff"
+  email: eunjinc@snu.ac.kr
+  link: eunjin-chang
+
+- name: Junsoo Kim
+  photo: jskim-thumb.jpg
+  email: junsoopablo@snu.ac.kr
+  info: "Research Staff"
+  intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
+  link: junsoo-kim
+

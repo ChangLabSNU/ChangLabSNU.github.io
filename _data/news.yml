@@ -1,0 +1,35 @@
+- date: Apr 1, 2021
+  headline: "A genomics expert, Junsoo, joins to strengthen the group's agility."
+
+- date: Mar 1, 2021
+  headline: 'The lab is getting bigger! Keewon and Hanju join.'
+
+- date: Sep 23, 2020
+  headline: 'The lab introduction is published as a part of <a href="http://pokas.gsalab.co.kr/webzine/79209">the POKAS-on webzine</a>.'
+
+- date: Sep 1, 2020
+  headline: 'Yoojung is joining the ranks of the lab members.'
+
+- date: Aug 25, 2020
+  headline: 'Hyeshik uploaded a <a href="https://www.youtube.com/watch?v=yLqy0wsWXqI&t=18s">YouTube video</a> about the molecular biology of SARS-CoV-2.'
+
+- date: Mar 15, 2020
+  headline: 'We uploaded a <a href="https://www.biorxiv.org/content/10.1101/2020.03.12.988865v2">preprint</a> reporting a cluster of RNA modifications in the SARS-CoV-2 RNAs.'
+
+- date: Mar 1, 2020
+  headline: "Ari has started grad schoool as the first student in the lab."
+
+- date: Sep 8, 2019
+  headline: 'We updated <a href="https://github.com/hyeshik/poreplex/releases/tag/v0.5">Poreplex</a> to 0.5 with the new Guppy compatibility.'
+
+- date: Mar 13, 2019
+  headline: "Eun-jin joined the lab."
+
+- date: Mar 1, 2019
+  headline: "We're officially opening the lab. Yay! 🙌"
+
+- date: Feb 27, 2019
+  headline: '<a href="https://github.com/hyeshik/poreplex/releases/tag/v0.4.1">Poreplex 0.4.1</a> has been released with ONT Guppy and multi-read fast5 support!'
+
+- date: Dec 27, 2018
+  headline: 'We released a new software, <a href="https://github.com/hyeshik/seamlessf5/releases/tag/v0.2">seamlessf5</a>, that helps transitions to the new data format for nanopore sequencing.'

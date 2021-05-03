@@ -1,0 +1,283 @@
+- authors: "D. Kim, Y.-S. Lee, S.-J. Jung, J. Yeo, J. J. Seo, Y.-Y. Lee, J. Lim, H. Chang, J. Song, J. Yang, J.-S. Kim, G. Jung, K. Ahn, and V. N. Kim"
+  title: "Viral Hijacking of the TENT4–ZCCHC14 Complex Protects Viral RNAs via Mixed Tailing"
+  journal: "Nature Structural & Molecular Biology"
+  pubdate:
+    year: 2020
+    month: May
+    mday: 25
+  vip: "27:581–588"
+  doi: doi.org/10.1038/s41594-020-0427-3
+  link:
+    url: "https://www.nature.com/articles/s41594-020-0427-3"
+
+- authors: "D. Kim, J.-Y. Lee, J.-S. Yang, J. W. Kim, V. N. Kim, and H. Chang"
+  title: "The Architecture of SARS-CoV-2 Transcriptome"
+  journal: Cell
+  image: 2020-Cell-a.jpg
+  description: SARS-CoV-2 is a betacoronavirus responsible for the COVID-19 pandemic. We have sequenced both genomic and subgenomic RNAs to understand the transcriptional landscape of the viral activities. Two complementary techniques were adopted for this study. [DNA nanoball sequencing](https://www.bgi.com/us/dnbseq-ngs-technology/) shows that the transcriptome is highly complex, owing to numerous discontinuous transcription events. SARS-CoV-2 produces transcripts encoding unknown ORFs with fusion, deletion, and frameshift in addition to the canonical genomic and nine subgenomic RNAs. Using [nanopore direct RNA sequencing](https://www.nature.com/articles/nmeth.4577), we mapped the primary structures of full-length subgenomic RNAs with discontinuities. The relatively new technique also enables the analysis of RNA modifications. We found frequent modifications that are specific to a subset of viral RNAs. Functional investigation of the unknown transcripts and RNA modifications discovered in this study will open new directions to our understanding of the life cycle and pathogenicity of SARS-CoV-2.
+  pubdate:
+    year: 2020
+    month: May
+    mday: 14
+  vip: "181(4):914–921.e10"
+  doi: 10.1016/j.cell.2020.04.011
+  marked: 1
+  highlight: 1
+  link:
+    url: "https://www.cell.com/cell/fulltext/S0092-8674(20)30406-2"
+    display: Cell, 181(4):914-921.e10
+  news2:
+
+- authors: "J. Won, S. Lee, M. Park, T. Y. Kim, M. G. Park, B. Y. Choi, D. Kim, H. Chang, V. N. Kim, and C. Justin Lee"
+  title: "Development of a Laboratory-safe and Low-cost Detection Protocol for SARS-CoV-2 of the Coronavirus Disease 2019 (COVID-19)"
+  journal: Experimental Neurobiology
+  pubdate:
+    year: 2020
+    month: Mar
+    mday: 11
+  vip: "29(2):107–119"
+  doi: 10.5607/en20009
+  link:
+    url: "http://www.en-journal.org/journal/view.html?doi=10.5607/en20009"
+
+- authors: "H. Kim, J. Kim, K. Kim, H. Chang, K. You, and V. N. Kim"
+  title: "Bias-Minimized Quantification of MicroRNA Reveals Widespread Alternative Processing and 3′ End Modification"
+  journal: Nucleic Acids Research
+  pubdate:
+    year: 2019
+    month: Jan
+    mday: 3
+  vip: 47(5):2630–2640
+  doi: 10.1093/nar/gky1293
+  link:
+    url: https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky1293/5271499
+
+- authors: "J. Lim, D. Kim, Y. Lee, M. Ha, M. Lee, J. Yeo, H. Chang, J. Song, K. Ahn, and V. N. Kim"
+  title: "Mixed Tailing by TENT4A and TENT4B Shields mRNA from Rapid Deadenylation"
+  journal: Science
+  pubdate:
+    year: 2018
+    month: Aug
+    mday: 17
+  vip: 361(6403):701–704
+  doi: 10.1126/science.aam5794
+  link:
+    url: https://science.sciencemag.org/content/361/6403/701
+
+- authors: "H. Yi, J. Park, M. Ha, J. Lim, H. Chang, and V. N. Kim"
+  title: "PABP Cooperates with the CCR4-NOT Complex to Promote mRNA Deadenylation and Block Precocious Decay"
+  journal: Molecular Cell
+  pubdate:
+    year: 2018
+    month: Jun
+    mday: 21
+  vip: 70(6):1081–1088.e5
+  doi: 10.1016/j.molcel.2018.05.009
+  link:
+    url: https://www.sciencedirect.com/science/article/abs/pii/S1097276518303599
+
+- title: "Terminal Uridylyltransferases Execute Programmed Clearance of Maternal Transcriptome in Vertebrate Embryos"
+  image: 2018-MolCell-a.jpg
+  description: Life starts with the RNAs and proteins derived from its mother in animals. For the first few cell cycles, maternally deposited RNAs are precisely used to produce the right amount of the proteins at the right place. Once the bootstrapping of embryo finishes, the maternal RNAs are replaced by the zygotically transcribed RNAs. In this paper, we surveyed the poly(A) tails during the earliest cell cycles of vertebrate embryos to understand how the transition is accurately controlled. A terminal uridylyltransferase, TUT7, is found to be a driving factor initiating maternal RNA degradation. The preference to short poly(A) tails of TUT7 contributes to the selectivity of the process. This paper demonstrates the unique opportunities of TAIL-seq in the studies of biological phenomena coming from its unprecedented throughput and resolution in contrast to the existing biochemical methods.
+  authors: "H. Chang<sup>1</sup>, J. Yeo<sup>1</sup>, J.-g. Kim, H. Kim, J. Lim, M. Lee, H. H. Kim, J. Ohk, H.-Y. Jeon, H. Lee, H. Jung, K.-W. Kim, and V. N. Kim"
+  journal: Molecular Cell
+  pubdate:
+    year: 2018
+    month: Apr
+    mday: 5
+  vip: 70(1):72–82
+  doi: 10.1016/j.molcel.2018.03.004
+  link:
+    url: https://www.cell.com/molecular-cell/fulltext/S1097-2765(18)30185-0
+    display: Molecular Cell, 70(1):72–82
+  highlight: 1
+  marked: 1
+  news2:
+
+- authors: "J. Lim, M. Lee, A. Son, H. Chang, and V. N. Kim"
+  title: "mTAIL-seq Reveals Dynamic Poly(A) Tail Regulation in Oocyte-to-Embryo Development"
+  journal: "Genes & Development"
+  pubdate:
+    year: 2016
+    month: Jul
+    mday: 21
+  vip: 30:1671–1682
+  doi: 10.1101/gad.284802.116
+  link:
+    url: http://genesdev.cshlp.org/content/30/14/1671.abstract
+
+- authors: "J.-E. Park, H. Yi, Y. Kim, H. Chang, and V. N. Kim"
+  title: "Regulation of Poly(A) Tail and Translation During the Somatic Cell Cycle"
+  journal: Molecular Cell
+  pubdate:
+    year: 2016
+    month: May
+    mday: 5
+  vip: 62(3):462-471
+  doi: 10.1016/j.molcel.2016.04.007
+  link:
+    url: https://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30057-0
+
+- authors: "M. Kampmann, M. A. Horlbeck, Y. Chena, J. C. Tsai, M. C. Bassik, L. A. Gilbert, J. E. Villalta, S. C. Kwon, H. Chang, V. N. Kim, and J. S. Weissman"
+  title: "Next-Generation Libraries for Robust RNA Interference-Based Genome-Wide Screens"
+  journal: "Proceedings of the National Academy of Sciences of the U. S. A."
+  pubdate:
+    year: 2015
+    month: May
+    mday: 6
+  vip: 112(26):E3384-E3391
+  doi: 10.1073/pnas.1508821112
+  link:
+    url: https://www.pnas.org/content/early/2015/06/09/1508821112.abstract
+
+- authors: "S. Kim, D. Seo, D. Kim, Y. Hong, H. Chang, D. Baek, V. N. Kim, S. Lee, and K. Ahn"
+  title: "Temporal Landscape of MicroRNA-Mediated Host-Virus Crosstalk during Productive Human Cytomegalovirus Infection"
+  journal: "Cell Host & Microbe"
+  pubdate:
+    year: 2015
+    month: Jun
+    mday: 10
+  vip: 17(6):838–851
+  doi: 10.1016/j.chom.2015.05.014
+  link:
+    url: https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(15)00218-8
+
+- authors: "B. Kim, M. Ha, L. Loeff, H. Chang, D. K. Simanshu, S. Li, M. Fareh, D. J. Patel, C. Joo, and V. N. Kim"
+  title: "TUT7 Controls the Fate of Precursor MicroRNAs by Using Three Different Uridylation Mechanisms"
+  journal: "EMBO Journal"
+  pubdate:
+    year: 2015
+    month: May
+    mday: 15
+  vip: 35(2):115-236
+  link:
+    url: http://emboj.embopress.org/content/34/13/1801.long
+
+- authors: "I. Jang<sup>1</sup>, H. Chang<sup>1</sup>, Y. Jun, S. Park, J. O. Yang, B. Lee, W. Kim, V. N. Kim, and S. Lee"
+  title: "miRseqViewer: Multi-Panel Visualization of Sequence, Structure and Expression for Analysis of MicroRNA Sequencing Data"
+  journal: Bioinformatics
+  pubdate:
+    year: 2015
+    month: Feb
+    mday: 15
+  vip: 31(4):596–598
+  doi: 10.1093/bioinformatics/btu676
+  marked: 1
+  link:
+    url: http://bioinformatics.oxfordjournals.org/content/31/4/596
+
+- title: "Uridylation by TUT4 and TUT7 Marks mRNA for Degradation"
+  image: 2014-Cell-a.jpg
+  description: "During the development of TAIL-seq, we found that the mammalian poly(A) tails often carry additional uridines at the 3′ end. What do those U tails do? We sought the enzymes responsible for the uridylation of poly(A) tails. TUT4 and TUT7 were found to be working for it redundantly. Without U tails, messenger RNAs had significantly longer half-lives. Which step in the mRNA catabolic process does the U tailing kicks in? Through the comparisons of tail profiles in dozens of perturbation conditions, we conclude that it happens after deadenylation and both 5′→3′ and 3′→5′ decay pathways are facilitated by uridylation of poly(A) tails. These discoveries were possible particularly thanks to the ability of TAIL-seq to focus in the oligo(A) tails apart from long poly(A) tails."
+  authors: "J. Lim<sup>1</sup>, M. Ha<sup>1</sup>, H. Chang<sup>1</sup>, S. C. Kwon, D. K. Simanshu, D. J. Patel, and V. N. Kim"
+  journal: Cell
+  pubdate:
+    year: 2014
+    month: Dec
+    mday: 4
+  vip: 159(6):1365–1376
+  doi: 10.1016/j.cell.2014.10.055
+  link:
+    url: https://www.cell.com/abstract/S0092-8674(14)01427-5
+    display: Cell, 159(6):1365–1376
+  highlight: 1
+  marked: 1
+  news2:
+
+- title: "TAIL-seq: Genome-wide Determination of Poly(A) Tail Length and 3′ End Modifications"
+  image: 2014-MolCell-a.jpg
+  description: "Eukaryotic messenger RNAs have long tails. They are long homogenous stretches comprised of only adenosine residues. It is widely known that these poly(A) tails protect RNAs from degradation and enhances the translation. Despite the 40 years of researches on the poly(A) tails, it was unclear how different are the poly(A) lengths in different genes and the detailed sequence composition of poly(A) tails. The major obstacle in adopting modern high-throughput techniques for poly(A) analysis was the long homopolymeric sequence. The second-generation sequencers such as Illumina SBS and IonTorrent can't deal with such long monotonous repeats due to failure of cumulative error estimation (Illumina) or signals exceeding the dynamic range (IonTorrent). To overcome the status, we had a look into the raw images directly from the fluorescence microscope equipped in the Illumina sequencers. We could find a way to recover the poly(A) tail length from the distorted fluorescence signals. Finally, we developed a high-throughput technique profiling poly(A) tail length distributions as well as 3′-end modifications of thousands of mRNAs simultaneously. The software is available from [our GitHub repository](https://github.com/hyeshik/tailseeker)."
+  authors: "H. Chang<sup>1</sup>, J. Lim<sup>1</sup>, M. Ha, and V. N. Kim"
+  doi: 10.1016/j.molcel.2014.02.007
+  journal: Molecular Cell
+  pubdate:
+    year: 2014
+    month: Mar
+    mday: 20
+  vip: 53(6):1044–1052
+  link:
+    url: https://www.cell.com/molecular-cell/fulltext/S1097-2765(14)00121-X
+    display: Molecular Cell, 53(6):1044–1052
+  highlight: 1
+  marked: 1
+  news2: 
+
+- authors: "M. Lee<sup>1</sup>, S. Han<sup>1</sup>, H. Chang<sup>1</sup>, Y.-S. Kwak, D. M. Weller, and D. Kim"
+  title: "FitSearch: a Robust Way to Interpret a Yeast Fitness Profile in Terms of Drug's Mode-of-Action"
+  journal: BMC Genomics
+  vip: 14(Suppl 1):S6
+  doi: 10.1186/1471-2164-14-S1-S6
+  pubdate:
+    year: 2014
+    month: Jan
+    mday: 21
+  link:
+    url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-14-S1-S6
+  marked: 1
+
+- authors: "S. Han, M. Lee, H. Chang, M. Nam, H.-O. Park, Y.-S. Kwak, H.-J. Ha, D. Kim, S.-O. Hwang, K.-L. Hoe, and D.-U. Kim"
+  title: "Construction of the First Compendium of Chemical-Genetic Profiles in the Fission Yeast <i>Schizosaccharomyces pombe</i> and Comparative Compendium Approach"
+  journal: Biochemical and Biophysical Research Communications
+  vip: 436(4):613–618
+  doi: 10.1016/j.bbrc.2013.05.138
+  pubdate:
+    year: 2013
+    month: Jul
+    mday: 12
+  link:
+    url: https://www.sciencedirect.com/science/article/pii/S0006291X13009595
+
+- authors: "S. Cho, I. Jang, Y. Jun, S. Yoon, M. Ko, Y. Kwon, I. Choi, H. Chang, D. Ryu, B. Lee, V. N. Kim, W. Kim, and S. Lee"
+  title: "miRGator v3.0: a MicroRNA Portal for Deep Sequencing, Expression Profiling and mRNA Targeting"
+  journal: Nucleic Acids Research
+  vip: 41(D1):D252–D257
+  doi: 10.1093/nar/gks1168
+  pubdate:
+    year: 2013
+    month: Jan
+    mday: 1
+  link:
+    url: https://academic.oup.com/nar/article/41/D1/D252/1066239
+
+- title: "LIN28A is a Suppressor of ER-associated Translation in Embryonic Stem Cells"
+  image: 2012-Cell-a.jpg
+  description: "LIN28A is one of the prominent pluripotency factors in human stem cells. It regulates the expression of thousands of genes by the negative regulation of let-7 biogenesis. While the canonical LIN28-let-7 axis is strong and impactful to a wide array of downstream genes, there had been several cases that LIN28 proteins induce the changes in the downstream with let-7 remaining unchanged. To reveal the unknown targets of LIN28A, we carried out CLIP-seq (crosslinking followed by immunoprecipitation, then sequencing) and ribosome footprinting. Using the uncommon clustered reverse-transcription errors, our CLIP-seq experiments could identify the thousands of target sites in messenger RNAs which exactly look like the binding sites in the let-7 precursors. The RNA expression levels were unchanged upon the known-down of LIN28A. However, their translation efficiency was elevated remarkably. Intriguingly, the majority of the targets code the proteins produced via the ER-associated translation, not the cytoplasmic translation of globular proteins or tail-anchored membrane proteins. The ER localization of LIN28A in embryonic stem cells could explain the target preference. This study shows how CLIP-seq experiments can identify the structural motif of an RBP."
+  authors: "J. Cho<sup>1</sup>, H. Chang<sup>1</sup>, S. C. Kwon, B. Kim, Y. Kim, J. Choe, M. Ha, Y. K. Kim, and V. N. Kim"
+  link:
+    url: https://www.cell.com/abstract/S0092-8674(12)01234-2
+    display: Cell, 151(4):765–777
+  pubdate:
+    year: 2012
+    month: Nov
+    mday: 9
+  highlight: 0
+  marked: 1
+  doi: 10.1016/j.cell.2012.10.019
+  vip: 151(4):765–777
+  journal: Cell
+  news2:
+
+- authors: "I. Heo, M. Ha, J. Lim, M.-J. Yoon, J.-E. Park, S. C. Kwon, H. Chang, and V. N. Kim"
+  title: "Mono-Uridylation of Pre-MicroRNA as a Key Step in the Biogenesis of Group II Let-7 MicroRNAs"
+  journal: Cell
+  vip: 151(3):521–532
+  link:
+    url: https://www.cell.com/abstract/S0092-8674(12)01129-4
+  pubdate:
+    year: 2012
+    month: Oct
+    mday: 26
+  doi: 10.1016/j.cell.2012.09.022
+
+- authors: "J.-E. Park, I. Heo, Y. Tian, D. K. Simanshu, H. Chang, D. Jee, D. J. Patel, and V. N. Kim"
+  title: "Dicer recognizes the 5′ end of RNA for efficient and accurate processing"
+  journal: Nature
+  vip: 475(7355):201-205
+  pubdate:
+    year: 2011
+    month: Jul
+    mday: 13
+  doi: 10.1038/nature10198
+  link:
+    url: https://www.nature.com/articles/nature10198
+
