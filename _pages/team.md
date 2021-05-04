@@ -26,3 +26,12 @@ permalink: /team/
 {% assign member_list = site.data.visitors %}
 {% include team_list.html %}
 
+<script>
+$('body').on('click', '.member-list-item[data-href]', function(){
+    if (window.location.hash) {
+        window.location.hash = $(this).data('href');
+    } else {
+        window.location.href = $(this).data('href');
+    }
+})
+</script>
