@@ -18,6 +18,6 @@ Introduction here.
 #### Education
 
 <ul class="chronological">
-  <li><span>2021–present</span> Master's Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2021–present</span> MS/PhD Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2017–2021</span> Bachelor of Science, School of Biological Sciences, Seoul National University</li>
 </ul>
