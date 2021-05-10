@@ -31,8 +31,7 @@ had as an undergraduate.
 
 We provide Ph.D. programs in [Interdisciplinary Program in
 Bioinformatics](http://ipbi.snu.ac.kr) and [School of Biological
-Sciences](http://biosci.snu.ac.kr). You can enroll in the graduate
-program mostly regardless of your undergraduate major.
+Sciences](http://biosci.snu.ac.kr).
 
 ### Intern programs for undergraduate students
 
@@ -49,5 +48,5 @@ a [paid internship program](https://biosci.snu.ac.kr/board/notice?cidx=29&bt=t&b
 during the summer and winter vacations.
 
 ### More..
-한국어로 작성된 [소책자](/coming/qbiolab-202009.pdf)도 있습니다.
+한국어로 작성된 [소책자](/coming/qbiolab-202105.pdf)도 있습니다.
 

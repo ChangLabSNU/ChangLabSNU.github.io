@@ -71,6 +71,6 @@ the existing techniques.
 
 We are looking for new <!--graduate students and -->postdocs to enjoy our explorations together [(more info)]({{ site.url }}{{ site.baseurl }}/openings)**!**
 
-A booklet introducing our lab is also available in [Korean](/coming/qbiolab-202009.pdf).
+A booklet introducing our lab is also available in [Korean](/coming/qbiolab-202105.pdf).
 
 Our group is currently based on fundings from [Center for RNA Research](https://narrykim.org) in [Institute for Basic Science (IBS)](http://www.ibs.re.kr) and [Research Institute of Basic Sciences (RIBS)](http://ribs.snu.ac.kr/) of [Seoul National University](http://www.snu.ac.kr).
