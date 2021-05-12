@@ -41,7 +41,7 @@ in our lab.
 
 Availability for the internship opportunity changes frequently. Please
 [contact Hyeshik](mailto:hyeshik@snu.ac.kr) or stop by his office
-(504–529) to inquire the vacancies for the intership.
+(203–525) to inquire the vacancies for the intership.
 <i>Optionally,</i> you may also apply for
 a [paid internship program](https://biosci.snu.ac.kr/board/notice?cidx=29&bt=t&bq=%EC%9D%B8%ED%84%B4%EC%8B%AD) provided by
 [SNU College of Natural Sciences](https://science.snu.ac.kr)
