@@ -33,19 +33,22 @@ in a quantitative manner.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/lablogo-slider.jpg" alt="Slide 1" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/members-202008.jpeg" alt="Slide 2" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 6" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/collaboration-202008.jpeg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-02.jpg" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/teatime-202008.jpeg" alt="Slide 4" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 6" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/workseats-202008.jpeg" alt="Slide 5" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 5" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/discussion-202008.jpeg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 4" />
+        </div>
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-01.jpg" alt="Slide 2" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
