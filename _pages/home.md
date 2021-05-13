@@ -24,6 +24,7 @@ in a quantitative manner.
         <li data-target="#carousel" data-slide-to="3"></li>
         <li data-target="#carousel" data-slide-to="4"></li>
         <li data-target="#carousel" data-slide-to="5"></li>
+        <li data-target="#carousel" data-slide-to="6"></li>
     </ol>
 
     <!-- Items -->
@@ -33,19 +34,19 @@ in a quantitative manner.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/lablogo-slider.jpg" alt="Slide 1" />
         </div>
         <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 6" />
+        </div>
+        <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 6" />
+        </div>
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 4" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-02.jpg" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 6" />
-        </div>
-        <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 5" />
-        </div>
-        <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 4" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-01.jpg" alt="Slide 2" />
