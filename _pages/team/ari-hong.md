@@ -49,9 +49,9 @@ new insights into translation and epitranscriptome.
   Laboratory for two months. Under Dr. Youngjin Choi, she constructed system
   to detect target from food sample, such as allergen or food poisoning
   bacteria. Gold nanoparticle, silica nanoparticle, and aptamer were
-  used to that system, and I optimized the their ratio to present shift
+  used to that system, and she optimized the their ratio to present shift
   of precipitation area according to target concentration.</blockquote></li>
-<li><span>2017-2019</span> Undergraduate Research Assistant, Center for food and bioconvergence Seoul National University<br/>
+<li><span>2017-2019</span> Undergraduate Research Assistant, <a href="http://calslab.snu.ac.kr/cfb/">Center for Food and Bioconvergence,</a> Seoul National University<br/>
   <blockquote>She worked as undergraduate research assistant at CFB
   or center for food and bio convergence located in Seoul National
   University. Under Dr. Yang Kim, she worked on preparing a sample for the
