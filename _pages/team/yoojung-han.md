@@ -19,5 +19,5 @@ Introduction here.
 
 <ul class="chronological">
   <li><span>2020–present</span> MS/PhD Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
-  <li><span>2016–2020</span> Bachelor of Agriculture in Biomaterials Science and Engineering, Seoul National University</li>
+  <li><span>2016–2020</span> B.S. in Biomaterials Engineering, Seoul National University</li>
 </ul>
