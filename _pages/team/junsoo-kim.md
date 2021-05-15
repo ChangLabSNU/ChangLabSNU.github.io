@@ -13,7 +13,11 @@ cv: /assets/cv/cv-junsoopablo.pdf
 permalink: /team/junsoo-kim
 ---
 
-Introduction here.
+Junsoo Kim is a computational biologist interested in using multi-omics data to discover hitherto unappreciated aspects of disease pathology. The goal of his research is to use high-throughput screens to gain insights into the biological basis of disease and identify novel drug targets.
+
+He is very much a technophile and enjoys using the latest advances in bioinformatics to further his research goals. After completing a master’s degree from the University of Oxford, he joined the Genomic Medicine Institute at Seoul National University (GMI-SNU) as a substitute for national service. In GMI-SNU, he researched on [de novo assembly of the Korean reference genome](https://www.nature.com/articles/nature20098) and developed an aspiration to research the underlying mechanism of gene regulation.
+
+He worked as a senior researcher at the biotech companies (Seegene and Macrogen) where he was responsible for the development of medical diagnostic technology. Since joining Chang Lab in 2021, his main research focuses on exploring the global dynamic landscapes of coronaviral genomes and regulatory rules. Using high-throughput technologies, he aims to deeply understand the molecular basis for viral genome biogenesis and develop novel antiviral strategies.
 
 #### Professional Experiences
 
