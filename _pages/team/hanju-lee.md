@@ -9,11 +9,11 @@ github: Han-ju
 scholar: 
 orcid: 
 image: /images/members/hjlee-thumb.jpg
-cv: 
+cv: /assets/cv/cv-hanju.pdf
 permalink: /team/hanju-lee
 ---
 
-Introduction here.
+Hanju Lee studies bioinformatics and statistics to develop method measuring length of poly(A) tails more accurate with various sequencing platforms from Illumina and Oxford Nanopore Tech.
 
 #### Education
 
