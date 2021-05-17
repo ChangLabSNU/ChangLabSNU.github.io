@@ -13,7 +13,12 @@ cv:
 permalink: /team/yoojung-han
 ---
 
-Introduction here.
+Yoojung Han studied broadly about biochemistry, materials engineering, 
+and molecular biology during her B.S. at Seoul National University.
+Then, she found her interests in computational biology and bioinformatics, 
+and jumped up to the new study field since 2020 summer as a member of Chang lab.
+Now, She is developing new methods for RNA nanopore sequencing especially for
+higher accuracy, better modification detection, and multiplexing.
 
 #### Education
 
