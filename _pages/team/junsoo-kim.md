@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Junsoo Kim
-position: Research Scientist
+position: Research Staff
 handle: junsoopablo
 email: junsoopablo@snu.ac.kr
 twitter: 
