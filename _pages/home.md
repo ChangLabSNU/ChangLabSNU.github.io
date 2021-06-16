@@ -68,7 +68,7 @@ nature of post-transcriptional gene regulation. For example, our new
 tool, [poreplex](https://github.com/hyeshik/poreplex), based on nanopore
 direct RNA sequencing enables real-time direct measurement of poly(A)
 tail lengths with the complete information about the alternative splicing
-and alternative polyadenylation in biologically purturbed conditions
+and alternative polyadenylation in biologically perturbed conditions
 (see [Research](research)). Our new technologies are expected to reveal
 the novel molecular phenomena that had been vastly undetectable using
 the existing techniques.
