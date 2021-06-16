@@ -8,21 +8,19 @@ permalink: /team/
 
 ## Group Members
 
-### Principal investigator
+### Principal Investigator
 {% assign member_list = site.data.team_pi %}
+{% include team_list.html %}
+
+### Graduate Students
+{% assign member_list = site.data.team_graduate %}
 {% include team_list.html %}
 
 ### Staff
 {% assign member_list = site.data.team_staff %}
 {% include team_list.html %}
 
-
-### Graduate students
-{% assign member_list = site.data.team_graduate %}
-{% include team_list.html %}
-
-
-### Undergraduate students
+### Undergraduate Students
 {% assign member_list = site.data.visitors %}
 {% include team_list.html %}
 
