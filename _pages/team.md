@@ -24,6 +24,26 @@ permalink: /team/
 {% assign member_list = site.data.visitors %}
 {% include team_list.html %}
 
+<br/>
+
+<div id="alumni">
+## Alumni
+
+### Undergraduate Internship
+
+{% for person in site.data.alumni_interns -%}
+{%- if prev_year != person.year_begin %}
+#### {{ person.year_begin }}
+{% endif -%}
+{{ person.name }} <small>({{ person.affiliation_then }}
+{%- if person.year_begin != person.year_end -%}
+; –{{ person.year_end }}
+{%- endif %})</small><br/>
+{%- assign prev_year = person.year_begin -%}
+{%- endfor %}
+</div>
+
+
 <script>
 $('body').on('click', '.member-list-item[data-href]', function(){
     if (window.location.hash) {

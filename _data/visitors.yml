@@ -1,17 +1,7 @@
-- name: Eunice Seungyeon Song
-  photo: essong-thumb.jpg
-  info: Undergrad Intern
-  intro: "Looking into the evolution of SARS-CoV-2 transcriptome"
-
 - name: Jayoung Ku
   photo: jyku-thumb.jpg
   info: Undergrad Intern
-  intro: "Completing the tutorial quests"
-
-- name: Seungbeom Han
-  photo: sbhan-thumb.jpg
-  info: Undergrad Intern
-  intro: "Completing the tutorial quests"
+  intro: "Looking into the evolution of SARS-CoV-2 transcriptome"
 
 - name: Chang Yong Mun
   photo: cymun-thumb.jpg
