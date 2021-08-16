@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Junsoo Kim
-position: Research Staff
+position: Graduate Student
 handle: junsoopablo
 email: junsoopablo@snu.ac.kr
 twitter: 
@@ -30,6 +30,7 @@ He worked as a senior researcher at the biotech companies (Seegene and Macrogen)
 #### Education
 
 <ul class="chronological">
+  <li><span>2021–present</span> Ph.D. student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2012–2013</span> M.Phil. in Integrated Immunology, Nuffield Department of Surgical Sciences, University of Oxford, UK</li>
   <li><span>2008–2011</span> B.Sc. in Biological Sciences (Biotechnology), University of Edinburgh, UK</li>
 </ul>

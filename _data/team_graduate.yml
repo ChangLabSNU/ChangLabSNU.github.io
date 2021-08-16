@@ -18,3 +18,10 @@
   info: "Graduate Student (Bioinformatics)"
   intro: "Finding a better way to measure poly(A) lengths"
   link: hanju-lee
+
+- name: Junsoo Kim 
+  photo: jskim-thumb.jpg
+  email: junsoopablo@snu.ac.kr
+  info: "Graduate Student (Bioinformatics)"
+  intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
+  link: junsoo-kim
