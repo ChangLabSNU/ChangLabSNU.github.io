@@ -1,3 +1,15 @@
+- authors: "F. R. Ringeling, S. Chakraborty, C. Vissers, D. Reiman, A. M. Patel, K.-H. Lee, A. Hong, C.-W. Park, T. Reska, J. Gagneur, H. Chang, M. Spletter, K.-J. Yoon, G. Ming, H. Song, and S. Canzar"
+  title: "Partitioning RNAs by length improves transcriptome reconstruction from short-read RNA-seq data"
+  journal: "Nature Biotechnology"
+  pubdate:
+    year: 2022
+    month: Jan
+    mday: 10
+  vip: "in press"
+  doi: doi.org/10.1038/s41587-021-01136-7
+  link:
+    url: "https://www.nature.com/articles/s41587-021-01136-7"
+
 - authors: "D. Kim, Y.-S. Lee, S.-J. Jung, J. Yeo, J. J. Seo, Y.-Y. Lee, J. Lim, H. Chang, J. Song, J. Yang, J.-S. Kim, G. Jung, K. Ahn, and V. N. Kim"
   title: "Viral Hijacking of the TENT4–ZCCHC14 Complex Protects Viral RNAs via Mixed Tailing"
   journal: "Nature Structural & Molecular Biology"
