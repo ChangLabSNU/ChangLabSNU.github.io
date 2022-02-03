@@ -34,11 +34,13 @@ permalink: /team/
 {% for person in site.data.alumni_interns -%}
 {%- if prev_year != person.year_begin %}
 #### {{ person.year_begin }}
+{% else -%}
+;
 {% endif -%}
-{{ person.name }} <small>({{ person.affiliation_then }}
-{%- if person.year_begin != person.year_end -%}
-; –{{ person.year_end }}
-{%- endif %})</small><br/>
+{{ person.name }} 
+{%- if person.year_begin != person.year_end %}
+(–{{ person.year_end }})
+{%- endif %}
 {%- assign prev_year = person.year_begin -%}
 {%- endfor %}
 </div>
