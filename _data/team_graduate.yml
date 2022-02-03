@@ -9,7 +9,7 @@
   photo: yjhan-thumb.jpg
   email: hanyj0823@snu.ac.kr
   info: "Graduate Student (Bioinformatics)"
-  intro: "Developing a new nanopore sequencing technique for single-cell RNA sequencing."
+  intro: Developing a new technique to prepare high-accuracy nanopore signal models.
   link: yoojung-han
 
 - name: Hanju Lee
@@ -25,3 +25,10 @@
   info: "Graduate Student (Bioinformatics)"
   intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
   link: junsoo-kim
+
+- name: Heeseung Yoo
+  photo: hsyoo-thumb.jpg
+  email: yhs252525@snu.ac.kr
+  info: "Graduate Student (Bioinformatics)"
+  intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
+  link: heeseung-yoo
