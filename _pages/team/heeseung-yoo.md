@@ -8,7 +8,7 @@ twitter:
 github: heeseungYoo
 scholar: 
 orcid: https://orcid.org/0000-0002-4814-0315
-image:/images/members/hsyoo-thumb.jpg
+image: /images/members/hsyoo-thumb.jpg
 cv: 
 permalink: /team/heeseung
 ---
