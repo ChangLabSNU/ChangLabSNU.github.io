@@ -32,3 +32,10 @@
   info: "Graduate Student (Bioinformatics)"
   intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
   link: heeseung-yoo
+
+- name: Seungbeom Han
+  photo: null-thumb.png
+  email: hansb980522@gmail.com
+  info: "Graduate Student (Bioinformatics)"
+  intro: Decoding the codes controlling translation
+  link: seungbeom-han
