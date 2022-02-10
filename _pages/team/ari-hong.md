@@ -20,7 +20,8 @@ new insights into translation and epitranscriptome.
 #### Education
 
 <ul class="chronological">
-  <li><span>2020–present</span> Master's Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2022–present</span> Ph.D. student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2020–2022</span> M.S. in Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2016–2020</span> B.S. in Food Science and Biotechnology, Seoul National University</li>
 </ul>
 
@@ -28,7 +29,7 @@ new insights into translation and epitranscriptome.
 #### Research Experience
 
 <ul class="chronological">
-  <li><span>2020–present</span> Master's Student, Interdisciplinary
+  <li><span>2020–present</span> Graduate Student, Interdisciplinary
   Program in Bioinformatics, Seoul National University<br/>
   <blockquote>She is studying computational biology, especially about
   direct RNA sequencing or DRS, transcriptomics, and epigenetics. Under

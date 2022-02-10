@@ -13,6 +13,7 @@ cv:
 permalink: /team/seungbeom-han
 ---
 
+Seungbeom Han just started his research career in 2022.
 
 #### Education
 
