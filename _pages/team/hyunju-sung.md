@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Hyun Ju Sung
-position: Researcher
+position: Research Associate
 handle: hyunju
 email: amp930712@gmail.com
 twitter: 
