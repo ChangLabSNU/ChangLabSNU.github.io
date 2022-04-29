@@ -49,10 +49,10 @@ in a quantitative manner.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 4" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2204-01.jpg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 5" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 5" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2204-01.jpg" alt="Slide 3" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-01.jpg" alt="Slide 2" />
