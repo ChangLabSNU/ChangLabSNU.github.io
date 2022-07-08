@@ -20,10 +20,6 @@ permalink: /team/
 {% assign member_list = site.data.team_staff %}
 {% include team_list.html %}
 
-### Undergraduate Students
-{% assign member_list = site.data.visitors %}
-{% include team_list.html %}
-
 <br/>
 
 <!--
