@@ -1,3 +1,15 @@
+- authors: "A. Hong, D. Kim, V. N. Kim, and H. Chang"
+  title: "Analyzing viral epitranscriptomes using nanopore direct RNA sequencing"
+  journal: "Journal of Microbiology"
+  pubdate:
+    year: 2022
+    month: Aug
+    mday: 24
+  vip: "60:867–876"
+  doi: doi.org/10.1007/s12275-022-2324-4
+  link:
+    url: "https://link.springer.com/article/10.1007/s12275-022-2324-4"
+
 - authors: "F. R. Ringeling, S. Chakraborty, C. Vissers, D. Reiman, A. M. Patel, K.-H. Lee, A. Hong, C.-W. Park, T. Reska, J. Gagneur, H. Chang, M. Spletter, K.-J. Yoon, G. Ming, H. Song, and S. Canzar"
   title: "Partitioning RNAs by length improves transcriptome reconstruction from short-read RNA-seq data"
   journal: "Nature Biotechnology"
