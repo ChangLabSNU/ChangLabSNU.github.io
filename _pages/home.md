@@ -6,9 +6,9 @@ sitemap: false
 permalink: /
 ---
 
-We are a vibrant research lab affiliated with the
-[Interdisciplinary Program in Bioinformatics](http://ipbi.snu.ac.kr)
-and
+The Chang Lab of Quantitative Molecular Biology is a vibrant
+research lab affiliated with the [Interdisciplinary Program in
+Bioinformatics](http://ipbi.snu.ac.kr) and
 [School of Biological Sciences](http://biosci.snu.ac.kr)
 at [Seoul National University](http://www.snu.ac.kr), Korea.
 We aim to understand how the gene expression is regulated
