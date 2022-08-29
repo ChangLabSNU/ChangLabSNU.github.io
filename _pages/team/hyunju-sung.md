@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Hyun Ju Sung
-position: Research Associate
+position: Graduate Student
 handle: hyunju
 email: amp930712@gmail.com
 twitter: 
@@ -24,6 +24,7 @@ one of the finest bioinformatics laboratories in the world.
 #### Education
 
 <ul class="chronological">
+  <li><span>2022–present</span> Ph.D. student, School of Biological Sciences, Seoul National University</li>
   <li><span>2020–2022</span> M.S. in Life Science, POSTECH</li>  
   <li><span>2012–2018</span> B.Sc. in Biotechnology, Yonsei University</li>
 </ul>

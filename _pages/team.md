@@ -12,12 +12,12 @@ permalink: /team/
 {% assign member_list = site.data.team_pi %}
 {% include team_list.html %}
 
-### Staff
-{% assign member_list = site.data.team_staff %}
+### Researchers &amp; Students
+{% assign member_list = site.data.team_researcher %}
 {% include team_list.html %}
 
-### Graduate Students
-{% assign member_list = site.data.team_graduate %}
+### Staff
+{% assign member_list = site.data.team_support %}
 {% include team_list.html %}
 
 <br/>
