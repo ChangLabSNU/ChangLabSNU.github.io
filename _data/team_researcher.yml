@@ -1,6 +1,6 @@
 - name: Ari Hong
   photo: arihong-thumb.jpg
-  info: "Graduate Student (Bioinformatics)"
+  info: Graduate Student
   email: elly924@snu.ac.kr
   intro: Decoding the codes controlling translation
   link: ari-hong
@@ -8,28 +8,28 @@
 - name: Hanju Lee
   photo: hjlee-thumb.jpg
   email: dlgks224@snu.ac.kr
-  info: "Graduate Student (Bioinformatics)"
+  info: Graduate Student
   intro: "Tracking the evolution of the molecular rules of <i>Coronaviridae</i>"
   link: hanju-lee
 
 - name: Heeseung Yoo
   photo: hsyoo-thumb.jpg
   email: yhs252525@snu.ac.kr
-  info: "Graduate Student (Bioinformatics)"
+  info: Graduate Student
   intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
   link: heeseung-yoo
 
 - name: Hyun Ju Sung
   photo: hjsung-thumb.jpg
   email: amp930712@gmail.com
-  info: "Graduate Student (Biological Sciences)"
+  info: Graduate Student
   intro: Devising a novel method of nanopore sequencing to detect RNA modification
   link: hyunju-sung
 
 - name: Junsoo Kim 
   photo: jskim-thumb.jpg
   email: junsoopablo@snu.ac.kr
-  info: "Graduate Student (Bioinformatics)"
+  info: Graduate Student
   intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
   link: junsoo-kim
 
@@ -43,13 +43,13 @@
 - name: Seungbeom Han
   photo: sbhan-thumb.jpg
   email: hansb@snu.ac.kr
-  info: "Graduate Student (Bioinformatics)"
+  info: Graduate Student
   intro: Decoding the codes controlling translation
   link: seungbeom-han
 
 - name: Yoojung Han
   photo: yjhan-thumb.jpg
   email: hanyj0823@snu.ac.kr
-  info: "Graduate Student (Bioinformatics)"
+  info: Graduate Student
   intro: Developing a new technique to prepare high-accuracy nanopore signal models
   link: yoojung-han
