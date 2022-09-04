@@ -1,5 +1,6 @@
 {% assign number_printed = 0 %}
-{% assign member_list = site.data.team | where_exp:"memb", "selected_categories contains memb.category and memb.active" %}
+{% assign active_members = site.data.team | where_exp:"memb", "memb.active" %}
+{% assign member_list = active_members | where_exp:"memb", "selected_categories contains memb.category" %}
 
 {% for member in member_list %}
 {% assign even_odd = number_printed | modulo: 2 %}
