@@ -1,9 +1,18 @@
+- name: Hyeshik Chang
+  photo: hschang-thumb.jpg
+  info: Principal Investigator
+  email: hyeshik@snu.ac.kr
+  intro: A computational biologist loving molecules and numbers
+  link: hyeshik-chang
+  category: principal-investigator
+
 - name: Ari Hong
   photo: arihong-thumb.jpg
   info: Graduate Student
   email: elly924@snu.ac.kr
   intro: Decoding the codes controlling translation
   link: ari-hong
+  category: student
 
 - name: Hanju Lee
   photo: hjlee-thumb.jpg
@@ -11,6 +20,7 @@
   info: Graduate Student
   intro: "Tracking the evolution of the molecular rules of <i>Coronaviridae</i>"
   link: hanju-lee
+  category: student
 
 - name: Heeseung Yoo
   photo: hsyoo-thumb.jpg
@@ -18,6 +28,7 @@
   info: Graduate Student
   intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
   link: heeseung-yoo
+  category: student
 
 - name: Hyun Ju Sung
   photo: hjsung-thumb.jpg
@@ -25,6 +36,7 @@
   info: Graduate Student
   intro: Devising a novel method of nanopore sequencing to detect RNA modification
   link: hyunju-sung
+  category: student
 
 - name: Junsoo Kim 
   photo: jskim-thumb.jpg
@@ -32,6 +44,7 @@
   info: Graduate Student
   intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
   link: junsoo-kim
+  category: student
 
 - name: Keewon Sung
   photo: kwsung-thumb.jpg
@@ -39,6 +52,7 @@
   info: "Postdoctoral Fellow"
   intro: "Inventing a breakthrough technique for nanopore RNA sequencing"
   link: keewon-sung
+  category: postdoc
 
 - name: Seungbeom Han
   photo: sbhan-thumb.jpg
@@ -46,6 +60,7 @@
   info: Graduate Student
   intro: Decoding the codes controlling translation
   link: seungbeom-han
+  category: student
 
 - name: Yoojung Han
   photo: yjhan-thumb.jpg
@@ -53,3 +68,19 @@
   info: Graduate Student
   intro: Developing a new technique to prepare high-accuracy nanopore signal models
   link: yoojung-han
+  category: student
+
+- name: Hyemyung Lee
+  photo: hmlee-thumb.jpg
+  email: hyemyung@snu.ac.kr
+  info: Administrative Specialist
+  link: hyemyung-lee
+  category: support
+
+- name: Yongkuk Choi
+  photo: ykchoi-thumb.jpg
+  email: ykchoi624@gmail.com
+  info: Research Associate
+  intro: Providing an extra hand for various projects
+  link: yongkuk-choi
+  category: research-assistant

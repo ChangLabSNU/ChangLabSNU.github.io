@@ -9,15 +9,15 @@ permalink: /team/
 ## Group Members
 
 ### Principal Investigator
-{% assign member_list = site.data.team_pi %}
+{% assign selected_categories = "principal-investigator" | split:',' %}
 {% include team_list.html %}
 
 ### Researchers &amp; Students
-{% assign member_list = site.data.team_researcher %}
+{% assign selected_categories = "student,postdoc" | split:',' %}
 {% include team_list.html %}
 
 ### Staff
-{% assign member_list = site.data.team_support %}
+{% assign selected_categories = "support,research-assistant" | split:',' %}
 {% include team_list.html %}
 
 <br/>
