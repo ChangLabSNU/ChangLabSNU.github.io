@@ -1,4 +1,5 @@
 - name: Hyeshik Chang
+  name_abbr: H. Chang
   photo: hschang-thumb.jpg
   info: Principal Investigator
   email: hyeshik@snu.ac.kr
@@ -8,6 +9,7 @@
   active: true
 
 - name: Ari Hong
+  name_abbr: A. Hong
   photo: arihong-thumb.jpg
   info: Graduate Student
   email: elly924@snu.ac.kr
@@ -17,6 +19,7 @@
   active: true
 
 - name: Hanju Lee
+  name_abbr: H. Lee
   photo: hjlee-thumb.jpg
   email: dlgks224@snu.ac.kr
   info: Graduate Student
@@ -26,6 +29,7 @@
   active: true
 
 - name: Heeseung Yoo
+  name_abbr: H. Yoo
   photo: hsyoo-thumb.jpg
   email: yhs252525@snu.ac.kr
   info: Graduate Student
@@ -35,6 +39,7 @@
   active: true
 
 - name: Hyun Ju Sung
+  name_abbr: H. J. Sung
   photo: hjsung-thumb.jpg
   email: amp930712@gmail.com
   info: Graduate Student
@@ -44,6 +49,7 @@
   active: true
 
 - name: Junsoo Kim 
+  name_abbr: J. Kim
   photo: jskim-thumb.jpg
   email: junsoopablo@snu.ac.kr
   info: Graduate Student
@@ -53,6 +59,7 @@
   active: true
 
 - name: Keewon Sung
+  name_abbr: K. Sung
   photo: kwsung-thumb.jpg
   email: alkwemi0429@snu.ac.kr
   info: "Postdoctoral Fellow"
@@ -62,6 +69,7 @@
   active: true
 
 - name: Seungbeom Han
+  name_abbr: S. Han
   photo: sbhan-thumb.jpg
   email: hansb@snu.ac.kr
   info: Graduate Student
@@ -71,6 +79,7 @@
   active: true
 
 - name: Yoojung Han
+  name_abbr: Y. Han
   photo: yjhan-thumb.jpg
   email: hanyj0823@snu.ac.kr
   info: Graduate Student
@@ -80,6 +89,7 @@
   active: true
 
 - name: Hyemyung Lee
+  name_abbr: H. Lee
   photo: hmlee-thumb.jpg
   email: hyemyung@snu.ac.kr
   info: Administrative Specialist
@@ -88,6 +98,7 @@
   active: true
 
 - name: Yongkuk Choi
+  name_abbr: Y. Choi
   photo: ykchoi-thumb.jpg
   email: ykchoi624@gmail.com
   info: Research Associate

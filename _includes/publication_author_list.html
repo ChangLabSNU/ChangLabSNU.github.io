@@ -1,0 +1,16 @@
+{%- for author in publi.authors -%}
+{%- if forloop.first -%}
+{%- elsif forloop.last and forloop.length >= 3 -%}
+, and
+{% else -%},
+{% endif -%}
+{%- if author.link -%}
+{%- assign member = site.data.team | where_exp:"memb", "memb.link == author.link" -%}
+  <a class="publi_author" href="{{ site.url }}{{ site.baseurl }}/team/{{ author.link }}">{{ member.first.name_abbr }}</a>
+{%- else -%}
+  <span class="publi_author">{{ author.name }}</span>
+{%- endif -%}
+{%- if author.is_first -%}<sup>1</sup>{%- endif -%}
+{%- if author.is_corresponding -%}<sup>&#42;</sup>{%- endif -%}
+{%- endfor -%}
+<br/>

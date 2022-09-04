@@ -15,7 +15,7 @@ img {
 
 
 body {
-	padding-top: 92px;
+    padding-top: 92px;
 }
 
 figcaption {
@@ -98,11 +98,22 @@ firstp {
 
 span.publi_journal {
     font-family: $headings-font-family;
+    font-style: italic;
     color: #222;
+}
+
+a.publi_author { /* Internal authors */
+    font-weight: 600;
+    color: #0544ab;
+}
+
+span.publi_author { /* External authors */
 }
 
 a.publi_title {
     font-family: $headings-font-family;
+    font-weight: bold;
+    color: #0544ab;
 }
 
 .panel-footer {
