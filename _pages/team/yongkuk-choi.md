@@ -5,7 +5,7 @@ position: Research Associate
 handle: ykchoi
 email: ykchoi624@gmail.com
 twitter: 
-github: 
+github: yongkuk
 scholar: 
 orcid: 
 image: /images/members/ykchoi-thumb.jpg

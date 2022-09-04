@@ -7,7 +7,7 @@ email: alkwemi0429@snu.ac.kr
 twitter: 
 github: keewonsung
 scholar: 
-orcid: 
+orcid: 0000-0002-2733-556X
 image: /images/members/kwsung-thumb.jpg
 cv: /assets/cv/cv-keewon.pdf
 permalink: /team/keewon-sung

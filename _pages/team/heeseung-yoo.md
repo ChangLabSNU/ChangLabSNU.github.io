@@ -13,8 +13,14 @@ cv:
 permalink: /team/heeseung-yoo
 ---
 
-Heeseung Yoo is a graduate student under M.S. course of bioinformatics at Seoul National University. She studied Computer Engineering and Data Analytics during her B.S. at Sookmyung Women’s University. She also studied Biological Science as a double major, which became an opportunity to get interested in bioinformatics. In 2022, she joined Dr. Hyeshik Chang's lab to expand her work into an in-depth study of bioinformatics. Now, she is interested in revealing internal information in nanopore sequencing data and detecting RNA modification.
-
+Heeseung Yoo is a graduate student under M.S. program in Bioinformatics
+at Seoul National University. She studied Computer Engineering and
+Data Analytics during her B.S. at Sookmyung Women’s University. She
+also studied Biological Science as a double major, which became an
+opportunity to get interested in bioinformatics. In 2022, she joined
+Dr. Hyeshik Chang's lab to expand her work into an in-depth study of
+bioinformatics. Now, she is interested in revealing internal information
+in nanopore sequencing data and detecting RNA modification.
 
 #### Education
 
