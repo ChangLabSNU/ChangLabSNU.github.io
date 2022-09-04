@@ -5,6 +5,7 @@
   intro: A computational biologist loving molecules and numbers
   link: hyeshik-chang
   category: principal-investigator
+  active: true
 
 - name: Ari Hong
   photo: arihong-thumb.jpg
@@ -13,6 +14,7 @@
   intro: Decoding the codes controlling translation
   link: ari-hong
   category: student
+  active: true
 
 - name: Hanju Lee
   photo: hjlee-thumb.jpg
@@ -21,6 +23,7 @@
   intro: "Tracking the evolution of the molecular rules of <i>Coronaviridae</i>"
   link: hanju-lee
   category: student
+  active: true
 
 - name: Heeseung Yoo
   photo: hsyoo-thumb.jpg
@@ -29,6 +32,7 @@
   intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
   link: heeseung-yoo
   category: student
+  active: true
 
 - name: Hyun Ju Sung
   photo: hjsung-thumb.jpg
@@ -37,6 +41,7 @@
   intro: Devising a novel method of nanopore sequencing to detect RNA modification
   link: hyunju-sung
   category: student
+  active: true
 
 - name: Junsoo Kim 
   photo: jskim-thumb.jpg
@@ -45,6 +50,7 @@
   intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
   link: junsoo-kim
   category: student
+  active: true
 
 - name: Keewon Sung
   photo: kwsung-thumb.jpg
@@ -53,6 +59,7 @@
   intro: "Inventing a breakthrough technique for nanopore RNA sequencing"
   link: keewon-sung
   category: postdoc
+  active: true
 
 - name: Seungbeom Han
   photo: sbhan-thumb.jpg
@@ -61,6 +68,7 @@
   intro: Decoding the codes controlling translation
   link: seungbeom-han
   category: student
+  active: true
 
 - name: Yoojung Han
   photo: yjhan-thumb.jpg
@@ -69,6 +77,7 @@
   intro: Developing a new technique to prepare high-accuracy nanopore signal models
   link: yoojung-han
   category: student
+  active: true
 
 - name: Hyemyung Lee
   photo: hmlee-thumb.jpg
@@ -76,6 +85,7 @@
   info: Administrative Specialist
   link: hyemyung-lee
   category: support
+  active: true
 
 - name: Yongkuk Choi
   photo: ykchoi-thumb.jpg
@@ -84,3 +94,4 @@
   intro: Providing an extra hand for various projects
   link: yongkuk-choi
   category: research-assistant
+  active: true
