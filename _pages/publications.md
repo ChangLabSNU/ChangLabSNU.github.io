@@ -26,7 +26,7 @@ permalink: /publications/
   <h4>{{ publi.title }}</h4>
   <img src="{{ site.url }}{{ site.baseurl }}/images/publications/{{ publi.image }}" class="img-responsive" width="33%" style="float: left" />
   <p>{{ publi.description }}</p>
-  <p>{% include publication_author_list.html %}</p>
+  <p><em>{% include publication_author_list.html %}</em></p>
   <h5><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></h5>
   <p class="text-danger"><strong> {{ publi.news1 }}</strong></p>
   <p> {{ publi.news2 }}</p>
