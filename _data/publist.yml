@@ -1,4 +1,36 @@
 - authors:
+    - name: S. Lee
+      is_first: true
+    - name: H. Kim
+      is_first: true
+    - link: ari-hong
+      is_first: true
+    - name: J. Song
+      is_first: true
+    - name: S. Lee
+    - name: M. Kim
+    - name: S. Hwang
+    - name: D. Jeong
+    - name: A. Son
+    - name: Y. Lee
+    - name: V. N. Kim
+    - name: J. Kim
+    - link: hyeshik-chang
+      is_corresponding: true
+    - name: K. Ahn
+      is_corresponding: true
+  title: "Functional and Molecular Dissection of HCMV Long Non-coding RNAs"
+  journal: "Scientific Reports"
+  pubdate:
+    year: 2022
+    month: Nov
+    mday: 11
+  vip: "12:19303"
+  doi: doi.org/10.1038/s41598-022-23317-3
+  link:
+    url: "https://www.nature.com/articles/s41598-022-23317-3"
+
+- authors:
     - link: ari-hong
       is_first: true
     - name: D. Kim
