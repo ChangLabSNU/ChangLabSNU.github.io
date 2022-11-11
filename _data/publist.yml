@@ -27,6 +27,7 @@
     mday: 11
   vip: "12:19303"
   doi: doi.org/10.1038/s41598-022-23317-3
+  marked: 1
   link:
     url: "https://www.nature.com/articles/s41598-022-23317-3"
 
@@ -47,6 +48,7 @@
     mday: 24
   vip: "60:867–876"
   doi: doi.org/10.1007/s12275-022-2324-4
+  marked: 1
   link:
     url: "https://link.springer.com/article/10.1007/s12275-022-2324-4"
 
