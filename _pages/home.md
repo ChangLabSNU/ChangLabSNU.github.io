@@ -85,6 +85,6 @@ and alternative polyadenylation in biologically perturbed conditions
 the novel molecular phenomena that had been vastly undetectable using
 the existing techniques.
 
-We are looking for new <!--graduate students and -->postdocs to enjoy our explorations together [(more info)]({{ site.url }}{{ site.baseurl }}/openings)**!**
+We are looking for new graduate students and postdocs to enjoy our explorations together [(more info)]({{ site.url }}{{ site.baseurl }}/openings)**!**
 
-Our group is currently based on fundings from [Center for RNA Research](https://narrykim.org) in [Institute for Basic Science (IBS)](http://www.ibs.re.kr) and [Research Institute of Basic Sciences (RIBS)](http://ribs.snu.ac.kr/) of [Seoul National University](http://www.snu.ac.kr).
+Our group is currently based on fundings from the [Center for RNA Research](https://narrykim.org) in the [Institute for Basic Science (IBS)](http://www.ibs.re.kr) and the Excellent Young Researcher program of the [National Research Foundation of Korea](https://www.nrf.re.kr).
