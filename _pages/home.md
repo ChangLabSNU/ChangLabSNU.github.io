@@ -40,6 +40,9 @@ in a quantitative manner.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 6" />
         </div>
         <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2212-01.jpg" alt="Slide 6" />
+        </div>
+        <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 6" />
         </div>
         <div class="item">
