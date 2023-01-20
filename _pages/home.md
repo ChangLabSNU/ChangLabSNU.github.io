@@ -58,7 +58,7 @@ in a quantitative manner.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2204-01.jpg" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-01.jpg" alt="Slide 2" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2301-01.jpg" alt="Slide 2" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2107-01.jpg" alt="Slide 2" />
