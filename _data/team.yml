@@ -78,16 +78,6 @@
   category: student
   active: true
 
-- name: Yoojung Han
-  name_abbr: Y. Han
-  photo: yjhan-thumb.jpg
-  email: hanyj0823@snu.ac.kr
-  info: Graduate Student
-  intro: Developing a new technique to prepare high-accuracy nanopore signal models
-  link: yoojung-han
-  category: student
-  active: true
-
 - name: Sohyeon Ju
   name_abbr: S. Ju
   photo: null-thumb.png
@@ -95,6 +85,16 @@
   info: Graduate Student
   intro: Delving into an interesting mechanism of a terminal nucleotidyltransferase with nanopore direct RNA sequencing
   link: sohyeon-ju
+  category: student
+  active: true
+
+- name: Yoojung Han
+  name_abbr: Y. Han
+  photo: yjhan-thumb.jpg
+  email: hanyj0823@snu.ac.kr
+  info: Graduate Student
+  intro: Developing a new technique to prepare high-accuracy nanopore signal models
+  link: yoojung-han
   category: student
   active: true
 
