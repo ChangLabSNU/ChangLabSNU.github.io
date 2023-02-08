@@ -88,6 +88,16 @@
   category: student
   active: true
 
+- name: Sohyeon Ju
+  name_abbr: S. Ju
+  photo: null-thumb.png
+  email: shjoo06@snu.ac.kr
+  info: Graduate Student
+  intro: Delving into an interesting mechanism of a terminal nucleotidyltransferase with nanopore direct RNA sequencing
+  link: sohyeon-ju
+  category: student
+  active: true
+
 - name: Hyemyung Lee
   name_abbr: H. Lee
   photo: hmlee-thumb.jpg
