@@ -8,7 +8,7 @@ twitter:
 github: shjoo06
 scholar: 
 orcid:
-image: /images/members/null-thumb.png
+image: /images/members/shju-thumb.jpg
 cv:
 permalink: /team/sohyeon-ju
 ---
