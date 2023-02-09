@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Hyemyung Lee
-position: Administrative Specialist
+position: Administrative Coordinator
 handle: hyemyung
 email: hyemyung@snu.ac.kr
 twitter: 
