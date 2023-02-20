@@ -13,6 +13,11 @@ cv:
 permalink: /team/ari-hong
 ---
 
+Ari worked extensively on the epitranscriptome analysis of viruses
+throughout her Master's program in our lab. Presently, she is working on
+her doctorate in the field of medical informatics at the
+[Bio-Medical Informatics Lab of SNU Hospital](https://sites.google.com/view/snuh-bmi-lab/home).
+
 #### Education
 
 <ul class="chronological">
