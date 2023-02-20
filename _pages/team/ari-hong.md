@@ -3,6 +3,7 @@ layout: member
 title: Ari Hong
 position: Alumni (2019–2023)
 handle: ari
+authorid: ari-hong
 email: elly924@snu.ac.kr
 twitter: 
 github: AriHong
@@ -25,3 +26,6 @@ her doctorate in the field of medical informatics at the
   <li><span>2020–2022</span> M.S. in Bioinformatics, Seoul National University</li>
   <li><span>2016–2020</span> B.S. in Food Science and Biotechnology, Seoul National University</li>
 </ul>
+
+
+{% include publication_in_profile.html %}

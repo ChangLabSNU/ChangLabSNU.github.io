@@ -1,0 +1,15 @@
+#### Publications with Our Lab
+
+<ul class="publications_in_profile">
+{% for publi in site.data.publist %}
+
+{% assign authormatches = publi.authors | where_exp:"author", "author.link == page.authorid" %}
+{% if authormatches.size > 0 %}
+<li><a href="{{ publi.link.url }}" class="publi_title">{{ publi.title }}</a><br/>
+{% include publication_author_list.html -%}
+<span class="publi_journal">{{ publi.journal }}</span>
+({{ publi.pubdate.year }}), {{ publi.vip }}</li> 
+{% endif %}
+
+{% endfor %}
+</ul>
