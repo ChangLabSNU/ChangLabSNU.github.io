@@ -21,3 +21,5 @@ Sohyeon Ju is a ... (to be written).
   <li><span>2023–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
   <li><span>2017–2022</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
+
+{% include publication_in_profile.html %}

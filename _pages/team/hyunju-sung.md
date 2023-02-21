@@ -28,3 +28,5 @@ one of the finest bioinformatics laboratories in the world.
   <li><span>2020–2022</span> M.S. in Life Science, POSTECH</li>  
   <li><span>2012–2018</span> B.Sc. in Biotechnology, Yonsei University</li>
 </ul>
+
+{% include publication_in_profile.html %}

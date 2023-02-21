@@ -26,3 +26,5 @@ higher accuracy, better modification detection, and multiplexing.
   <li><span>2020–present</span> MS/PhD Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2016–2020</span> B.S. in Biomaterials Engineering, Seoul National University</li>
 </ul>
+
+{% include publication_in_profile.html %}

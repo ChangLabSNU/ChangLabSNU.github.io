@@ -34,3 +34,5 @@ He worked as a senior researcher at the biotech companies (Seegene and Macrogen)
   <li><span>2012–2013</span> M.Phil. in Integrated Immunology, Nuffield Department of Surgical Sciences, University of Oxford, UK</li>
   <li><span>2008–2011</span> B.Sc. in Biological Sciences (Biotechnology), University of Edinburgh, UK</li>
 </ul>
+
+{% include publication_in_profile.html %}

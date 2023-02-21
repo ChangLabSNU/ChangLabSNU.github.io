@@ -21,3 +21,5 @@ worked at [OECD Korea Policy Centre](http://www.oecdkorea.org/) and
 in charge of administrative duties and international seminars. Hyemyung
 joined the Chang lab in June 2021, and provides administrative support
 for the lab members.
+
+{% include publication_in_profile.html %}

@@ -29,3 +29,4 @@ in nanopore sequencing data and detecting RNA modification.
   <li><span>2017–2021</span> B.S. in IT Engineering &amp; Biological Science, Sookmyung Women’s University</li>
 </ul>
 
+{% include publication_in_profile.html %}

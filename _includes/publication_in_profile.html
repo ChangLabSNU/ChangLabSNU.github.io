@@ -1,9 +1,21 @@
+{% assign authorid = page.name | split: "." | first %}
+
+{% assign number_publications = 0 %}
+{% for publi in site.data.publist %}
+{% assign authormatches = publi.authors | where_exp:"author", "author.link == authorid" %}
+{% if authormatches.size > 0 %}
+{% assign number_publications = number_publications | plus: 1 %}
+{% endif %}
+{% endfor %}
+
+{% if number_publications > 0 %}
+
 #### Publications with Our Lab
 
 <ul class="publications_in_profile">
 {% for publi in site.data.publist %}
 
-{% assign authormatches = publi.authors | where_exp:"author", "author.link == page.authorid" %}
+{% assign authormatches = publi.authors | where_exp:"author", "author.link == authorid" %}
 {% if authormatches.size > 0 %}
 <li><a href="{{ publi.link.url }}" class="publi_title">{{ publi.title }}</a><br/>
 {% include publication_author_list.html -%}
@@ -13,3 +25,4 @@
 
 {% endfor %}
 </ul>
+{% endif %}

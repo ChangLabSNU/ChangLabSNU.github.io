@@ -38,3 +38,5 @@ RNA modifications at the single-molecule level.
   <li><span>2015–2017</span> M.S. in Chemistry, Seoul National University</li>  
   <li><span>2009–2015</span> B.S. in Chemical and Biological Engineering, Seoul National University</li>
 </ul>
+
+{% include publication_in_profile.html %}
