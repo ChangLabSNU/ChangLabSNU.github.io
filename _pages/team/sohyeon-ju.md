@@ -25,7 +25,7 @@ variety of martial arts and is an avid kickboxer. Her diverse experiences
 and perspectives have provided her with unique insights that she hopes
 will contribute to the scientific community. In the Chang lab, her
 goal is to explore and understand comparative genomics by incorporating
-cutting-edge single-molecule sequencing techniques.
+single-molecule sequencing techniques.
 
 #### Education
 
