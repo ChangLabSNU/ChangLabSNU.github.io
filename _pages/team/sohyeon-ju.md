@@ -13,7 +13,19 @@ cv:
 permalink: /team/sohyeon-ju
 ---
 
-Sohyeon Ju is a ... (to be written).
+Sohyeon is a new graduate student at the Chang lab with a keen interest
+in evolutionary developmental biology at the ecological scale. She
+joined the Chang lab in 2023 to study modern molecular techniques for
+analysis of gene regulation and genomes, as she firmly believes that
+analyzing genetic materials in depth is essential to comprehending
+the complexities of life.
+
+In addition to her academic endeavors, Sohyeon enjoys training in a
+variety of martial arts and is an avid kickboxer. Her diverse experiences
+and perspectives have provided her with unique insights that she hopes
+will contribute to the scientific community. In the Chang lab, her
+goal is to explore and understand comparative genomics by incorporating
+cutting-edge single-molecule sequencing techniques.
 
 #### Education
 
