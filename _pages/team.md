@@ -8,12 +8,12 @@ permalink: /team/
 
 ## Group Members
 
-### Staff
-{% assign selected_categories = "principal-investigator,support,research-assistant" | split:',' %}
+### Principal Investigator
+{% assign selected_categories = "principal-investigator" | split:',' %}
 {% include team_list.html %}
 
-### Researchers &amp; Students
-{% assign selected_categories = "student,postdoc" | split:',' %}
+### Members
+{% assign selected_categories = "student,postdoc,support,research-assistant" | split:',' %}
 {% include team_list.html %}
 
 <br/>

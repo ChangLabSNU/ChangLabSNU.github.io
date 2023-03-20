@@ -1,8 +1,9 @@
 {% assign number_printed = 0 %}
 {% assign active_members = site.data.team | where_exp:"memb", "memb.active" %}
 {% assign member_list = active_members | where_exp:"memb", "selected_categories contains memb.category" %}
+{% assign members_by_name = member_list | sort: "sort-key" %}
 
-{% for member in member_list %}
+{% for member in members_by_name %}
 {% assign even_odd = number_printed | modulo: 2 %}
 
 {% if even_odd == 0 %}
@@ -16,7 +17,9 @@
   {% else %}
   <h4>{{ member.name }}</h4>
   {% endif %}
+  {% if member.category != "principal-investigator" %}
   <i>{{ member.info }}</i>
+  {% endif %}
   {% if member.intro %}
   <p class="member-intro">{{ member.intro }}</p>
   {% endif %}

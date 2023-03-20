@@ -6,6 +6,7 @@
   intro: A computational biologist loving molecules and numbers
   link: hyeshik-chang
   category: principal-investigator
+  sort-key: chang-hyeshik
   active: true
 
 - name: Ari Hong
@@ -16,6 +17,7 @@
   intro: Decoding the codes controlling translation
   link: ari-hong
   category: student
+  sort-key: hong-ari
   active: false
 
 - name: Hanju Lee
@@ -26,6 +28,7 @@
   intro: "Tracking the evolution of the molecular rules of <i>Coronaviridae</i>"
   link: hanju-lee
   category: student
+  sort-key: lee-hanju
   active: true
 
 - name: Heeseung Yoo
@@ -36,6 +39,7 @@
   intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
   link: heeseung-yoo
   category: student
+  sort-key: yoo-heeseung
   active: true
 
 - name: Hyun Ju Sung
@@ -46,6 +50,7 @@
   intro: Devising a novel method of nanopore sequencing to detect RNA modification
   link: hyunju-sung
   category: student
+  sort-key: sung-hyun-ju
   active: true
 
 - name: Junsoo Kim 
@@ -56,6 +61,7 @@
   intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
   link: junsoo-kim
   category: student
+  sort-key: kim-junsoo
   active: true
 
 - name: Keewon Sung
@@ -66,6 +72,7 @@
   intro: "Inventing a breakthrough technique for nanopore RNA sequencing"
   link: keewon-sung
   category: postdoc
+  sort-key: sung-keewon
   active: true
 
 - name: Seungbeom Han
@@ -76,6 +83,7 @@
   intro: Decoding the codes controlling translation
   link: seungbeom-han
   category: student
+  sort-key: han-seungbeom
   active: true
 
 - name: Sohyeon Ju
@@ -86,6 +94,7 @@
   intro: Delving into an interesting mechanism of a terminal nucleotidyltransferase with nanopore direct RNA sequencing
   link: sohyeon-ju
   category: student
+  sort-key: ju-sohyeon
   active: true
 
 - name: Yoojung Han
@@ -96,6 +105,7 @@
   intro: Developing a new technique to prepare high-accuracy nanopore signal models
   link: yoojung-han
   category: student
+  sort-key: han-yoojung
   active: true
 
 - name: Hyemyung Lee
@@ -103,6 +113,19 @@
   photo: hmlee-thumb.jpg
   email: hyemyung@snu.ac.kr
   info: Administrative Coordinator
+  intro: Ensuring seamless operation throughout the lab
   link: hyemyung-lee
   category: support
+  sort-key: lee-hyemyung
+  active: true
+
+- name: Chae Young Kwon
+  name_abbr: C. Y. Kwon
+  photo: cykwon-thumb.jpg
+  email: kcy0617@snu.ac.kr
+  info: Research Associate
+  intro: Making sure that the lab projects move forward without a hitch
+  link: chaeyoung-kwon
+  category: research-assistant
+  sort-key: kwon-chae-young
   active: true
