@@ -13,7 +13,12 @@ cv:
 permalink: /team/chaeyoung-kwon
 ---
 
-Chae Young Kwon is ...
+Chae Young Kwon is a research associate at the Chang lab with interest
+in RNA transcription and regulation. She spent her master's degree
+working on a research project in the field of medicine, specializing in
+the physiology and genetic traits of bacteria. She joined the Chang lab
+with the goal of expanding her understanding of the phenomenon of life
+from DNA to RNA.
 
 #### Education
 
