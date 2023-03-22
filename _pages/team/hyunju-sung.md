@@ -3,13 +3,13 @@ layout: member
 title: Hyun Ju Sung
 position: Graduate Student
 handle: hyunju
-email: amp930712@gmail.com
+email: amp9307@snu.ac.kr
 twitter: 
 github: 
 scholar: 
 orcid: 
 image: /images/members/hjsung-thumb.jpg
-cv: 
+cv: /assets/cv/cv-hyunju.pdf
 permalink: /team/hyunju-sung
 ---
 
