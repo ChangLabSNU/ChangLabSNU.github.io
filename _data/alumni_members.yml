@@ -1,13 +1,14 @@
 - name: Yongkuk Choi
   position: Research Associate
   period: [2022, 2022]
+  link: yongkuk-choi
   current: M.D. Student at Catholic University of Korea College of Medicine
 
 - name: Ari Hong
-  position: Undergraduate Intern, Master's Student
+  position: Undergraduate Intern &gt; Master's Student
   period: [2019, 2023]
   link: ari-hong
-  current: Ph.D. Student at <a href="https://sites.google.com/view/snuh-bmi-lab">Dr. Kwangsoo Kim's Lab</a>, Seoul National University
+  current: Ph.D. Student at <a href="https://sites.google.com/view/snuh-bmi-lab">Bio-Medical Informatics Lab</a>, Seoul National University Hospital
 
 - name: Eun-jin Chang
   position: Research Assistant
