@@ -6,7 +6,7 @@ sitemap: false
 permalink: /team/
 ---
 
-## Current Members
+## Members
 
 {% assign selected_categories = "principal-investigator" | split:',' %}
 {% include team_list.html %}
