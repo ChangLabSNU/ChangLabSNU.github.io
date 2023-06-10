@@ -9,7 +9,7 @@ github:
 scholar: 
 orcid: 
 image: /images/members/hjsung-thumb.jpg
-cv: /assets/cv/cv-hyunju.pdf
+cv:
 permalink: /team/hyunju-sung
 ---
 
