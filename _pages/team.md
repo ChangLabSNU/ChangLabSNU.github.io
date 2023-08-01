@@ -16,6 +16,7 @@ permalink: /team/
 
 <br/>
 
+<!--
 ## Former Members
 
 <div id="alumni_list">
@@ -35,6 +36,7 @@ permalink: /team/
 </div>
 {%- endfor %}
 </div>
+-->
 
 ## Undergraduate Interns
 
