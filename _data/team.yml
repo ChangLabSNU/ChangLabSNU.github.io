@@ -129,3 +129,14 @@
   category: research-assistant
   sort-key: kwon-chae-young
   active: true
+
+- name: Jayoung Ku
+  name_abbr: J. Ku
+  photo: jku-thumb.jpg
+  email: jayoung0115@snu.ac.kr
+  info: Graduate Student
+  intro: Improving the way to design mRNA vaccines
+  link: jayoung-ku
+  category: student
+  sort-key: ku-jayoung
+  active: true
