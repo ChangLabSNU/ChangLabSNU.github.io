@@ -140,3 +140,14 @@
   category: student
   sort-key: ku-jayoung
   active: true
+
+- name: Sojeong Lee
+  name_abbr: S. Lee
+  photo: sjlee-thumb.jpg
+  email: lsj975@snu.ac.kr
+  info: Graduate Student
+  intro: Inventing a method to decrypt modified bases in heavily-modified RNAs
+  link: sojeong-lee
+  category: student
+  sort-key: lee-sojeong
+  active: true

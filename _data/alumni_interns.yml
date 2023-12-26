@@ -1,6 +1,16 @@
+- name: Ha Kyung Kim
+  year_begin: 2023
+  year_end: 2024
+  affiliation_then: Yonsei University
+
+- name: Hoon Ma
+  year_begin: 2023
+  year_end: 2024
+  affiliation_then: Seoul National University
+
 - name: Dongmin Ryu
   year_begin: 2023
-  year_end: 2023
+  year_end: 2024
   affiliation_then: Pohang University of Science and Technology
 
 - name: Seunghyun Kim
@@ -22,6 +32,7 @@
   year_begin: 2023
   year_end: 2023
   affiliation_then: Soongsil University
+  link: sojeong-lee
 
 - name: Seungyoon Oh
   year_begin: 2023
