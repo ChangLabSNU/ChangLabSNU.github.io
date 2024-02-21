@@ -16,18 +16,19 @@ permalink: /team/
 
 <br/>
 
-<!--
 ## Former Members
 
+{% assign alumni_by_leaving_date = site.data.alumni_members | sort: "end_date" | reverse %}
+
 <div id="alumni_list">
-{% for person in site.data.alumni_members -%}
+{% for person in alumni_by_leaving_date -%}
 <div>
 <h5>{% if person.link -%}
 <a href="{{ site.url }}{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>
 {%- else %}{{ person.name }}{% endif %}
 <span>–
 {{ person.position }}
-({% if person.period[0] == person.period[1] %}{{ person.period[0] }}{% else %}{{ person.period[0] }}–{{ person.period[1] }}{% endif %})
+({% if person.start_date[0] == person.end_date[0] %}{{ person.start_date[0] }}{% else %}{{ person.start_date[0] }}–{{ person.end_date[0] }}{% endif %})
 </span>
 </h5>
 <div class="current_position">
@@ -36,7 +37,6 @@ permalink: /team/
 </div>
 {%- endfor %}
 </div>
--->
 
 ## Undergraduate Interns
 

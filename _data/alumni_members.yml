@@ -1,20 +1,24 @@
 - name: Ari Hong
   position: Undergraduate Intern &gt; Master's Student
-  period: [2019, 2023]
+  start_date: [2019, 7, 15]
+  end_date: [2023, 2, 10]
   link: ari-hong
   current: Ph.D. Student at the Bio-Medical Informatics Lab, Seoul National University Hospital
 
 - name: Yongkuk Choi
   position: Research Associate
-  period: [2022, 2022]
+  start_date: [2022, 7, 11]
+  end_date: [2022, 12, 31]
   link: yongkuk-choi
   current: M.D. Student at Catholic University of Korea College of Medicine
 
 - name: Eun-jin Chang
   position: Research Assistant
-  period: [2019, 2022]
+  start_date: [2019, 3, 12]
+  end_date: [2022, 1, 31]
 
 - name: Heeseung Yoo
   position: Undergraduate Intern &gt; Master's Student
-  period: [2021, 2024]
+  start_date: [2021, 9, 1]
+  end_date: [2024, 2, 8]
   link: heeseung-yoo

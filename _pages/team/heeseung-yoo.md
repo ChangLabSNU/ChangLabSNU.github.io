@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Heeseung Yoo
-position: Graduate Student
+position: Alumni (2021–2024)
 handle: heeseung
 email: yhs252525@snu.ac.kr
 twitter: 
