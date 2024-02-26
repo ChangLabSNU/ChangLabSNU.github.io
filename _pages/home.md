@@ -37,13 +37,13 @@ examine molecular mechanisms at a systems level.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 6" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2307-01.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-02.jpg" alt="Slide 6" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 6" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2202-01.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-01.jpg" alt="Slide 6" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 4" />
