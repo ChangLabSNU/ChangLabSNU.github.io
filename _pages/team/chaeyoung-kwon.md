@@ -9,7 +9,7 @@ github:
 scholar: 
 orcid: 
 image: /images/members/cykwon-thumb.jpg
-cv: 
+cv: /assets/cv/cv-chaeyoung.pdf
 permalink: /team/chaeyoung-kwon
 ---
 
