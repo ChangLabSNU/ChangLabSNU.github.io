@@ -34,31 +34,31 @@ examine molecular mechanisms at a systems level.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/lablogo-slider.jpg" alt="Slide 1" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2404-01.jpg" alt="Slide 2" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-02.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-01.jpg" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 4" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-01.jpg" alt="Slide 6" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 5" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 4" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 6" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 5" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 7" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2301-01.jpg" alt="Slide 2" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2301-01.jpg" alt="Slide 8" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2107-01.jpg" alt="Slide 2" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-02.jpg" alt="Slide 9" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2105-07.jpg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2107-01.jpg" alt="Slide 10" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
