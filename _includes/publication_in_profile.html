@@ -1,5 +1,37 @@
 {% assign authorid = page.name | split: "." | first %}
 
+{% assign number_fellowships = 0 %}
+{% for fsh in site.data.fellowships %}
+{% if fsh.recipient == authorid %}
+{% assign number_fellowships = number_fellowships | plus: 1 %}
+{% endif %}
+{% endfor %}
+
+{% if number_fellowships > 0 %}
+
+#### Fellowships
+
+<ul class="fellowships_in_profile chronological">
+{% for fsh in site.data.fellowships reversed %}
+
+{% if fsh.recipient == authorid %}
+<li>
+<span class="fellowship_period">
+{%- if fsh.year.size > 1 -%}
+{{ fsh.year[0] }}–{{ fsh.year[1] }}
+{%- else -%}
+{{ fsh.year }}
+{%- endif -%}
+</span>
+<a href="{{ fsh.href }}" class="fellowship_title">{{ fsh.title }}</a>
+from {{ fsh.donor }}
+</li>
+{% endif %}
+
+{% endfor %}
+</ul>
+{% endif %}
+
 {% assign number_publications = 0 %}
 {% for publi in site.data.publist %}
 {% assign authormatches = publi.authors | where_exp:"author", "author.link == authorid" %}
