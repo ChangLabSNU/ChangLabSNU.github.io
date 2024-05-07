@@ -13,11 +13,13 @@ cv: /assets/cv/cv-junsoopablo.pdf
 permalink: /team/junsoo-kim
 ---
 
-Junsoo Kim is a computational biologist interested in using multi-omics data to discover hitherto unappreciated aspects of disease pathology. The goal of his research is to use high-throughput screens to gain insights into the biological basis of disease and identify novel drug targets.
+Junsoo Kim is a computational biologist driven by a deep curiosity to unravel the complex world of RNA biology. His research centers on investigating the intricate interplay between post-transcriptional modifications and the fate of RNA molecules, with a particular focus on understanding how these modifications regulate RNA stability and translation efficiency.
 
-He is very much a technophile and enjoys using the latest advances in bioinformatics to further his research goals. After completing a master’s degree from the University of Oxford, he joined the Genomic Medicine Institute at Seoul National University (GMI-SNU) as a substitute for national service. In GMI-SNU, he researched on [de novo assembly of the Korean reference genome](https://www.nature.com/articles/nature20098) and developed an aspiration to research the underlying mechanism of gene regulation.
+Junsoo's journey in bioinformatics began with a master's degree from the University of Oxford, followed by a stint at the Genomic Medicine Institute at Seoul National University (GMI-SNU) as a substitute for national service. There, he worked on [de novo assembly of the Korean reference genome](https://www.nature.com/articles/nature20098), which sparked his fascination with the underlying mechanisms of gene regulation.
 
-He worked as a senior researcher at the biotech companies (Seegene and Macrogen) where he was responsible for the development of medical diagnostic technology. Since joining Chang Lab in 2021, his main research focuses on exploring the global dynamic landscapes of coronaviral genomes and regulatory rules. Using high-throughput technologies, he aims to deeply understand the molecular basis for viral genome biogenesis and develop novel antiviral strategies.
+After gaining valuable experience as a senior researcher at biotech companies like Seegene and Macrogen, Junsoo joined Chang Lab in 2021 to pursue his Ph.D. in Bioinformatics at Seoul National University. In the lab, he led a study that uncovered the molecular mechanisms by which [SARS-CoV-2 infection disrupts host translation in the lungs](https://www.nature.com/articles/s12276-023-01110-0), providing novel insights into the pathogenesis of COVID-19. 
+
+Building upon this foundation, Junsoo now aims to leverage the power of high-throughput sequencing technologies and deep learning to develop innovative computational methods that can detect and quantify RNA modifications with unprecedented resolution. Through his research, Junsoo hopes to shed light on the dynamic landscape of the RNA lifecycle and contribute to a deeper understanding of how post-transcriptional regulation shapes gene expression in health and disease.
 
 #### Professional Experiences
 
