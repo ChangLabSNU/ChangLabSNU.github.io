@@ -29,9 +29,7 @@ briefly why you are interested and what you are expecting as a career
 goal. Then, attach a CV, including information about the subjects you
 had as an undergraduate.
 
-We provide Ph.D. programs in [Interdisciplinary Program in
-Bioinformatics](http://ipbi.snu.ac.kr) and [School of Biological
-Sciences](http://biosci.snu.ac.kr).
+We provide a Ph.D. program in the [School of Biological Sciences](http://biosci.snu.ac.kr).
 
 ### Intern programs for undergraduate students
 

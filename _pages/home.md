@@ -83,9 +83,8 @@ We are currently seeking motivated graduate students and postdocs to
 join our collaborative research efforts in this exciting field
 [(more info)]({{ site.url }}{{ site.baseurl }}/openings)!
 
-Our lab is affiliated with the [School of Biological Sciences](https://biosci.snu.ac.kr) and
-the [Interdisciplinary Program in Bioinformatics](http://ipbi.snu.ac.kr) at
-[Seoul National University](https://www.snu.ac.kr).
+Our lab is affiliated with the [School of Biological Sciences](https://biosci.snu.ac.kr)
+at [Seoul National University](https://www.snu.ac.kr).
 Currently, our group's research is supported by funding
 from the [Center for RNA Research](https://rna.ibs.re.kr) in the
 [Institute for Basic Science (IBS)](https://www.ibs.re.kr) and the
