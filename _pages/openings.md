@@ -46,6 +46,6 @@ a [paid internship program](https://biosci.snu.ac.kr/board/notice?cidx=29&bt=t&b
 during the summer and winter vacations.
 
 ### More..
-한국인 학생분들은 [연구실 지원 안내](https://qbio.notion.site/QBioLab-17ce63c88d5843a19ac8f670c7b62220)
+한국인 학생분들은 [연구실 지원 안내](https://qbio.io/join)
 페이지를 참고하여 지원 부탁드립니다!
 
