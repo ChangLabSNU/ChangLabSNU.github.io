@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Keewon Sung
-position: Postdoctoral Fellow
+position: Research Assistant Professor
 handle: keewon
 email: alkwemi0429@snu.ac.kr
 twitter: 
