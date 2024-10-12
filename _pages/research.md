@@ -18,7 +18,7 @@ proteome-wide views by the high-throughput methods allow us to step
 closer to the rules of nature with less bias towards our current
 knowledge.
 
-### Developing Optimal Design Techniques for mRNA Vaccines
+### Optimal Design Strategies for mRNA Vaccines
 
 mRNA vaccines use untranslated regions (UTRs) and coding sequences
 (CDS) similar to cellular mRNAs. A single protein sequence can have over
