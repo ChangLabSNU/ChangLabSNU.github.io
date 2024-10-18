@@ -151,3 +151,14 @@
   category: student
   sort-key: lee-sojeong
   active: true
+
+- name: Chaebeom Sheen
+  name_abbr: C. Sheen
+  photo: cbsheen-thumb.jpg
+  email: cauchybs@snu.ac.kr
+  info: Research Assistant
+  intro: Improving the stability of mRNA vaccines containing N1-methylpseudouridine
+  link: chaebeom-sheen
+  category: research-assistant
+  sort-key: sheen-chaebeom
+  active: true
