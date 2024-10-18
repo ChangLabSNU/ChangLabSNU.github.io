@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Chaebeom Sheen
-position: N/A # Research Assistant? Research Associate? 
+position: Research Assistant
 handle: cbsheen
 email: cauchybs@snu.ac.kr
 twitter: 
@@ -13,9 +13,21 @@ cv:
 permalink: /team/chaebeom-sheen
 ---
 
-Chaebeom collaborated with Hyeshik and [Sohyeon](https://qbio.io/team/sohyeon-ju) in 2024 after taking a leave of absence from medical school. He contributed to the development of [VaxPress](https://github.com/ChangLabSNU/VaxPress), an elitist multi-objective genetic algorithm designed to optimize the coding region of mRNA drugs. His work focused on incorporating the structural and energetic properties of N1-methylpseudouridine, a modified nucleotide commonly used in mRNA vaccines. Additionally, he helped distribute VaxPress using Google Cloud and Kubernetes, enabling a scalable and distributed approach to mRNA optimization. 
-
-Chaebeom's work in VaxPress equipped him with a unique blend of skills at the intersection of bioscience and technology. He gained hands-on experience in cloud computing and distributed systems while deepening his knowledge of Python and machine learning. With this newfound interdisciplinary insight, Chaebeom aims to explore further applications of computational approaches in medicine and human biology. His goal is to bridge clinical practice with computational biology, potentially in fields such as personalized medicine or computational pathology. 
+Chaebeom joined as a visiting member while on leave
+from medical school. He is participating on developing
+[VaxPress](https://github.com/ChangLabSNU/VaxPress), an advanced genetic
+algorithm approach for codon optimization for mRNA vaccines. Chaebeom
+focused on <i>N</i><sup>1</sup>-methylpseudouridine, a modified nucleotide
+used in mRNA vaccines. He also implemented VaxPress on a cloud platform
+using Kubernetes for scalable, distributed optimization. This experience
+has provided him with a unique blend of skills at the intersection of
+biological science and technology. Chaebeom gained hands-on expertise
+in cloud computing, distributed systems, Python, and machine learning,
+deepening his interdisciplinary knowledge. He aims to explore further
+applications of computational approaches in medicine and human biology,
+with a particular interest in bridging clinical practice and computational
+biology, potentially in areas like personalized medicine or computational
+pathology.
 
 
 #### Education
