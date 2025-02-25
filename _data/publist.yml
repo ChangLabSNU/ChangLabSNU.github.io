@@ -1,4 +1,27 @@
 - authors:
+    - name: J. H. Ahn
+    - name: S. Lee
+    - name: J. Moon
+    - link: yoojung-han
+    - link: hyeshik-chang
+    - name: J. Youn
+    - name: J. W. Cho
+      is_corresponding: true
+    - name: J.-H. Jang
+      is_corresponding: true
+  title: Another common genetic ataxia in South Korea: Spinocerebellar ataxia 36
+  journal: European Journal of Human Genetics
+  vip: "in press"
+  pubdate:
+    year: 2025
+    month: Feb
+    mday: 24
+  doi: doi.org/10.1038/s41431-024-01783-9
+  marked: 0
+  link:
+    url: "https://www.nature.com/articles/s41431-024-01783-9"
+
+- authors:
     - link: junsoo-kim
       is_first: true
     - name: D. Youn
