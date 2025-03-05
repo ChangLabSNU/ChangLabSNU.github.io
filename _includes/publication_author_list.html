@@ -6,7 +6,7 @@
 {% endif -%}
 {%- if author.link -%}
 {%- assign member = site.data.team | where_exp:"memb", "memb.link == author.link" -%}
-  <a class="publi_author" href="{{ site.url }}{{ site.baseurl }}/team/{{ author.link }}">{{ member.first.name_abbr }}</a>
+  <a class="publi_author" href="{{ site.url }}{{ site.baseurl }}/team/{{ author.link }}">{{ member.first.name }}</a>
 {%- else -%}
   <span class="publi_author">{{ author.name }}</span>
 {%- endif -%}

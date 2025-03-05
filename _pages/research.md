@@ -18,75 +18,70 @@ proteome-wide views by the high-throughput methods allow us to step
 closer to the rules of nature with less bias towards our current
 knowledge.
 
-### Revealing the uncharted 3′ extremity of mRNA
+### Optimal Design Strategies for mRNA Vaccines
 
-![]({{ site.url }}{{ site.baseurl }}/images/research/tailseq-flowcell-image.jpg){: style="width: 300px; margin: 20px; float: right; border: 10px"}
+mRNA vaccines use untranslated regions (UTRs) and coding sequences
+(CDS) similar to cellular mRNAs. A single protein sequence can have over
+10<sup>600</sup> possible mRNA sequences due to codon redundancy, and the
+diversity in UTRs is even greater. Unlike cellular mRNAs, mRNA vaccines
+are not replicated inside the cell, so optimizing their stability is
+crucial for efficacy.
 
-A 3′ end of an RNA is not such a place where boring repeats of
-adenosines hang out sluggishly. Poly(A) tails are rapidly tailored to
-express their payloads as instructed by the regulatory network. Moreover,
-reaching the cytoplasm, they are trimmed and elongated, uridylated
-and deuridylated, and even guanylated and deguanylated. Those marks
-altogether control the expression for precise quantity, timing, and life
-span of messages.
+![]({{ site.url }}{{ site.baseurl }}/images/research/sars-cov-2-codons.jpg){: style="width: 100%; margin: 5px 0px;"}
 
-Much about poly(A) is still unclear due to the difficulties by their
-low complexity and dynamic nature. Our technique called *TAIL-seq* is
-currently the most widely used one for profiling the poly(A) tails across the
-thousands of different messenger RNAs. It has been applied to
-several exciting discoveries of unknown regulations to poly(A) tails:
-poly(A) uridylation
-([Lim](https://www.cell.com/abstract/S0092-8674(14)01427-5),
-[Zuber](https://www.sciencedirect.com/science/article/pii/S2211124716301814)),
-G/A mixed-tailing
-([Lim](https://science.sciencemag.org/content/361/6403/701.abstract)),
-initiation of selective RNA degradation in the vertebrate reproduction
-([Chang](https://www.cell.com/molecular-cell/fulltext/S1097-2765(18)30185-0),
-[Morgan](https://www.nature.com/articles/nature23318)), restriction
-of LINE-1 transcripts
-([Warkocki](https://www.sciencedirect.com/science/article/pii/S0092867418309176)),
-defensive responses to viral RNAs
-([Le Pen](https://www.nature.com/articles/s41594-018-0106-9),
-[Batra](https://www.nature.com/articles/nsmb.3310)).
+We are developing methods to rapidly design optimal mRNA sequences
+by considering biological factors that influence RNA stability. RNA
+secondary structure significantly affects stability, and our algorithms
+identify unstable features to guide vaccine design. Since RNA exists as
+an ensemble of multiple structures rather than a single conformation,
+it is essential to consider the thermodynamic probabilities of all
+possible structures during design.
 
-Despite the advances by the approach, there are still several important
-biological questions that cannot be easily answered using TAIL-seq.
-- _TAIL-seq can't distinguish isoforms._ TAIL-seq reads lack the exact
-information about the transcript. It is difficult to tell which one is
-related to a read among the alternatively spliced (or alternatively
-polyadenylated) isoforms. Knowing the sequence composition of 3′ UTR
-associated with each poly(A) tail is crucial to understand regulatory
-elements in the controls of RNA stability and translation.
+We also focus on preserving cis-regulatory elements in UTRs for RNA
+stability while optimizing the overall sequence. To meet [CEPI's 100 Days
+Mission](https://cepi.net/cepi-20-and-100-days-mission), we incorporate
+parallel cloud computing and design strategies that minimize DNA synthesis
+and assembly times.
 
-- _Long poly(A) tails are often underestimated in TAIL-seq._ Multiple steps
-bring a bias against long poly(A) tails in TAIL-seq. PCR amplification
-and interference to sequencing reactions are the most prominent sources
-that make long poly(A) tails stand less in the result. To clarify what's
-happening to the long poly(A) tails in the cell, we need a reliable way
-to observe the tails more accurately in a high-throughput fashion.
+Our optimization methods and algorithms are implemented in an open-source
+tool named [VaxPress](https://github.com/ChangLabSNU/VaxPress), with
+ongoing improvements to enhance stability and speed of mRNA therapeutic
+development.
 
-- _TAIL-seq is limited to highly expressed transcripts._ Enough tags are
-essential for high-resolution measurement of poly(A) length profiling
-of a gene. Lowly expressed genes or transcripts often fail to yield
-enough poly(A) tags in the result, while many of them are pivotal
-regulators that change the fate of the cell. We're working on improving
-the library preparation and sequencing to make it easier, efficient,
-yet more sensitive.
-
-
-### Single-molecule RNA analysis in a sub-nucleotide resolution
+### Single-Molecule RNA Analysis in a Sub-Nucleotide Resolution
 
 <iframe id="ytplayer" type="text/html" width="480" height="270"
   src="https://www.youtube.com/embed/RcP85JHLmnI?mute=1&cc_load_policy=0&controls=0&disablekb=1&loop=1&modestbranding=1&start=33&end=67"
   frameborder="0" style="width: 480px; margin: 20px; float: right; border: 10px"
   ></iframe>
 
-The same genome gives birth to RNAs, but every RNA lives a different life. Polyadenylation, splicing, base modifications, capping, folding, subcellular localization, and coverings with thousands of RNA-binding proteins make every molecule unique. To fully understand the complex regulations between the genomic DNA and protein outputs, we need an ability to read the information inside the single RNA molecules one by one. Nanopore direct sequencing is an enabling technology to reveal the missing connections in the genetic circuitry.
+RNA molecules, despite originating from a common genome, exhibit
+remarkable diversity in their modifications and life cycles. This
+diversity arises from a range of processes, including polyadenylation,
+splicing, base modifications, capping, folding, subcellular localization,
+and interactions with numerous RNA-binding proteins. To elucidate the
+intricate regulatory mechanisms that bridge genomic DNA and protein
+expression, it is crucial to analyze individual RNA molecules at the
+single-molecule level.
 
 ![]({{ site.url }}{{ site.baseurl }}/images/research/nanopore-sm-features.jpg){: style="width: 400px; margin: 20px; float: right; border: 10px"}
 
 ![]({{ site.url }}{{ site.baseurl }}/images/research/nanopore-polya.jpg){: style="width: 420px; margin: 20px; float: right; border: 10px"}
 
-In nanopore direct RNA sequencing (DRS), a nucleic acid migrates through “nanopore,” a tiny hole, embedded within a bilayer membrane. The ionic current is distrubed in uniquely different levels depending on the RNA base passing through the hole. This information presents special opportunities to survey sub-nucleotide-level details throughout a full-length RNA molecule.
+Nanopore direct sequencing has emerged as a transformative technology
+capable of revealing the complex connections within genetic circuitry. In
+nanopore direct RNA sequencing (DRS), nucleic acids traverse a nanoscale
+pore embedded in a bilayer membrane. As each RNA base passes through
+the nanopore, it induces a unique disturbance in the ionic current,
+enabling the detection of individual nucleotides. This technique offers
+unprecedented opportunities to examine sub-nucleotide-level details
+across full-length RNA molecules.
 
-We are developing a full suite comprising of biochemical methods as well as machine learning applications to adopt direct RNA sequencing to RNA biology. With those tools, we will further scrutinize the unclear parts of RNA regulatory mechanisms.
+To leverage the potential of DRS for RNA biology, we are developing
+a comprehensive suite of biochemical methods and machine learning
+applications. These tools aim to enhance our ability to investigate
+previously unclear aspects of RNA regulatory mechanisms. By adapting
+direct RNA sequencing to the nuances of RNA biology, we seek to deepen
+our understanding of the complex processes that govern RNA function
+and regulation.
+

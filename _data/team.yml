@@ -6,6 +6,7 @@
   intro: A computational biologist loving molecules and numbers
   link: hyeshik-chang
   category: principal-investigator
+  sort-key: chang-hyeshik
   active: true
 
 - name: Ari Hong
@@ -16,7 +17,8 @@
   intro: Decoding the codes controlling translation
   link: ari-hong
   category: student
-  active: true
+  sort-key: hong-ari
+  active: false
 
 - name: Hanju Lee
   name_abbr: H. Lee
@@ -26,6 +28,7 @@
   intro: "Tracking the evolution of the molecular rules of <i>Coronaviridae</i>"
   link: hanju-lee
   category: student
+  sort-key: lee-hanju
   active: true
 
 - name: Heeseung Yoo
@@ -36,19 +39,21 @@
   intro: "Developing an algorithm that detect RNA sites augmented by chemical adducts"
   link: heeseung-yoo
   category: student
-  active: true
+  sort-key: yoo-heeseung
+  active: false
 
 - name: Hyun Ju Sung
   name_abbr: H. J. Sung
   photo: hjsung-thumb.jpg
-  email: amp930712@gmail.com
+  email: amp9307@snu.ac.kr
   info: Graduate Student
   intro: Devising a novel method of nanopore sequencing to detect RNA modification
   link: hyunju-sung
   category: student
-  active: true
+  sort-key: sung-hyun-ju
+  active: false
 
-- name: Junsoo Kim 
+- name: Junsoo Kim
   name_abbr: J. Kim
   photo: jskim-thumb.jpg
   email: junsoopablo@snu.ac.kr
@@ -56,16 +61,18 @@
   intro: "Deciphering the architecture of infectious diseases by combining insights from high-throughput <i>omics</i> technologies"
   link: junsoo-kim
   category: student
+  sort-key: kim-junsoo
   active: true
 
 - name: Keewon Sung
   name_abbr: K. Sung
   photo: kwsung-thumb.jpg
   email: alkwemi0429@snu.ac.kr
-  info: "Postdoctoral Fellow"
+  info: "Research Assistant Professor"
   intro: "Inventing a breakthrough technique for nanopore RNA sequencing"
   link: keewon-sung
   category: postdoc
+  sort-key: sung-keewon
   active: true
 
 - name: Seungbeom Han
@@ -76,16 +83,18 @@
   intro: Decoding the codes controlling translation
   link: seungbeom-han
   category: student
+  sort-key: han-seungbeom
   active: true
 
 - name: Sohyeon Ju
   name_abbr: S. Ju
-  photo: null-thumb.png
+  photo: shju-thumb.jpg
   email: shjoo06@snu.ac.kr
   info: Graduate Student
   intro: Delving into an interesting mechanism of a terminal nucleotidyltransferase with nanopore direct RNA sequencing
   link: sohyeon-ju
   category: student
+  sort-key: ju-sohyeon
   active: true
 
 - name: Yoojung Han
@@ -96,13 +105,82 @@
   intro: Developing a new technique to prepare high-accuracy nanopore signal models
   link: yoojung-han
   category: student
+  sort-key: han-yoojung
   active: true
 
 - name: Hyemyung Lee
   name_abbr: H. Lee
   photo: hmlee-thumb.jpg
   email: hyemyung@snu.ac.kr
-  info: Administrative Specialist
+  info: Administrative Coordinator
+  intro: Ensuring seamless operation throughout the lab
   link: hyemyung-lee
   category: support
+  sort-key: lee-hyemyung
+  active: true
+
+- name: Chae Young Kwon
+  name_abbr: C. Y. Kwon
+  photo: cykwon-thumb.jpg
+  email: kcy0617@snu.ac.kr
+  info: Research Associate
+  intro: Making sure that the lab projects move forward with a blazing speed
+  link: chaeyoung-kwon
+  category: research-assistant
+  sort-key: kwon-chae-young
+  active: true
+
+- name: Jayoung Ku
+  name_abbr: J. Ku
+  photo: jku-thumb.jpg
+  email: jayoung0115@snu.ac.kr
+  info: Graduate Student
+  intro: Improving the way to design mRNA vaccines
+  link: jayoung-ku
+  category: student
+  sort-key: ku-jayoung
+  active: true
+
+- name: Sojeong Lee
+  name_abbr: S. Lee
+  photo: sjlee-thumb.jpg
+  email: lsj975@snu.ac.kr
+  info: Graduate Student
+  intro: Inventing a method to decrypt modified bases in heavily-modified RNAs
+  link: sojeong-lee
+  category: student
+  sort-key: lee-sojeong
+  active: true
+
+- name: Chaebeom Sheen
+  name_abbr: C. Sheen
+  photo: cbsheen-thumb.jpg
+  email: cauchybs@snu.ac.kr
+  info: Research Assistant
+  intro: Improving the stability of mRNA vaccines containing N1-methylpseudouridine
+  link: chaebeom-sheen
+  category: research-assistant
+  sort-key: sheen-chaebeom
+  active: true
+
+- name: Hoon Ma
+  name_abbr: H. Ma
+  photo: hma-thumb.jpg
+  email: mahoon2@snu.ac.kr
+  info: Graduate Student
+  intro: Improving the manufacturing process of mRNA vaccines
+  link: hoon-ma
+  category: student
+  sort-key: ma-hoon
+  active: true
+
+- name: Jisu Lim
+  name_abbr: J. Lim
+  photo: jslim-thumb.jpg
+  email: quotient@snu.ac.kr
+  info: Graduate Student
+  intro: Exploring the secrets of designing mRNA vaccines
+  link: jisu-lim
+  category: student
+  sort-key: lim-jisu
   active: true

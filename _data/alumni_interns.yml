@@ -1,7 +1,132 @@
+- name: Hyunsoo Ham
+  year_begin: 2025
+  year_end: 2025
+  affiliation_then: Seoul National University
+
+- name: Nakbeom Seong
+  year_begin: 2024
+  year_end: 2025
+  affiliation_then: Korea University
+
+- name: Jisu Lim
+  year_begin: 2024
+  year_end: 2025
+  affiliation_then: Korea University
+  link: jisu-lim
+
+- name: Yeon U Lee
+  year_begin: 2024
+  year_end: 2024
+  affiliation_then: Seoul National University
+
+- name: Hyunseo Son
+  year_begin: 2024
+  year_end: 2024
+  affiliation_then: Seoul National University
+
+- name: Min Hyung Kim
+  year_begin: 2024
+  year_end: 2024
+  affiliation_then: Korea University
+
+- name: Yewon Chung
+  year_begin: 2024
+  year_end: 2024
+  affiliation_then: Seoul National University
+
+- name: Hyungseo Ham
+  year_begin: 2024
+  year_end: 2024
+  affiliation_then: Seoul National University
+
+- name: Jihyeon Oh
+  year_begin: 2024
+  year_end: 2024
+  affiliation_then: Seoul National University
+
+- name: Ha Kyung Kim
+  year_begin: 2023
+  year_end: 2024
+  affiliation_then: Yonsei University
+
+- name: Hoon Ma
+  year_begin: 2023
+  year_end: 2024
+  affiliation_then: Seoul National University
+  link: hoon-ma
+
+- name: Dongmin Ryu
+  year_begin: 2023
+  year_end: 2024
+  affiliation_then: Pohang University of Science and Technology
+
+- name: Seunghyun Kim
+  year_begin: 2023
+  year_end: 2023
+  affiliation_then: Daegu Gyeongbuk Institute of Science and Technology
+
+- name: Jaehyeong Lee
+  year_begin: 2023
+  year_end: 2023
+  affiliation_then: Seoul National University
+
+- name: Jiwon Shin
+  year_begin: 2023
+  year_end: 2023
+  affiliation_then: Seoul National University
+
+- name: Sojeong Lee
+  year_begin: 2023
+  year_end: 2023
+  affiliation_then: Soongsil University
+  link: sojeong-lee
+
+- name: Seungyoon Oh
+  year_begin: 2023
+  year_end: 2023
+  affiliation_then: Seoul National University
+
+- name: Hyun Soo Ham
+  year_begin: 2022
+  year_end: 2023
+  affiliation_then: Seoul National University
+
+- name: Sung Joon Huang
+  year_begin: 2022
+  year_end: 2023
+  affiliation_then: Seoul National University
+
+- name: Yewon Kwon
+  year_begin: 2022
+  year_end: 2022
+  affiliation_then: Seoul National University
+
+- name: Ina Jeon
+  year_begin: 2022
+  year_end: 2022
+  affiliation_then: Korea University
+
+- name: Sohyeon Ju
+  year_begin: 2022
+  year_end: 2022
+  affiliation_then: Seoul National University
+  link: sohyeon-ju
+
+- name: Jaeseon Lee
+  year_begin: 2022
+  year_end: 2022
+  affiliation_then: Seoul National University
+
+- name: Junseo Kang
+  year_begin: 2022
+  year_end: 2022
+  affiliation_then: Hanyang University
+
 - name: Jayoung Ku
   year_begin: 2021
   year_end: 2022
   affiliation_then: Seoul National University
+  link: jayoung-ku
 
 - name: Sanghyo Lee
   year_begin: 2021
@@ -17,6 +142,7 @@
   year_begin: 2021
   year_end: 2021
   affiliation_then: Sookmyung Women's University
+  link: heeseung-yoo
 
 - name: Hyeon Hwang
   year_begin: 2021
@@ -32,6 +158,7 @@
   year_begin: 2021
   year_end: 2021
   affiliation_then: KAIST
+  link: seungbeom-han
 
 - name: Jihyeon Park
   year_begin: 2021
@@ -77,6 +204,7 @@
   year_begin: 2020
   year_end: 2020
   affiliation_then: SNU
+  link: yoojung-han
 
 - name: Dongjoo Lee
   year_begin: 2020
@@ -102,8 +230,10 @@
   year_begin: 2019
   year_end: 2021
   affiliation_then: SNU
+  link: hanju-lee
 
 - name: Ari Hong
   year_begin: 2019
   year_end: 2020
   affiliation_then: SNU
+  link: ari-hong

@@ -96,6 +96,11 @@ firstp {
     margin-right: 30px;
 }
 
+ul.publications_in_profile li {
+    padding-bottom: 12px;
+    line-height: 130%;
+}
+
 span.publi_journal {
     font-family: $headings-font-family;
     font-style: italic;
@@ -288,17 +293,37 @@ a.member-link {
     line-height: 1.65;
 }
 
-div#alumni h4 {
-    padding-top: 15px;
+div#intern_list h4 {
+    padding-top: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
-div#alumni h3 {
-    margin-top: 15px;
-    padding-top: 15px;
-}
-
-div#alumni small {
+div#intern_list small {
     color: #a0a0a0;
+}
+
+div#alumni_list {
+    padding-top: 3px;
+    padding-bottom: 15px;
+}
+
+div#alumni_list div.current_position {
+    padding-top: 0px;
+}
+
+div#alumni_list h5 span {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 90%;
+}
+
+div#alumni_list h5 {
+    margin-bottom: 2px;
+}
+
+div#alumni_list h5 a {
+    color: #404040;
 }
 
 @media only screen and (max-width: 768px) {

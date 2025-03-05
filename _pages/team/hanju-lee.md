@@ -21,3 +21,5 @@ Hanju Lee studies bioinformatics and statistics to develop method measuring leng
   <li><span>2021–present</span> MS/PhD Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2017–2021</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
+
+{% include publication_in_profile.html %}

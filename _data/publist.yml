@@ -1,4 +1,75 @@
 - authors:
+    - name: J. H. Ahn
+    - name: S. Lee
+    - name: J. Moon
+    - link: yoojung-han
+    - link: hyeshik-chang
+    - name: J. Youn
+    - name: J. W. Cho
+      is_corresponding: true
+    - name: J.-H. Jang
+      is_corresponding: true
+  title: "Another common genetic ataxia in South Korea: Spinocerebellar ataxia 36"
+  journal: European Journal of Human Genetics
+  vip: "in press"
+  pubdate:
+    year: 2025
+    month: Feb
+    mday: 24
+  doi: doi.org/10.1038/s41431-024-01783-9
+  marked: 0
+  link:
+    url: "https://www.nature.com/articles/s41431-024-01783-9"
+
+- authors:
+    - link: junsoo-kim
+      is_first: true
+    - name: D. Youn
+      is_first: true
+    - name: S. Choi
+      is_first: true
+    - name: Y. W. Lee
+    - name: D. Sumberzul
+    - name: J. Yoon
+    - link: hanju-lee
+    - name: J. W. Bae
+    - name: H. Noh
+    - name: D. On
+    - name: S.-M. Hong
+    - name: S.-H. An
+    - name: H. J. Jang
+    - name: S. Y. Kim
+    - name: Y. B. Kim
+    - name: J.-Y. Hwang
+    - name: H.-J. Lee
+    - name: H. B. Kim
+    - name: J. W. Park
+    - name: J.-W. Yun
+    - name: J.-S. Shin
+    - name: J.-Y. Seo
+    - name: K. T. Nam
+    - name: K.-S. Choi
+    - name: H.-Y. Lee
+      is_corresponding: true
+    - link: hyeshik-chang
+      is_corresponding: true
+    - name: J. K. Seong
+      is_corresponding: true
+    - name: J. Cho
+      is_corresponding: true
+  title: "SARS-CoV-2 infection engenders heterogeneous ribonucleoprotein interactions to impede translation elongation in the lungs"
+  journal: "Experimental & Molecular Medicine"
+  vip: "55:2541–2552"
+  pubdate:
+    year: 2023
+    month: Nov
+    mday: 1
+  doi: doi.org/10.1038/s12276-023-01110-0
+  marked: 1
+  link:
+    url: "https://www.nature.com/articles/s12276-023-01110-0"
+
+- authors:
     - name: S. Lee
       is_first: true
     - name: H. Kim

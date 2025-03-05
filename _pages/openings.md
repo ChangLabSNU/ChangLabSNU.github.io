@@ -29,9 +29,7 @@ briefly why you are interested and what you are expecting as a career
 goal. Then, attach a CV, including information about the subjects you
 had as an undergraduate.
 
-We provide Ph.D. programs in [Interdisciplinary Program in
-Bioinformatics](http://ipbi.snu.ac.kr) and [School of Biological
-Sciences](http://biosci.snu.ac.kr).
+We provide a Ph.D. program in the [School of Biological Sciences](http://biosci.snu.ac.kr).
 
 ### Intern programs for undergraduate students
 
@@ -48,6 +46,6 @@ a [paid internship program](https://biosci.snu.ac.kr/board/notice?cidx=29&bt=t&b
 during the summer and winter vacations.
 
 ### More..
-한국인 학생분들은 [연구실 지원 안내](https://qbio.notion.site/QBioLab-17ce63c88d5843a19ac8f670c7b62220)
+한국인 학생분들은 [연구실 지원 안내](https://qbio.io/join)
 페이지를 참고하여 지원 부탁드립니다!
 

@@ -1,7 +1,7 @@
 ---
 title: "CHANGlab - Join"
 layout: redirected
-redirect_to: https://qbio.notion.site/QBioLab-17ce63c88d5843a19ac8f670c7b62220
+redirect_to: https://qbio.notion.site/QBioLab-44d1a1b54a284dd3a834be8542aa0345
 sitemap: false
 permalink: /join
 ---

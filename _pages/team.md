@@ -6,39 +6,64 @@ sitemap: false
 permalink: /team/
 ---
 
-## Group Members
+## Members
 
-### Staff
-{% assign selected_categories = "principal-investigator,support,research-assistant" | split:',' %}
+{% assign selected_categories = "principal-investigator" | split:',' %}
 {% include team_list.html %}
 
-### Researchers &amp; Students
-{% assign selected_categories = "student,postdoc" | split:',' %}
+{% assign selected_categories = "student,postdoc,support,research-assistant" | split:',' %}
 {% include team_list.html %}
 
 <br/>
 
-<!--
-<div id="alumni">
-## Alumni
+## Former Members
 
-### Undergraduate Internship
+{% assign alumni_by_leaving_date = site.data.alumni_members | sort: "end_date" | reverse %}
 
+<div id="alumni_list">
+{% for person in alumni_by_leaving_date -%}
+<div>
+<h5>{% if person.link -%}
+<a href="{{ site.url }}{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>
+{%- else %}{{ person.name }}{% endif %}
+<span>–
+{% if person.position contains ',' -%}
+as
+{%- else -%}
+as a
+{%- endif %}
+{{ person.position }}
+
+({% if person.start_date[0] == person.end_date[0] %}{{ person.start_date[0] }}{% else %}{{ person.start_date[0] }}–{{ person.end_date[0] }}{% endif %})
+</span>
+</h5>
+<div class="current_position">
+{% if person.current %}Current Position: {{ person.current }}{% endif %}
+</div>
+</div>
+{%- endfor %}
+</div>
+
+## Undergraduate Interns
+
+Both former and current interns are represented on this list.
+
+<div id="intern_list">
 {% for person in site.data.alumni_interns -%}
 {%- if prev_year != person.year_begin %}
 #### {{ person.year_begin }}
 {% else -%}
 ;
 {% endif -%}
+{%- if person.link %}<a href="{{ site.url }}{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>{% else -%}
 {{ person.name }} 
+{%- endif -%}
 {%- if person.year_begin != person.year_end %}
 (–{{ person.year_end }})
 {%- endif %}
 {%- assign prev_year = person.year_begin -%}
 {%- endfor %}
 </div>
--->
-
 
 <script>
 $('body').on('click', '.member-list-item[data-href]', function(){
