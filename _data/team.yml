@@ -53,7 +53,7 @@
   sort-key: sung-hyun-ju
   active: false
 
-- name: Junsoo Kim 
+- name: Junsoo Kim
   name_abbr: J. Kim
   photo: jskim-thumb.jpg
   email: junsoopablo@snu.ac.kr
@@ -166,10 +166,21 @@
 - name: Hoon Ma
   name_abbr: H. Ma
   photo: hma-thumb.jpg
-  email: cauchybs@snu.ac.kr
+  email: mahoon2@snu.ac.kr
   info: Graduate Student
   intro: Improving the manufacturing process of mRNA vaccines
   link: hoon-ma
   category: student
   sort-key: ma-hoon
+  active: true
+
+- name: Jisu Lim
+  name_abbr: J. Lim
+  photo: jslim-thumb.jpg
+  email: quotient@snu.ac.kr
+  info: Graduate Student
+  intro: Exploring the secrets of designing mRNA vaccines
+  link: jisu-lim
+  category: student
+  sort-key: lim-jisu
   active: true
