@@ -13,19 +13,17 @@ cv:
 permalink: /team/sohyeon-ju
 ---
 
-Sohyeon is a new graduate student at the Chang lab with a keen interest
-in evolutionary developmental biology at the ecological scale. She
-joined the Chang lab in 2023 to study modern molecular techniques for
-analysis of gene regulation and genomes, as she firmly believes that
-analyzing genetic materials in depth is essential to comprehending
-the complexities of life.
-
-In addition to her academic endeavors, Sohyeon enjoys training in a
-variety of martial arts and is an avid kickboxer. Her diverse experiences
-and perspectives have provided her with unique insights that she hopes
-will contribute to the scientific community. In the Chang lab, her
-goal is to explore and understand comparative genomics by incorporating
-single-molecule sequencing techniques.
+Sohyeon Ju holds a Bachelor's degree in Biological Sciences with a
+minor in Forestry. During her undergraduate studies, she developed
+a deep appreciation for the diversity and complexity of life seen
+through a scientific lens. Since 2022, she has been drawn to the
+power of computational and quantitative approaches in extracting
+insights from high-throughput data to uncover the underlying logic
+of intricate biological systems. Her current research focuses on
+(1) studying the role of TENT4A/B deadenylase in neuronal contexts
+using ONT direct-RNA sequencing and (2) optimizing coding sequences
+in therapeutic mRNA to enhance efficacy through *in silico*
+optimization and experimental validation.
 
 #### Education
 
