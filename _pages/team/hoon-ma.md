@@ -13,9 +13,11 @@ cv:
 permalink: /team/hoon-ma
 ---
 
-Hoon Ma is a hacker who's interested in the secrets of life. He studied diverse computing skills 
-from low-level assembly to high-level data structures and algorithms. Now he is ready to apply his knowledge to solve fascinating questions from the field of biology, such as designing optimal sequence 
-for mRNA vaccines.
+Hoon Ma is a hacker who's interested in the secrets of life. He studied
+diverse computing skills from low-level assembly to high-level data
+structures and algorithms. Now he is ready to apply his knowledge to
+solve fascinating questions from the field of biology, such as designing
+optimal sequence for mRNA vaccines.
 
 #### Education
 

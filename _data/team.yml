@@ -162,3 +162,14 @@
   category: research-assistant
   sort-key: sheen-chaebeom
   active: true
+
+- name: Hoon Ma
+  name_abbr: H. Ma
+  photo: hma-thumb.jpg
+  email: cauchybs@snu.ac.kr
+  info: Graduate Student
+  intro: Improving the manufacturing process of mRNA vaccines
+  link: hoon-ma
+  category: student
+  sort-key: ma-hoon
+  active: true
