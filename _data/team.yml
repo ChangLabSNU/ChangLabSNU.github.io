@@ -184,3 +184,14 @@
   category: student
   sort-key: lim-jisu
   active: true
+
+- name: Dongmin Ryu
+  name_abbr: D. Ryu
+  photo: dmryu-thumb.jpg
+  email: 5252lde@snu.ac.kr
+  info: Graduate Student
+  intro: Enhancing the efficacy of mRNA vaccines
+  link: dongmin-ryu
+  category: student
+  sort-key: ryu-dongmin
+  active: true
