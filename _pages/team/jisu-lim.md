@@ -19,7 +19,7 @@ Jisu is a graduate student at the School of Biological Sciences, Seoul National 
 
 <ul class="chronological">
   <li><span>2025–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
-  <li><span>2019–2025</span> B.S. in Environmental Sciecne & Ecological Engineering and Biotechnology, Korea University</li>
+  <li><span>2019–2025</span> B.S. in Environmental Science & Ecological Engineering and Biotechnology, Korea University</li>
 </ul>
 
 {% include publication_in_profile.html %}
