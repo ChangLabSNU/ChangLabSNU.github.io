@@ -34,7 +34,7 @@ examine molecular mechanisms at a systems level.
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/lablogo-slider.jpg" alt="Slide 1" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2404-01.jpg" alt="Slide 2" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2504-01.jpg" alt="Slide 2" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/home-slider/2402-01.jpg" alt="Slide 3" />
