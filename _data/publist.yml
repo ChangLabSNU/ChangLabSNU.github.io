@@ -1,4 +1,32 @@
 - authors:
+    - name: J. Seo
+      is_first: true
+    - name: H.-J. Park
+      is_first: true
+    - name: A. Oh
+      is_first: true
+    - name: C. B. Jeong
+    - name: S. Kim
+    - link: sojeong-lee
+    - name: Chuna Kim
+    - link: hyeshik-chang
+    - name: J.-H. Nam
+      is_corresponding: true
+    - name: D. Park
+      is_corresponding: true
+  title: "3AIM-seq: quality assessment of mRNA therapeutics using sequencing for 3′ polyA tails of in vitro transcribed mRNA"
+  journal: Molecular Therapy
+  vip: "in press"
+  pubdate:
+    year: 2025
+    month: Jun
+    mday: 28
+  doi: doi.org/10.1016/j.ymthe.2025.06.033
+  marked: 0
+  link:
+    url: "https://www.sciencedirect.com/science/article/pii/S1525001625004848"
+
+- authors:
     - name: J. H. Ahn
     - name: S. Lee
     - name: J. Moon
@@ -11,7 +39,7 @@
       is_corresponding: true
   title: "Another common genetic ataxia in South Korea: Spinocerebellar ataxia 36"
   journal: European Journal of Human Genetics
-  vip: "in press"
+  vip: "36"
   pubdate:
     year: 2025
     month: Feb
