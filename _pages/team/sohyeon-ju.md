@@ -28,7 +28,7 @@ optimization and experimental validation.
 #### Education
 
 <ul class="chronological">
-  <li><span>2023–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
+  <li><span>2023–present</span> M.S. Student, School of Biological Sciences, Seoul National University</li>
   <li><span>2017–2022</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
 

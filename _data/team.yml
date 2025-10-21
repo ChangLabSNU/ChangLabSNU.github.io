@@ -42,17 +42,6 @@
   sort-key: yoo-heeseung
   active: false
 
-- name: Hyun Ju Sung
-  name_abbr: H. J. Sung
-  photo: hjsung-thumb.jpg
-  email: amp9307@snu.ac.kr
-  info: Graduate Student
-  intro: Devising a novel method of nanopore sequencing to detect RNA modification
-  link: hyunju-sung
-  category: student
-  sort-key: sung-hyun-ju
-  active: false
-
 - name: Junsoo Kim
   name_abbr: J. Kim
   photo: jskim-thumb.jpg
@@ -194,4 +183,15 @@
   link: dongmin-ryu
   category: student
   sort-key: ryu-dongmin
+  active: true
+
+- name: Dohye Yun
+  name_abbr: D. Yun
+  photo: dhyun-thumb.jpg
+  email: yund1362@snu.ac.kr
+  info: Research Associate
+  intro: Efficient, on-point experimental execution that powers progress
+  link: dohye-yun
+  category: research-assistant
+  sort-key: yun-dohye
   active: true
