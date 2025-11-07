@@ -1,4 +1,31 @@
 - authors:
+    - name: S.-J. Jung
+      is_first: true
+    - name: J. J. Seo
+      is_first: true
+    - name: S. Lee
+      is_first: true
+    - name: S.-I. Hyun
+    - name: J. Lee
+    - link: sojeong-lee
+    - name: Y. Lee
+    - link: hyeshik-chang
+    - name: H. Lee
+    - name: J.-H. Kim
+    - name: V. N. Kim
+      is_corresponding: true
+  title: "RNA stability enhancers for durable base-modified mRNA therapeutics"
+  journal: Nature Biotechnology
+  vip: "in press"
+  pubdate:
+    year: 2025
+    month: Nov
+    mday: 7
+  doi: doi.org/10.1038/s41587-025-02891-7
+  link:
+    url: "https://www.nature.com/articles/s41587-025-02891-7"
+
+- authors:
     - name: J. Seo
       is_first: true
     - name: H.-J. Park
@@ -16,7 +43,7 @@
       is_corresponding: true
   title: "3AIM-seq: quality assessment of mRNA therapeutics using sequencing for 3′ polyA tails of in vitro transcribed mRNA"
   journal: Molecular Therapy
-  vip: "in press"
+  vip: "33(10):4923–4936"
   pubdate:
     year: 2025
     month: Jun
