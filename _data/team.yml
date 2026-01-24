@@ -84,7 +84,7 @@
   link: sohyeon-ju
   category: student
   sort-key: ju-sohyeon
-  active: true
+  active: false
 
 - name: Yoojung Han
   name_abbr: Y. Han

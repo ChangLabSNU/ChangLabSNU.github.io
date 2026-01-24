@@ -13,22 +13,18 @@ cv:
 permalink: /team/sohyeon-ju
 ---
 
-Sohyeon Ju holds a Bachelor's degree in Biological Sciences with a
-minor in Forestry. During her undergraduate studies, she developed
-a deep appreciation for the diversity and complexity of life seen
-through a scientific lens. Since 2022, she has been drawn to the
-power of computational and quantitative approaches in extracting
-insights from high-throughput data to uncover the underlying logic
-of intricate biological systems. Her current research focuses on
-(1) studying the role of TENT4A/B deadenylase in neuronal contexts
-using ONT direct-RNA sequencing and (2) optimizing coding sequences
-in therapeutic mRNA to enhance efficacy through *in silico*
-optimization and experimental validation.
+Sohyeon Ju recently graduated from the lab after completing her thesis
+on mRNA codon optimization for therapeutic applications. Her work
+combined computational and quantitative approaches with experimental
+validation to design coding sequences that can improve mRNA performance
+and efficacy. She is now exploring her next career step and is excited
+to apply her experience in high-throughput data analysis, mRNA sequence
+design, and rigorous scientific problem-solving in a new setting.
 
 #### Education
 
 <ul class="chronological">
-  <li><span>2023–present</span> M.S. Student, School of Biological Sciences, Seoul National University</li>
+  <li><span>2023–2026</span> M.S. in Biological Sciences, Seoul National University</li>
   <li><span>2017–2022</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
 
