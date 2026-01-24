@@ -26,7 +26,7 @@ sequencing data and detecting RNA modification.
 #### Education
 
 <ul class="chronological">
-  <li><span>2022–2024</span> Master's Student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2022–2024</span> M.S. in Bioinformatics, Seoul National University</li>
   <li><span>2017–2021</span> B.S. in IT Engineering &amp; Biological Science, Sookmyung Women’s University</li>
 </ul>
 

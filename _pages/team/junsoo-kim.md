@@ -32,7 +32,7 @@ Building upon this foundation, Junsoo now aims to leverage the power of high-thr
 #### Education
 
 <ul class="chronological">
-  <li><span>2021–present</span> Ph.D. student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2021–2026</span> Ph.D. in Bioinformatics, Seoul National University</li>
   <li><span>2012–2013</span> M.Phil. in Integrated Immunology, Nuffield Department of Surgical Sciences, University of Oxford, UK</li>
   <li><span>2008–2011</span> B.Sc. in Biological Sciences (Biotechnology), University of Edinburgh, UK</li>
 </ul>

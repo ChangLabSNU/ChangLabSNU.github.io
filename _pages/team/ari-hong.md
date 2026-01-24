@@ -21,7 +21,7 @@ her doctorate in the field of medical informatics at the
 #### Education
 
 <ul class="chronological">
-  <li><span>2022–present</span> Ph.D. student, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2022–present</span> Ph.D. candidate, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2020–2022</span> M.S. in Bioinformatics, Seoul National University</li>
   <li><span>2016–2020</span> B.S. in Food Science and Biotechnology, Seoul National University</li>
 </ul>
