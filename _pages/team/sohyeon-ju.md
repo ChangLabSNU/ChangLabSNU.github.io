@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Sohyeon Ju
-position: Graduate Student
+position: Alumni (2023–2026)
 handle: shjo
 email: shjoo06@snu.ac.kr
 twitter: 
