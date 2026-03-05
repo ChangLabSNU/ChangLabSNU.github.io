@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Junsoo Kim
-position: Graduate Student
+position: Postdoctoral Researcher
 handle: junsoopablo
 email: junsoopablo@snu.ac.kr
 twitter: 
