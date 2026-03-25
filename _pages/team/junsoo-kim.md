@@ -19,7 +19,7 @@ Junsoo's journey in bioinformatics began with a master's degree from the Univers
 
 After gaining valuable experience as a senior researcher at biotech companies like Seegene and Macrogen, Junsoo joined Chang Lab in 2021 to pursue his Ph.D. in Bioinformatics at Seoul National University. In the lab, he led a study that uncovered the molecular mechanisms by which [SARS-CoV-2 infection disrupts host translation in the lungs](https://www.nature.com/articles/s12276-023-01110-0), providing novel insights into the pathogenesis of COVID-19. 
 
-Building upon this foundation, Junsoo now aims to leverage the power of high-throughput sequencing technologies and deep learning to develop innovative computational methods that can detect and quantify RNA modifications with unprecedented resolution. Through his research, Junsoo hopes to shed light on the dynamic landscape of the RNA lifecycle and contribute to a deeper understanding of how post-transcriptional regulation shapes gene expression in health and disease.
+After completing his Ph.D. in 2026, Junsoo joined Boston Children's Hospital as a postdoctoral researcher, working with Prof. Alice Eunjung Lee. His new research explores the evolution of mobile elements using long-read sequencing technologies.
 
 #### Professional Experiences
 

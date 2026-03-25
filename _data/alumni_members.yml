@@ -23,6 +23,13 @@
   end_date: [2024, 2, 8]
   link: heeseung-yoo
 
+- name: Junsoo Kim
+  position: Ph.D. Student
+  start_date: [2021, 3, 1]
+  end_date: [2026, 3, 23]
+  link: junsoo-kim
+  current: Postdoctoral Researcher at Boston Children's Hospital
+
 - name: Sohyeon Ju
   position: Master's Student
   start_date: [2023, 3, 1]
