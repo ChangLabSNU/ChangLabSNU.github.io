@@ -1,4 +1,23 @@
 - authors:
+    - link: junsoo-kim
+      is_first: true
+    - link: yoojung-han
+      is_first: true
+    - link: chaeyoung-kwon
+    - link: hyeshik-chang
+      is_corresponding: true
+  title: "VaxLab: integrated platform for rapid multistrategy mRNA vaccine design"
+  journal: "Experimental & Molecular Medicine"
+  vip: "in press"
+  pubdate:
+    year: 2026
+    month: Apr
+    mday: 8
+  doi: doi.org/10.1038/s12276-026-01637-y
+  link:
+    url: "https://www.nature.com/articles/s12276-026-01637-y"
+
+- authors:
     - name: S.-J. Jung
       is_first: true
     - name: J. J. Seo
