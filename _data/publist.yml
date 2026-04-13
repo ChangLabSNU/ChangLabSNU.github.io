@@ -1,4 +1,23 @@
 - authors:
+    - link: yoojung-han
+      is_first: true
+    - name: J.-H. Jang
+      is_corresponding: true
+    - link: hyeshik-chang
+      is_corresponding: true
+  title: "Targeted long-read sequencing for high-resolution repeat profiling in myotonic dystrophy type 1"
+  journal: "Experimental & Molecular Medicine"
+  vip: "in press"
+  pubdate:
+    year: 2026
+    month: Apr
+    mday: 13
+  doi: doi.org/10.1038/s12276-026-01683-6
+  marked: 1
+  link:
+    url: "https://www.nature.com/articles/s12276-026-01683-6"
+
+- authors:
     - link: junsoo-kim
       is_first: true
     - link: yoojung-han
