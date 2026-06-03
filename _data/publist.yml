@@ -27,7 +27,6 @@
       is_corresponding: true
   title: "VaxLab: integrated platform for rapid multistrategy mRNA vaccine design"
   journal: "Experimental & Molecular Medicine"
-  vip: "in press"
   vip: "58:1149–1157"
   pubdate:
     year: 2026
@@ -105,7 +104,7 @@
       is_corresponding: true
   title: "Another common genetic ataxia in South Korea: Spinocerebellar ataxia 36"
   journal: European Journal of Human Genetics
-  vip: "36"
+  vip: "34:515–521"
   pubdate:
     year: 2025
     month: Feb
