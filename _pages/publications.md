@@ -9,6 +9,7 @@ permalink: /publications/
 
 # Publications
 
+{#
 ## Highlights
 
 {% assign number_printed = 0 %}
@@ -49,6 +50,7 @@ permalink: /publications/
 
 <p> &nbsp; </p>
 
+#}
 
 ## Full List
 
