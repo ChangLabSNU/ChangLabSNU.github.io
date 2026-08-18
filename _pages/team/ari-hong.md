@@ -14,14 +14,16 @@ permalink: /team/ari-hong
 ---
 
 Ari worked extensively on the epitranscriptome analysis of viruses
-throughout her Master's program in our lab. Presently, she is working on
-her doctorate in the field of medical informatics at the
-[Bio-Medical Informatics Lab of SNU Hospital](https://sites.google.com/view/snuh-bmi-lab/home).
+throughout her Master's program in our lab. After completing her doctorate
+in medical informatics at the
+[Bio-Medical Informatics Lab of SNU Hospital](https://sites.google.com/view/snuh-bmi-lab/home),
+she is now a postdoctoral researcher at the Max Planck Institute of
+Molecular Physiology in Germany.
 
 #### Education
 
 <ul class="chronological">
-  <li><span>2022–present</span> Ph.D. candidate, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
+  <li><span>2022–2026</span> Ph.D. in Bioinformatics, Interdisciplinary Program in Bioinformatics, Seoul National University</li>
   <li><span>2020–2022</span> M.S. in Bioinformatics, Seoul National University</li>
   <li><span>2016–2020</span> B.S. in Food Science and Biotechnology, Seoul National University</li>
 </ul>
