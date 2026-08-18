@@ -16,7 +16,7 @@ permalink: /team/ari-hong
 Ari worked extensively on the epitranscriptome analysis of viruses
 throughout her Master's program in our lab. After completing her doctorate
 in medical informatics at the
-[Bio-Medical Informatics Lab of SNU Hospital](https://sites.google.com/view/snuh-bmi-lab/home),
+Bio-Medical Informatics Lab of SNU Hospital,
 she is now a postdoctoral researcher at the Max Planck Institute of
 Molecular Physiology in Germany.
 
