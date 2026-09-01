@@ -10,7 +10,7 @@
   start_date: [2022, 7, 11]
   end_date: [2022, 12, 31]
   link: yongkuk-choi
-  current: M.D. Student at Catholic University of Korea College of Medicine
+  current: Medical Intern at CUK St. Vincent's Hospital, Suwon
 
 - name: Eun-jin Chang
   position: Research Assistant
@@ -36,3 +36,10 @@
   end_date: [2026, 1, 24]
   link: sohyeon-ju
   current: Ph.D. Student at Leipzig University, Germany
+
+- name: Keewon Sung
+  position: Postdoctoral Fellow, Research Assistant Professor
+  start_date: [2021, 3, 1]
+  end_date: [2026, 8, 31]
+  link: keewon-sung
+  current: Assistant Professor at the Department of Convergence Pharmaceutical Science, Korea University

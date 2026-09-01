@@ -3,7 +3,7 @@ layout: member
 title: Yongkuk Choi
 position: Alumni (2022)
 handle: ykchoi
-email: ykchoi624@gmail.com
+email: 
 twitter: 
 github: yongkuk
 scholar: 
@@ -23,13 +23,14 @@ Yongkuk decided to expand his expertise beyond molecular biology and
 transitioned to the field of medicine. After completing his military
 duty, he briefly returned to the lab to assist in the development of new
 technologies for time-series transcriptome analysis using nanopore
-sequencing. Now back in medical school, he is eagerly exploring the
-non-molecular aspects of human biology.
+sequencing. He earned his M.D. in 2026 and is now a medical intern at
+St. Vincent's Hospital in Suwon, exploring the non-molecular aspects of
+human biology firsthand.
 
 #### Education
 
 <ul class="chronological">
-  <li><span>2020–present</span> M.D. student, College of Medicine, The Catholic University of Korea</li>
+  <li><span>2020–2026</span> M.D., College of Medicine, The Catholic University of Korea</li>
   <li><span>2016–2020</span> Ph.D. candidate, School of Biological Sciences, Seoul National University</li>
   <li><span>2012–2016</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>

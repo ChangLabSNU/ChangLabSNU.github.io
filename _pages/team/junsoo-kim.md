@@ -1,15 +1,15 @@
 ---
 layout: member
 title: Junsoo Kim
-position: Postdoctoral Researcher
+position: Alumni (2021–2026)
 handle: junsoopablo
-email: junsoopablo@snu.ac.kr
+email: 
 twitter: 
 github: junsoopablo
 scholar: 
 orcid: 0000-0001-7898-1644
 image: /images/members/jskim-thumb.jpg
-cv: /assets/cv/cv-junsoopablo.pdf
+cv: 
 permalink: /team/junsoo-kim
 ---
 

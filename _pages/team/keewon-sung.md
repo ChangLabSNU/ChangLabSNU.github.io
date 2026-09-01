@@ -1,15 +1,15 @@
 ---
 layout: member
 title: Keewon Sung
-position: Research Assistant Professor
+position: Alumni (2021–2026)
 handle: keewon
-email: alkwemi0429@snu.ac.kr
+email: 
 twitter: 
 github: keewonsung
 scholar: 
 orcid: 0000-0002-2733-556X
 image: /images/members/kwsung-thumb.jpg
-cv: /assets/cv/cv-keewon.pdf
+cv: 
 permalink: /team/keewon-sung
 ---
 
@@ -25,11 +25,15 @@ Meanwhile, he also received training for single-cell molecular mechanobiology at
 Johns Hopkins University, USA, as a visiting scientist. During that time, he 
 became interested in high-throughput methods for systems molecular biology.
 
-In 2021, he joined the Chang lab as a postdoctoral fellow. His current research
-focuses on the development of a breakthrough methodology for nanopore direct RNA
-sequencing. By combining novel biochemical/biophysical and computational approaches, 
-he aims to uncover transcriptome-wide intracellular RNA-protein interactions and/or 
-RNA modifications at the single-molecule level. 
+In 2021, he joined the Chang lab as a postdoctoral fellow, later serving as a 
+Research Assistant Professor. His work here centered on developing a breakthrough 
+methodology for nanopore direct RNA sequencing. By combining novel 
+biochemical/biophysical and computational approaches, he set out to uncover 
+transcriptome-wide intracellular RNA-protein interactions and RNA modifications at 
+the single-molecule level.
+
+Keewon is now an Assistant Professor in the Department of Convergence 
+Pharmaceutical Science at Korea University, where he leads his own research group.
 
 #### Education
 

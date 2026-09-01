@@ -3,7 +3,7 @@ layout: member
 title: Ari Hong
 position: Alumni (2019–2023)
 handle: ari
-email: elly924@snu.ac.kr
+email: 
 twitter: 
 github: AriHong
 scholar: 
