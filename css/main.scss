@@ -336,3 +336,53 @@ div#alumni_list h5 a {
     background: #f1f4fc;
     cursor: pointer; 
 }
+
+/*
+ * Utility classes standing in for inline style="..." attributes.
+ * The Content-Security-Policy served for this site has no 'unsafe-inline'
+ * in style-src, so a style attribute in the markup is dropped by the browser
+ * rather than applied. Anything that used to be inline lives here instead.
+ */
+
+.qb-hidden {
+    display: none;
+}
+
+.qb-float-left {
+    float: left;
+}
+
+.qb-float-right {
+    float: right;
+}
+
+.qb-marked {
+    color: crimson;
+}
+
+.qb-home-spacer {
+    height: 40px;
+}
+
+.qb-fig-wide {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.qb-fig-right {
+    margin: 20px;
+    float: right;
+    border: 10px;
+}
+
+.qb-fig-right-400 {
+    width: 400px;
+}
+
+.qb-fig-right-420 {
+    width: 420px;
+}
+
+.qb-fig-right-480 {
+    width: 480px;
+}

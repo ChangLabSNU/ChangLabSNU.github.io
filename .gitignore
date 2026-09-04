@@ -2,3 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 public/
+
+# Claude Code local settings and worktrees
+.claude/

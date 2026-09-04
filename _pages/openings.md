@@ -11,7 +11,7 @@ permalink: /openings
 We are looking for the best and brightest people to navigate
 the unexplored territory of science together.
 
-<figure style="float: right;">
+<figure class="qb-float-right">
 <img src="/images/openings/xkcd_the_difference.jpg" width="400px">
 </figure>
 

@@ -65,12 +65,4 @@ Both former and current interns are represented on this list.
 {%- endfor %}
 </div>
 
-<script>
-$('body').on('click', '.member-list-item[data-href]', function(){
-    if (window.location.hash) {
-        window.location.hash = $(this).data('href');
-    } else {
-        window.location.href = $(this).data('href');
-    }
-})
-</script>
+<script src="{{ site.url }}{{ site.baseurl }}/js/team-list.js" integrity="{{ '/js/team-list.js' | sri }}"></script>

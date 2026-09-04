@@ -17,14 +17,13 @@
 
     {% include footer.html %}
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36114190-2"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-36114190-2');
-</script>
+{%- comment -%}
+  Google Analytics was removed here: the property it reported to,
+  UA-36114190-2, is a Universal Analytics one, and UA stopped accepting data in
+  2023, so the tag collected nothing. It also could not be pinned with SRI,
+  since Google regenerates the loader per request. If analytics come back as
+  GA4, the tag will still be an unpinnable cross-domain include.
+{%- endcomment -%}
 
   </body>
 

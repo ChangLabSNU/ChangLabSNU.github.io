@@ -11,7 +11,7 @@
 {% endif %}
 
 <div class="col-sm-6 clearfix member-list-item" {% if member.link %}data-href="{{ member.link }}"{% endif %}>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/members/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <img src="{{ site.url }}{{ site.baseurl }}/images/members/{{ member.photo }}" class="img-responsive qb-float-left" width="25%" />
   {% if member.link %}
   <h4><a href="{{ member.link }}" class="member-link">{{ member.name }}</a></h4>
   {% else %}

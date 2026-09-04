@@ -25,7 +25,7 @@ permalink: /publications/
 <div class="col-sm-6 clearfix">
  <div class="well">
   <h4>{{ publi.title }}</h4>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/publications/{{ publi.image }}" class="img-responsive" width="33%" style="float: left" />
+  <img src="{{ site.url }}{{ site.baseurl }}/images/publications/{{ publi.image }}" class="img-responsive qb-float-left" width="33%" />
   <p>{{ publi.description }}</p>
   <p><em>{% include publication_author_list.html %}</em></p>
   <h5><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></h5>
@@ -56,7 +56,7 @@ permalink: /publications/
 
 {% for publi in site.data.publist %}
 
-{% if publi.marked %}<span style="color: crimson">‣</span>{% endif %}
+{% if publi.marked %}<span class="qb-marked">‣</span>{% endif %}
   <a href="{{ publi.link.url }}" class="publi_title">{{ publi.title }}</a><br/>
   {% include publication_author_list.html -%}
   <span class="publi_journal">{{ publi.journal }}</span>

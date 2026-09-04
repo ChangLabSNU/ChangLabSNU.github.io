@@ -8,8 +8,12 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
 
-{% if jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
+{%- comment -%}
+  The production-only analytics.html include was dropped along with the
+  analytics tag in _layouts/default.html. It reported to UA-82472331-1 --
+  another dead Universal Analytics property -- and, because both CI pipelines
+  build with JEKYLL_ENV=production, it would have put an unpinnable
+  cross-domain script back into every CI-built page.
+{%- endcomment -%}
 
 </head>

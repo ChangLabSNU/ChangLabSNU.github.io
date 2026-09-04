@@ -22,4 +22,11 @@
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+{%- comment -%}
+  Served from this origin rather than ajax.googleapis.com: a third-party script
+  is both a cross-domain include and something we cannot pin with SRI without
+  tracking the CDN's copy. Pinned with a build-time hash anyway.
+  Still jQuery 1.11.3 because Bootstrap 3.3.6 (js/bootstrap.min.js) refuses to
+  load against jQuery 3.x -- upgrading one requires upgrading both.
+{%- endcomment -%}
+<script src="{{ site.url }}{{ site.baseurl }}/js/jquery.min.js" integrity="{{ '/js/jquery.min.js' | sri }}"></script>
