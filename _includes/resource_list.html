@@ -1,0 +1,44 @@
+{%- comment -%}
+  Renders _data/resources.yml grouped by category. The groups print in the
+  order listed below, and a group with no entries prints nothing at all --
+  so a new item only needs a `category` matching one of these keys. Within a
+  group, entries keep the order they have in the data file.
+
+  Entries are Bootstrap media objects, not a floated image: the text is a real
+  table-cell column, so a long description stays beside the picture instead of
+  wrapping underneath it once it outgrows the image.
+
+  Kramdown runs over this output (parse_block_html is on), so the tags below
+  stay unindented -- four leading spaces would turn them into a code block --
+  and the image wrapper carries markdown="0" to keep kramdown from wrapping the
+  <img> in a <p> inside the table cell.
+{%- endcomment -%}
+
+{% assign resource_groups = "software|Software,resource|Other Resources" | split: ',' %}
+
+{% for group in resource_groups %}
+{% assign group_fields = group | split: '|' %}
+{% assign group_items = site.data.resources | where: "category", group_fields[0] %}
+
+{% if group_items.size > 0 %}
+<h3>{{ group_fields[1] }}</h3>
+
+<div class="resource-list">
+{% for item in group_items %}
+<div class="resource-item media">
+{% if item.image %}<div class="media-left" markdown="0"><img src="{{ site.url }}{{ site.baseurl }}/images/resources/{{ item.image }}" alt="{{ item.name }}" class="resource-thumb media-object" /></div>{% endif %}
+<div class="media-body">
+<h4 class="media-heading"><a href="{{ item.link }}">{{ item.name }}</a>{% if item.info %} <span class="resource-info">{{ item.info }}</span>{% endif %}</h4>
+{% if item.description %}<p>{{ item.description }}</p>{% endif %}
+{%- capture item_meta -%}
+{%- for extra in item.links -%}<a href="{{ extra.url }}">{{ extra.title }}</a>{% unless forloop.last %} · {% endunless %}{%- endfor -%}
+{%- if item.license -%}{% if item.links %} · {% endif %}<span class="resource-license">{{ item.license }}</span>{%- endif -%}
+{%- endcapture -%}
+{% if item_meta != '' %}<p class="resource-meta">{{ item_meta }}</p>{% endif %}
+</div>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+{% endfor %}

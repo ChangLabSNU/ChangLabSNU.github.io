@@ -1,0 +1,65 @@
+# Software and other materials distributed from the lab, rendered by
+# _includes/resource_list.html on the /resources page. Within each category,
+# the entries appear in the order they are listed here.
+#
+# category:    group to list the entry under -- one of the keys in
+#              _includes/resource_list.html ("software" or "resource").
+#              A group with no entries prints no heading.
+# info:        one-line subtitle shown next to the name.
+# description: a paragraph on what it is and who it is for.
+# image:       optional file in images/resources/, shown in the column left of
+#              the text. Rendered 120px wide (240px source, i.e. 2x) and capped
+#              at 160px tall; the aspect ratio is preserved.
+# links:       optional list of `title`/`url` pairs (docs, paper, ...) shown
+#              in small print under the description.
+# license:     optional; shown next to those links.
+
+- name: VaxPress
+  image: vaxpress-thumb.png
+  link: https://github.com/ChangLabSNU/VaxPress
+  category: software
+  info: Codon optimizer for mRNA vaccine development
+  description: >
+    Refines a coding sequence — given as either protein or RNA — for the
+    storage stability and in vivo expression an mRNA vaccine needs, weighing
+    secondary structure, codon usage, and the other sequence features that
+    decide how long an mRNA survives and how well it is translated.
+    Optimization targets are pluggable, so you can score for your own
+    property without touching the engine.
+  links:
+    - title: Documentation
+      url: https://vaxpress.readthedocs.io/
+  license: MIT License
+
+- name: VaxLab
+  image: vaxlab-thumb.png
+  link: https://github.com/ChangLabSNU/VaxLab
+  category: software
+  info: Integrated platform for mRNA vaccine design
+  description: >
+    Takes a vaccine candidate from a protein sequence to a finished design in
+    a single Colab notebook: several optimization strategies to choose between
+    — LinearDesign, CodonBERT, a simple codon optimizer, and tissue-specific
+    codon usage — a library of pre-validated UTRs or freshly generated ones,
+    interactive views of what each choice costs and buys, and an automated
+    quality report at the end.
+  links:
+    - title: Open in Colab
+      url: https://colab.research.google.com/github/ChangLabSNU/VaxLab/blob/main/VaxLab.ipynb
+    - title: Paper
+      url: https://www.nature.com/articles/s12276-026-01637-y
+  license: MIT License
+
+- name: QBio Fonts
+  image: qbio-fonts-thumb.png
+  link: https://qbio.io/share/fonts/
+  category: resource
+  info: Korean typefaces for academic communication of biologists
+  description: >
+    Four font families — SNU Edge, SNU Sprout, SNU Appendard and SNU Jaha —
+    redrawn from open typefaces for research documents that mix Korean and
+    English. They carry the true italics that scientific nomenclature needs,
+    a full range of weights for emphasis, and metrics that keep the two
+    scripts evenly spaced side by side. Free OTF downloads for slides,
+    figure labels, and manuscripts.
+  license: SIL Open Font License 1.1

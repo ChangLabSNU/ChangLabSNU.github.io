@@ -332,6 +332,62 @@ div#alumni_list h5 a {
     }
 }
 
+/* Software & resources */
+
+div.resource-item {
+    /* Bootstrap's .media already adds 15px above every entry but the first,
+       so this only has to top up the gap to the page's ~24px rhythm. */
+    padding-bottom: 12px;
+}
+
+/* An id in the selector, to outrank the "#gridid img" photo styling above. */
+#gridid img.resource-thumb {
+    max-width: 120px;
+    max-height: 160px;
+    margin: 4px 0 6px 0; /* the gutter is .media-left's padding, below */
+    /* Bootstrap's own $thumbnail-border (#eee) disappears against the pale
+       specimen sheet, so this sits a few steps darker. */
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    /* Same down-right direction as the "#gridid img" photo shadow, at about a
+       third of its weight -- the border already carries the edge. */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.13);
+}
+
+div.resource-item .media-left {
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #gridid img.resource-thumb {
+        max-width: 90px;
+        max-height: 120px;
+    }
+
+    div.resource-item .media-left {
+        padding-right: 14px;
+    }
+}
+
+div.resource-item h4 {
+    margin-bottom: 4px;
+}
+
+div.resource-item h4 span.resource-info {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 80%;
+    color: #606060;
+}
+
+div.resource-item p.resource-meta {
+    font-size: 90%;
+}
+
+div.resource-item p.resource-meta span.resource-license {
+    color: #909090;
+}
+
 .member-list-item[data-href]:hover {
     background: #f1f4fc;
     cursor: pointer; 
