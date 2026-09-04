@@ -6,7 +6,9 @@
 
   Entries are Bootstrap media objects, not a floated image: the text is a real
   table-cell column, so a long description stays beside the picture instead of
-  wrapping underneath it once it outgrows the image.
+  wrapping underneath it once it outgrows the image. Both cells carry
+  media-middle, so whichever of the two is taller sets the height and the other
+  centres against it.
 
   Kramdown runs over this output (parse_block_html is on), so the tags below
   stay unindented -- four leading spaces would turn them into a code block --
@@ -26,8 +28,8 @@
 <div class="resource-list">
 {% for item in group_items %}
 <div class="resource-item media">
-{% if item.image %}<div class="media-left" markdown="0"><img src="{{ site.url }}{{ site.baseurl }}/images/resources/{{ item.image }}" alt="{{ item.name }}" class="resource-thumb media-object" /></div>{% endif %}
-<div class="media-body">
+{% if item.image %}<div class="media-left media-middle" markdown="0"><img src="{{ site.url }}{{ site.baseurl }}/images/resources/{{ item.image }}" alt="{{ item.name }}" class="resource-thumb media-object" /></div>{% endif %}
+<div class="media-body media-middle">
 <h4 class="media-heading"><a href="{{ item.link }}">{{ item.name }}</a>{% if item.info %} <span class="resource-info">{{ item.info }}</span>{% endif %}</h4>
 {% if item.description %}<p>{{ item.description }}</p>{% endif %}
 {%- capture item_meta -%}

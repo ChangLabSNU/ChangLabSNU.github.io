@@ -344,7 +344,7 @@ div.resource-item {
 #gridid img.resource-thumb {
     max-width: 120px;
     max-height: 160px;
-    margin: 4px 0 6px 0; /* the gutter is .media-left's padding, below */
+    margin: 0; /* the gutter is .media-left's padding, below */
     /* Bootstrap's own $thumbnail-border (#eee) disappears against the pale
        specimen sheet, so this sits a few steps darker. */
     border: 1px solid #d0d0d0;
@@ -356,6 +356,10 @@ div.resource-item {
 
 div.resource-item .media-left {
     padding-right: 20px;
+}
+
+div.resource-item .media-body > p:last-child {
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 768px) {
