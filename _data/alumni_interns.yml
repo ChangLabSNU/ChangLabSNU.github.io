@@ -1,3 +1,18 @@
+- name: Jiho Park
+  year_begin: 2026
+  year_end: 2026
+  affiliation_then: Seoul National University
+
+- name: Taehwan Ahn
+  year_begin: 2026
+  year_end: 2026
+  affiliation_then: Seoul National University
+
+- name: Bomin Kim
+  year_begin: 2026
+  year_end: 2026
+  affiliation_then: Seoul National University
+
 - name: Minchan Shin
   year_begin: 2026
   year_end: 2026
@@ -30,7 +45,7 @@
 
 - name: Hahndeul Kim
   year_begin: 2025
-  year_end: 2025
+  year_end: 2026
   affiliation_then: Seoul National University
 
 - name: Hyunsoo Ham
