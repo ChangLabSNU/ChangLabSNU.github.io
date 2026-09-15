@@ -29,6 +29,8 @@ exclude:
   - README.md
   - run.sh
   - sync.sh
+  # Carousel photos kept for reuse but not on the front page today.
+  - images/_home-slider-archive/
 
 sass:
   sass_dir: _sass
