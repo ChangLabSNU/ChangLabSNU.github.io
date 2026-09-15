@@ -4,9 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Jekyll 3.9.3 static site for the Hyeshik Chang Lab (Quantitative Molecular Biology) at Seoul National University. Live at **qbio.io**.
+Jekyll 4 static site for the Hyeshik Chang Lab (Quantitative Molecular Biology) at Seoul National University. Live at **qbio.io**.
 
-Tech stack: Jekyll, Bootstrap 3, FontAwesome 6, Kramdown (GFM), Liquid templates, SCSS.
+Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Bootstrap 3.3.x and jQuery 1.11.3 (both
+vendored and pinned to each other -- Bootstrap 3's JS will not run on jQuery 3),
+Font Awesome Free 5.15.3, Kramdown (GFM), Liquid templates, SCSS.
 
 ## Build & Serve
 
@@ -60,6 +62,17 @@ Content pages live here. Member profiles are in `_pages/team/[link].md` where `[
 
 Add entry to top of `_data/publist.yml`. Use `link:` for lab member authors (must match team.yml), `name:` for external authors.
 
+### Add or change a page's social card
+
+`_includes/head.html` builds the title, description, canonical link and Open Graph
+tags from front matter: `title`, `excerpt` (falls back to `site.description`) and
+`image` (falls back to the lab photo). A page with its own `image` gets the small
+square Twitter card, everything else the wide one. Member pages compose their
+description from `title` and `position` instead of needing an `excerpt`.
+
+`sitemap: false` genuinely excludes a page now that jekyll-sitemap is loaded --
+keep it on 404 and redirect stubs, leave it off anything that should be indexed.
+
 ### Add software or a shared resource
 
 Add an entry to `_data/resources.yml` with `category: software` (lab-developed tools) or
@@ -83,8 +96,21 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 - Sort keys: `lastname-firstname` pattern
 - Publication author superscripts: `<sup>1</sup>` = first author, `<sup>*</sup>` = corresponding
 - Custom plugin `_plugins/markdown.rb` enables `{% markdown filename %}` in templates
-- Homepage carousel configured in `_pages/home.md` with images from `images/home-slider/`
+- Homepage carousel configured in `_pages/home.md` with images from `images/home-slider/`.
+  Every slide carries its own `width`/`height` (the real pixel size of the file, so the
+  browser reserves the right box) and every slide but the first carries `loading="lazy"`.
+  Keep both in step when swapping a photo. Slides not currently on the page live in
+  `images/_home-slider-archive/`, which is excluded from the build.
+- Icon CSS is subset: `_sass/fontawesome/_icons-subset.scss` and the tail of
+  `_sass/bootstrap/_glyphicons.scss` list only the icons in use. Using a new icon means
+  adding its rule there -- the class alone will render nothing.
 
 ## Deployment
 
-GitLab CI builds on master branch push (Ruby 2.6.3, JEKYLL_ENV=production). Manual deploy via `./sync.sh` which builds and rsyncs to production.
+GitHub Actions (`.github/workflows/jekyll.yml`) builds on push to `main` with Ruby 3.3
+and `JEKYLL_ENV=production`, and deploys to GitHub Pages. Manual deploy via `./sync.sh`,
+which builds and rsyncs to production.
+
+`.gitlab-ci.yml` is left over from a GitLab Pages setup and cannot succeed: it pins Ruby
+2.6.3 and bundler 2.0.1, while the Gemfile needs Ruby >= 2.7 and `Gemfile.lock` is in a
+format only bundler >= 2.6 can read. There is no GitLab remote. Fix or delete it.
