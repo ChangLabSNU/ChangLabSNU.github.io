@@ -5,12 +5,12 @@
 @import 'variables';
 @import 'mixins';
 @import 'core';
-@import 'larger';
 @import 'fixed-width';
-@import 'list';
-@import 'bordered-pulled';
-@import 'animated';
-@import 'rotated-flipped';
-@import 'stacked';
-@import 'icons';
+// 'icons' (every icon in the Free set) replaced by the nine this site uses.
+@import 'icons-subset';
 @import 'screen-reader';
+
+// Dropped, all unused: 'larger' (fa-lg/fa-2x...), 'list' (fa-ul/fa-li),
+// 'bordered-pulled' (fa-border/fa-pull-*), 'animated' (fa-spin/fa-pulse),
+// 'rotated-flipped' (fa-rotate-*/fa-flip-*) and 'stacked' (fa-stack).
+// The only modifier any template uses is fa-fw, from 'fixed-width'.
