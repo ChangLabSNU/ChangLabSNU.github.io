@@ -2,7 +2,6 @@
 title: "CHANGlab - Publications"
 layout: gridlay
 excerpt: "CHANGlab -- Publications."
-sitemap: false
 permalink: /publications/
 ---
 

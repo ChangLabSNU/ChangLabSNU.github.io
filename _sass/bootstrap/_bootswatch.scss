@@ -2,9 +2,13 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,400i" !default;
-@import url($web-font-path);
-
+// Roboto used to be pulled from fonts.googleapis.com here. That is a
+// cross-domain request on every page load -- the same thing the
+// self-hosted jQuery and the SRI filter exist to avoid -- so the body
+// stack now leads with the Inter that is already self-hosted for
+// headings. To go back, restore the @import below and put "Roboto"
+// first in $font-family-sans-serif.
+// $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,400i" !default;
 @mixin shadow($width: 4px){
   border-width: 0 1px $width 1px;
 }

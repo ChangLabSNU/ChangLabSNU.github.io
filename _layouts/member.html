@@ -11,7 +11,7 @@ layout: default
     <div class="media">
       {% if member.image %}
       <span class="pull-left pad-right">
-        <img class="big-member-photo" src="{{ member.image }}">
+        <img class="big-member-photo" src="{{ member.image }}" alt="{{ member.title | escape }}">
       </span>
       {% endif %}
     </div>
@@ -83,7 +83,7 @@ layout: default
     <div class="pad-left note">
       <div class="smallspacer"></div>
       <i class="fas fa-book fa-fw"></i>
-      <a class="off" href="http://scholar.google.com/citations?user={{ member.scholar }}">{{ member.title }}</a>
+      <a class="off" href="https://scholar.google.com/citations?user={{ member.scholar }}">{{ member.title }}</a>
     </div>
     <div class="bigspacer"></div>
     {% endif %}

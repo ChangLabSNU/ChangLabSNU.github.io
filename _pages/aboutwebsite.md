@@ -2,13 +2,12 @@
 title: "About the website"
 layout: textlay
 excerpt: "About the website."
-sitemap: false
 permalink: /aboutwebsite.html
 ---
 
 ## About this website
 
-This website is powered by [Jekyll](https://jekyllrb.com) and uses some [Bootstrap](http://www.getbootstrap.com). Although we have tinkered a bit with the contents and the design, the site is largely based on [the Allan lab's codebase](https://www.allanlab.org/aboutwebsite.html). Please refer to the following license terms for reusing the components used in this site.
+This website is powered by [Jekyll](https://jekyllrb.com) and uses some [Bootstrap](https://getbootstrap.com). Although we have tinkered a bit with the contents and the design, the site is largely based on [the Allan lab's codebase](https://www.allanlab.org/aboutwebsite.html). Please refer to the following license terms for reusing the components used in this site.
 
 #### Our own contents
 

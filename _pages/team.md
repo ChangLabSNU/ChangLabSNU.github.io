@@ -2,7 +2,6 @@
 title: "CHANGlab - Team"
 layout: gridlay
 excerpt: "CHANGlab: Team members"
-sitemap: false
 permalink: /team/
 ---
 

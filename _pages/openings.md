@@ -2,7 +2,6 @@
 title: "CHANGlab - Openings"
 layout: textlay
 excerpt: "Openings"
-sitemap: false
 permalink: /openings
 ---
 
@@ -12,7 +11,7 @@ We are looking for the best and brightest people to navigate
 the unexplored territory of science together.
 
 <figure class="qb-float-right">
-<img src="/images/openings/xkcd_the_difference.jpg" width="400px">
+<img src="/images/openings/xkcd_the_difference.jpg" alt="xkcd 242: The Difference" width="400px">
 </figure>
 
 You will have the chance to challenge the long-standing unanswered
@@ -29,7 +28,7 @@ briefly why you are interested and what you are expecting as a career
 goal. Then, attach a CV, including information about the subjects you
 had as an undergraduate.
 
-We provide a Ph.D. program in the [School of Biological Sciences](http://biosci.snu.ac.kr).
+We provide a Ph.D. program in the [School of Biological Sciences](https://biosci.snu.ac.kr).
 
 ### Intern programs for undergraduate students
 

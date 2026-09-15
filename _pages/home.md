@@ -2,7 +2,6 @@
 title: "CHANGlab - Home"
 layout: homelay
 excerpt: "Chang Lab at Seoul National University."
-sitemap: false
 permalink: /
 ---
 

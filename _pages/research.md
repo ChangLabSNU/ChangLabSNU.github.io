@@ -2,7 +2,6 @@
 title: "CHANGlab - Research"
 layout: textlay
 excerpt: "CHANGlab -- Research"
-sitemap: false
 permalink: /research/
 ---
 

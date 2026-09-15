@@ -1,19 +1,41 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url}}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
 
-{%- comment -%}
-  The production-only analytics.html include was dropped along with the
-  analytics tag in _layouts/default.html. It reported to UA-82472331-1 --
-  another dead Universal Analytics property -- and, because both CI pipelines
-  build with JEKYLL_ENV=production, it would have put an unpinnable
-  cross-domain script back into every CI-built page.
-{%- endcomment -%}
+  {%- comment -%}
+    Page title, description and social image, resolved once here so the
+    <title>, the canonical link and the Open Graph tags cannot drift apart.
+    A member page supplies its own portrait through the `image` front matter
+    that _layouts/member.html already reads; everything else falls back to
+    the lab photo.
+  {%- endcomment -%}
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- if page.layout == "member" -%}
+    {%- capture page_desc -%}{{ page.title }} — {{ page.position }}, {{ site.title }} at Seoul National University.{%- endcapture -%}
+  {%- else -%}
+    {%- assign page_desc = page.excerpt | default: site.description -%}
+  {%- endif -%}
+  {%- assign page_desc = page_desc | strip_html | strip_newlines | truncate: 200 -%}
+  {%- assign page_image = page.image | default: "/images/home-slider/lablogo-slider.jpg" -%}
+  {%- comment -%}
+    A member portrait is taller than it is wide, so it goes in the small square
+    card; the wide card is for the lab photo, which is the right shape for it.
+  {%- endcomment -%}
+  {%- if page.image -%}{%- assign card = "summary" -%}{%- else -%}{%- assign card = "summary_large_image" -%}{%- endif -%}
+  {%- assign page_url = page.url | replace: 'index.html', '' | absolute_url -%}
 
+  <title>{{ page_title | escape }}</title>
+  <meta name="description" content="{{ page_desc | escape }}">
+  <link rel="canonical" href="{{ page_url }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ page_desc | escape }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ page_image | absolute_url }}">
+  <meta name="twitter:card" content="{{ card }}">
+
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
 </head>

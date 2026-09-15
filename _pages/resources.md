@@ -2,7 +2,6 @@
 title: "CHANGlab - Resources"
 layout: gridlay
 excerpt: "CHANGlab -- Software and resources distributed from the lab."
-sitemap: false
 permalink: /resources/
 ---
 

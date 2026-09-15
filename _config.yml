@@ -12,9 +12,17 @@ description: > # this means to ignore newlines until "baseurl:"
   Hyeshik Chang's Quantitative Molecular Biology Laboratory in the School of Biological
   Sciences at Seoul National University, South Korea.
 baseurl: ""
-url: ""
+# Absolute base for canonical links and Open Graph tags. `jekyll serve`
+# overrides this with the local address, so it does not leak into dev.
+url: "https://qbio.io"
 
 destination: ./_site
+
+# jekyll-sitemap is already resolved in Gemfile.lock (it comes in with
+# minimal-mistakes-jekyll), it just was never loaded: there was no plugins
+# key at all, which is why every page carried a decorative `sitemap: false`.
+plugins:
+  - jekyll-sitemap
 
 include:
   - .htaccess
