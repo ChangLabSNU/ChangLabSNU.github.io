@@ -5,3 +5,6 @@ public/
 
 # Claude Code local settings and worktrees
 .claude/
+
+# macOS Finder metadata
+.DS_Store

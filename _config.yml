@@ -20,9 +20,20 @@ include:
   - .htaccess
   - _pages
 
+# Repo-only files. Without this list Jekyll copies every unrecognised file at
+# the site root into _site/, which published CLAUDE.md, README.md, run.sh and
+# sync.sh to qbio.io. Jekyll appends its own defaults (Gemfile, vendor/, ...)
+# to whatever is listed here, so those do not need repeating.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - run.sh
+  - sync.sh
+
 sass:
   sass_dir: _sass
   style: compressed
+  sourcemap: never
   quiet_deps: true
   silence_deprecations:
     - import
