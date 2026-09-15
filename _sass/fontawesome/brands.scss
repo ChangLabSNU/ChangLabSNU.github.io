@@ -9,12 +9,11 @@
   font-style: normal;
   font-weight: 400;
   font-display: $fa-font-display;
-  src: url('#{$fa-font-path}/fa-brands-400.eot');
-  src: url('#{$fa-font-path}/fa-brands-400.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
-  url('#{$fa-font-path}/fa-brands-400.woff') format('woff'),
-  url('#{$fa-font-path}/fa-brands-400.ttf') format('truetype'),
-  url('#{$fa-font-path}/fa-brands-400.svg#fontawesome') format('svg');
+  // Legacy formats (.eot for IE8-11, .ttf for Android < 4.4, .svg for
+  // iOS < 5) were dropped along with the font files themselves; every
+  // browser this site supports takes the .woff2.
+  src: url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
+       url('#{$fa-font-path}/fa-brands-400.woff') format('woff');
 }
 
 .fab {
