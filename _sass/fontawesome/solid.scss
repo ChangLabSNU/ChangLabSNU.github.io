@@ -9,11 +9,9 @@
   font-style: normal;
   font-weight: 900;
   font-display: $fa-font-display;
-  // Legacy formats (.eot for IE8-11, .ttf for Android < 4.4, .svg for
-  // iOS < 5) were dropped along with the font files themselves; every
-  // browser this site supports takes the .woff2.
-  src: url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
-       url('#{$fa-font-path}/fa-solid-900.woff') format('woff');
+  // Only .woff2 is shipped: every browser this site supports takes it, so the
+  // legacy formats (.woff, .eot, .ttf, .svg) were dropped with their files.
+  src: url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2');
 }
 
 .fa,
