@@ -8,3 +8,7 @@ public/
 
 # macOS Finder metadata
 .DS_Store
+
+# Bundler: per-checkout config and gems installed with `bundle config set path vendor/bundle`
+.bundle/
+vendor/

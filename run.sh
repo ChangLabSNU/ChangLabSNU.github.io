@@ -1,3 +1,3 @@
 #!/bin/sh -e
-cdrun qbiowww bundle exec jekyll serve --watch
-#--incremental
+# Local preview at http://localhost:4000
+exec bundle exec jekyll serve --watch "$@"
