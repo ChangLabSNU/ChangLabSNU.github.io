@@ -13,12 +13,17 @@ Font Awesome Free 5.15.3, Kramdown (GFM), Liquid templates, SCSS.
 ## Build & Serve
 
 Ruby version is pinned in `.ruby-version` (CI reads it too); `Gemfile.lock` needs Bundler 4.
+On the lab server Ruby, Bundler and the gems all live in the `qbiowww` conda env
+(`environment.yml`, dedicated to this repo -- free to rebuild). Enter it with `cdrun`;
+plain `bundle` outside it is the system Ruby and will not match.
 
 ```bash
-bundle install                      # Install dependencies (vendor/bundle if configured)
+cdrun qbiowww "bundle install"      # Install dependencies into the env
 ./run.sh                            # Dev server at http://localhost:4000
-JEKYLL_ENV=production bundle exec jekyll build   # Production build into _site/
+cdrun qbiowww "JEKYLL_ENV=production bundle exec jekyll build"   # Production build into _site/
 ```
+
+Bumping Ruby means changing `.ruby-version` and `environment.yml` together.
 
 CI also runs `htmlproofer` over `_site/` (internal links and images only); the exact
 invocation is in `.github/workflows/jekyll.yml` and README.md. Run it before pushing.
@@ -118,10 +123,18 @@ GitHub Pages is the live site. `.github/workflows/jekyll.yml` builds every push 
 request with `JEKYLL_ENV=production` and link-checks the result; only `main` is deployed.
 Dependabot (`.github/dependabot.yml`) proposes action and gem updates monthly.
 
-`./sync.sh` keeps a backup mirror on the lab server (`/home/www/qbio.io/`), needed for
-internal operational reasons. It only publishes a clean checkout of `origin/main`, builds
-into a temp dir so a failed build leaves the mirror alone, then rsyncs `--delete`.
+`./sync.sh` keeps a backup mirror on the lab server: `/home/www/qbio.io/`, served by nginx
+as **qbio.snu.ac.kr**, needed for internal operational reasons. It only publishes a clean
+checkout of `origin/main`, builds into a temp dir so a failed build leaves the mirror alone,
+then rsyncs `--delete`. That docroot also holds hand-placed directories that are not in
+this repo; they are listed in `KEEP` in `sync.sh` and protected from the delete. `-n` is a
+dry run.
 
-GitHub Pages cannot set response headers, so the live site serves no Content-Security-Policy
-(nothing in the repo sets one either). Comments that mention "this site's CSP" (no inline
-scripts) can only apply to the lab server's web config. Keep to that rule anyway.
+Because of the mirror, links to the site's own pages and assets must be root-relative
+(`{{ site.baseurl }}/...` or `relative_url`), never `{{ site.url }}`: an absolute qbio.io
+URL would make the mirror depend on GitHub Pages, and the mirror's CSP blocks it anyway.
+Only canonical and Open Graph URLs use `absolute_url`.
+
+That CSP is set by the lab server's nginx (`script-src 'self'`, no `'unsafe-inline'`, no
+third-party images). GitHub Pages cannot set headers, so qbio.io itself serves none -- write
+for the stricter host: no inline scripts, no new third-party origins.

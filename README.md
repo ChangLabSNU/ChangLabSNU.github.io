@@ -5,13 +5,18 @@ National University, live at <https://qbio.io>. It is a Jekyll 4 site.
 
 ## Working on it locally
 
-You need Ruby (the version in `.ruby-version`) and Bundler 4.
+You need Ruby (the version in `.ruby-version`) and Bundler 4. On the lab server they
+come from the `qbiowww` conda env, defined in `environment.yml` and used only by this
+repo; `run.sh` and `sync.sh` enter it through `cdrun`:
 
 ```sh
-bundle config set --local path vendor/bundle   # once: keep gems inside the checkout
-bundle install
-./run.sh                                        # preview at http://localhost:4000
+conda env create -f environment.yml        # once; `conda env update` after edits
+cdrun qbiowww "gem install --no-document bundler -v 4.0.6 && bundle install"
+./run.sh                                   # preview at http://localhost:4000
 ```
+
+Elsewhere, any Ruby of that version works: `gem install bundler -v 4.0.6`,
+`bundle install`, `./run.sh`.
 
 To check a production build the way CI does:
 
@@ -33,5 +38,11 @@ publications (`publist.yml`), news (`news.yml`), alumni and shared resources.
   `.github/workflows/jekyll.yml`. Pull requests are built and link-checked, not
   deployed.
 - **Backup mirror:** `./sync.sh` on the lab server rebuilds the current
-  `origin/main` and rsyncs it to `/home/www/qbio.io/`. It refuses to run from a
-  checkout that has local changes or is not at `origin/main`.
+  `origin/main` and rsyncs it to `/home/www/qbio.io/`, which nginx serves as
+  <https://qbio.snu.ac.kr>. It refuses to run from a checkout that has local
+  changes or is not at `origin/main`; `./sync.sh -n` shows what would change.
+  Directories placed there by hand (listed in `KEEP` in the script) are left alone.
+
+Asset and navigation links are root-relative (`{{ site.baseurl }}/...`), never
+`{{ site.url }}`, so the mirror loads everything from itself; only canonical
+and Open Graph URLs are absolute and point at qbio.io.
