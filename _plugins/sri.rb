@@ -1,7 +1,7 @@
 =begin
   Jekyll filter producing a Subresource Integrity hash for a site-local asset.
   Usage:
-    <script src="/js/jquery.min.js" integrity="{{ '/js/jquery.min.js' | sri }}"></script>
+    <script src="/js/site.js" integrity="{{ '/js/site.js' | sri }}" defer></script>
   The digest is taken from the file on disk at build time, so it can never drift
   out of sync with the asset the way a hand-written hash would.
 =end

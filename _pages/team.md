@@ -63,5 +63,3 @@ Both former and current interns are represented on this list.
 {%- assign prev_year = person.year_begin -%}
 {%- endfor %}
 </div>
-
-<script src="{{ site.baseurl }}/js/team-list.js" integrity="{{ '/js/team-list.js' | sri }}"></script>

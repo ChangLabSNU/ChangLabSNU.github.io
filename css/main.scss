@@ -446,3 +446,12 @@ div.resource-item p.resource-meta span.resource-license {
 .qb-fig-right-480 {
     width: 480px;
 }
+
+/* With reduced motion asked for, js/site.js stops the carousel's autoplay;
+   this makes the moves that remain (and the navbar) jump instead of slide. */
+@media (prefers-reduced-motion: reduce) {
+    .carousel-inner > .item,
+    .collapsing {
+        transition: none;
+    }
+}

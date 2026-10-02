@@ -4,7 +4,7 @@
 
 // Roboto used to be pulled from fonts.googleapis.com here. That is a
 // cross-domain request on every page load -- the same thing the
-// self-hosted jQuery and the SRI filter exist to avoid -- so the body
+// self-hosted scripts and the SRI filter exist to avoid -- so the body
 // stack now leads with the Inter that is already self-hosted for
 // headings. To go back, restore the @import below and put "Roboto"
 // first in $font-family-sans-serif.

@@ -6,8 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Jekyll 4 static site for the Hyeshik Chang Lab (Quantitative Molecular Biology) at Seoul National University. Live at **qbio.io**.
 
-Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Bootstrap 3.3.x and jQuery 1.11.3 (both
-vendored and pinned to each other -- Bootstrap 3's JS will not run on jQuery 3),
+Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Bootstrap 3.3.x CSS (vendored SCSS) with no
+jQuery or Bootstrap JS: `js/site.js` is the only script -- carousel, collapsing navbar and
+clickable team cards -- and drives Bootstrap 3's CSS classes directly,
 Font Awesome Free 5.15.3, Kramdown (GFM), Liquid templates, SCSS.
 
 ## Build & Serve
