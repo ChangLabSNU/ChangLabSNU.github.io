@@ -16,7 +16,9 @@ cdrun qbiowww "gem install --no-document bundler -v 4.0.6 && bundle install"
 ```
 
 Elsewhere, any Ruby of that version works: `gem install bundler -v 4.0.6`,
-`bundle install`, `./run.sh`.
+`bundle install`, `./run.sh`. Install libvips too (`brew install vips`,
+`apt install libvips42t64`) to preview the resized WebP photos; without it the
+preview shows the originals, and only a production build insists on it.
 
 To check a production build the way CI does:
 

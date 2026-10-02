@@ -30,34 +30,34 @@ examine molecular mechanisms at a systems level.
     <div class="carousel-inner" markdown="0">
 
         <div class="item active">
-            <img src="{{ site.baseurl }}/images/home-slider/lablogo-slider.jpg" alt="Slide 1" width="1318" height="877" />
+            {% picture slide images/home-slider/lablogo-slider.jpg alt="Slide 1" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2604-02.jpg" alt="Slide 2" width="1920" height="1280" loading="lazy" />
+            {% picture slide images/home-slider/2604-02.jpg alt="Slide 2" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2402-01.jpg" alt="Slide 3" width="1920" height="1278" loading="lazy" />
+            {% picture slide images/home-slider/2402-01.jpg alt="Slide 3" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2105-06.jpg" alt="Slide 4" width="1920" height="1278" loading="lazy" />
+            {% picture slide images/home-slider/2105-06.jpg alt="Slide 4" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2105-05.jpg" alt="Slide 5" width="1920" height="1278" loading="lazy" />
+            {% picture slide images/home-slider/2105-05.jpg alt="Slide 5" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2105-03.jpg" alt="Slide 6" width="1920" height="1280" loading="lazy" />
+            {% picture slide images/home-slider/2105-03.jpg alt="Slide 6" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2105-04.jpg" alt="Slide 7" width="1920" height="1278" loading="lazy" />
+            {% picture slide images/home-slider/2105-04.jpg alt="Slide 7" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2504-02.jpg" alt="Slide 8" width="2416" height="1602" loading="lazy" />
+            {% picture slide images/home-slider/2504-02.jpg alt="Slide 8" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2402-02.jpg" alt="Slide 9" width="1920" height="1278" loading="lazy" />
+            {% picture slide images/home-slider/2402-02.jpg alt="Slide 9" loading="lazy" %}
         </div>
         <div class="item">
-            <img src="{{ site.baseurl }}/images/home-slider/2107-01.jpg" alt="Slide 10" width="1920" height="1278" loading="lazy" />
+            {% picture slide images/home-slider/2107-01.jpg alt="Slide 10" loading="lazy" %}
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">

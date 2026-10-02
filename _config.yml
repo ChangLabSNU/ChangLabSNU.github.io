@@ -38,6 +38,25 @@ exclude:
   # Carousel photos kept for reuse but not on the front page today.
   - images/_home-slider-archive/
 
+# Presets for {% picture %} (_plugins/picture.rb). `widths` are the WebP
+# copies to make, in pixels; `sizes` tells the browser how wide the image is
+# drawn, so it can pick one before layout. Both were measured from the
+# rendered pages (the layout stops growing at a 1000px viewport): widths cover
+# the largest drawn size at 1x and 2x. Re-measure if a layout changes width.
+pictures:
+  slide:          # home carousel, 283-675px wide
+    widths: [600, 1200]
+    sizes: "(min-width: 1000px) 575px, (min-width: 768px) calc(66.67vw - 92px), calc(100vw - 92px)"
+  member-thumb:   # team page photos, 85-183px wide
+    widths: [180, 360]
+    sizes: "(min-width: 1000px) 117px, (min-width: 768px) calc(12.5vw - 8px), calc(25vw - 8px)"
+  figure-wide:    # full-width figure in a text page, up to 968px
+    widths: [1000, 2000]
+    sizes: "(min-width: 1000px) 968px, calc(100vw - 32px)"
+  figure-side:    # .qb-fig-right-400/420 floats
+    widths: [420, 840]
+    sizes: "420px"
+
 sass:
   sass_dir: _sass
   style: compressed

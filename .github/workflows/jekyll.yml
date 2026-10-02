@@ -35,6 +35,21 @@ jobs:
           # ruby-version is read from .ruby-version
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 1 # Increment this number if you need to re-download cached gems
+      - name: Install libvips
+        # _plugins/picture.rb makes the WebP copies of the photos with it.
+        # The package took a t64 suffix in Ubuntu 24.04; older names as fallback.
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends libvips42t64 \
+            || sudo apt-get install -y -qq --no-install-recommends libvips42
+      - name: Cache WebP copies
+        # Keyed by content digest inside, so a stale restore is still correct;
+        # only images added since are encoded.
+        uses: actions/cache@v6
+        with:
+          path: .jekyll-cache/pictures
+          key: pictures-${{ hashFiles('images/**', '_plugins/picture.rb') }}
+          restore-keys: pictures-
       - name: Setup Pages
         id: pages
         if: github.event_name != 'pull_request'

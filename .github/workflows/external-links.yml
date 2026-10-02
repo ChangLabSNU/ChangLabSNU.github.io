@@ -28,9 +28,9 @@ jobs:
           bundler-cache: true
           cache-version: 1
       - name: Build with Jekyll
+        # Not a production build: that would need libvips for the WebP copies
+        # (_plugins/picture.rb), and outbound links do not depend on them.
         run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
       - name: Check external links
         id: proof
         continue-on-error: true

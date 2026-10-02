@@ -73,7 +73,7 @@ Content pages live here. Member profiles are in `_pages/team/[link].md` where `[
 
 1. Add entry to `_data/team.yml` with `active: true`
 2. Create `_pages/team/<link>.md` with `layout: member` front matter
-3. Add photo to `images/members/<name>-thumb.jpg`
+3. Add photo to `images/members/<name>-thumb.jpg` (any size; the team page resizes it)
 
 ### Add a publication
 
@@ -115,11 +115,16 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 - Custom plugins: `_plugins/sri.rb` adds an `sri` filter that hashes a local file at build
   time: `<script src="..." integrity="{{ '/js/x.js' | sri }}">`. Use it for every script tag.
   `_plugins/data_check.rb` validates `_data/` (see above).
+- Photos go through `{% picture <preset> <path> alt="..." %}` (`_plugins/picture.rb`), not a
+  bare `<img>`: it publishes WebP copies at the widths of the preset (`pictures:` in
+  `_config.yml`) with `srcset`/`sizes` and the right `width`/`height`, so commit the
+  full-size JPEG and let the build resize it. Used for the carousel slides, team-page
+  photos and research figures. A production build needs libvips (in `environment.yml`;
+  CI installs it); other builds fall back to the original image. The member page photo
+  and Open Graph images stay plain JPEG, since link-preview crawlers handle WebP poorly.
 - Homepage carousel configured in `_pages/home.md` with images from `images/home-slider/`.
-  Every slide carries its own `width`/`height` (the real pixel size of the file, so the
-  browser reserves the right box) and every slide but the first carries `loading="lazy"`.
-  Keep both in step when swapping a photo. Slides not currently on the page live in
-  `images/_home-slider-archive/`, which is excluded from the build.
+  Every slide but the first carries `loading="lazy"`. Slides not currently on the page live
+  in `images/_home-slider-archive/`, which is excluded from the build.
 - Icon CSS is subset: `_sass/fontawesome/_icons-subset.scss` and the tail of
   `_sass/bootstrap/_glyphicons.scss` list only the icons in use. Using a new icon means
   adding its rule there -- the class alone will render nothing.

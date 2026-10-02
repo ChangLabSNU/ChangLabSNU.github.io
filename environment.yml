@@ -12,3 +12,5 @@ dependencies:
   - c-compiler
   - cxx-compiler
   - make
+  # _plugins/picture.rb resizes photos to WebP with it (through ruby-vips)
+  - libvips
