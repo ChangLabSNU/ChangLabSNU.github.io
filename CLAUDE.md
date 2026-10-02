@@ -130,11 +130,13 @@ request with `JEKYLL_ENV=production` and link-checks the result; only `main` is 
 Dependabot (`.github/dependabot.yml`) proposes action and gem updates monthly.
 
 `./sync.sh` keeps a backup mirror on the lab server: `/home/www/qbio.io/`, served by nginx
-as **qbio.snu.ac.kr**, needed for internal operational reasons. It only publishes a clean
-checkout of `origin/main`, builds into a temp dir so a failed build leaves the mirror alone,
-then rsyncs `--delete`. That docroot also holds hand-placed directories that are not in
+as **qbio.snu.ac.kr**, needed for internal operational reasons. It builds an export of
+`origin/main` (never the working tree) into a temp dir, so a failed build leaves the mirror
+alone, then rsyncs `--delete -c`: only files whose contents changed are copied and listed.
+A lock stops a cron run and a manual run from overlapping. That docroot also holds hand-placed directories that are not in
 this repo; they are listed in `KEEP` in `sync.sh` and protected from the delete. `-n` is a
-dry run.
+dry run, `-q` (for cron) prints only changes and errors. Running it for real publishes to the
+mirror: leave that to the user.
 
 Because of the mirror, links to the site's own pages and assets must be root-relative
 (`{{ site.baseurl }}/...` or `relative_url`), never `{{ site.url }}`: an absolute qbio.io

@@ -39,11 +39,17 @@ checks these files and stops with a list of problems (an author `link` missing f
 - **Live site:** every push to `main` is built and deployed to GitHub Pages by
   `.github/workflows/jekyll.yml`. Pull requests are built and link-checked, not
   deployed.
-- **Backup mirror:** `./sync.sh` on the lab server rebuilds the current
-  `origin/main` and rsyncs it to `/home/www/qbio.io/`, which nginx serves as
-  <https://qbio.snu.ac.kr>. It refuses to run from a checkout that has local
-  changes or is not at `origin/main`; `./sync.sh -n` shows what would change.
+- **Backup mirror:** `./sync.sh` on the lab server builds the current `origin/main`
+  (from an export of that commit, whatever this checkout holds) and rsyncs it to
+  `/home/www/qbio.io/`, which nginx serves as <https://qbio.snu.ac.kr>. `-n` shows
+  what would change; `-q` prints nothing unless something changed or failed.
   Directories placed there by hand (listed in `KEEP` in the script) are left alone.
+  To keep it current without anyone remembering, run it from cron (`crontab -e`;
+  cron mails whatever it prints to `MAILTO`, so you hear only of changes and failures):
+
+  ```
+  17 * * * * /home/hyeshik/ChangLabSNU.github.io/sync.sh -q
+  ```
 
 Asset and navigation links are root-relative (`{{ site.baseurl }}/...`), never
 `{{ site.url }}`, so the mirror loads everything from itself; only canonical
