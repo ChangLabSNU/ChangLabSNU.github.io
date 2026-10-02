@@ -23,7 +23,6 @@ plugins:
   - jekyll-sitemap
 
 include:
-  - .htaccess
   - _pages
 
 # Repo-only files. Without this list Jekyll copies every unrecognised file at

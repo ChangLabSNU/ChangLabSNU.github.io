@@ -107,7 +107,8 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 - Member URL slugs: lowercase hyphenated (`jane-doe`)
 - Sort keys: `lastname-firstname` pattern
 - Publication author superscripts: `<sup>1</sup>` = first author, `<sup>*</sup>` = corresponding
-- Custom plugin `_plugins/markdown.rb` enables `{% markdown filename %}` in templates
+- The one custom plugin, `_plugins/sri.rb`, adds an `sri` filter that hashes a local file at build
+  time: `<script src="..." integrity="{{ '/js/x.js' | sri }}">`. Use it for every script tag.
 - Homepage carousel configured in `_pages/home.md` with images from `images/home-slider/`.
   Every slide carries its own `width`/`height` (the real pixel size of the file, so the
   browser reserves the right box) and every slide but the first carries `loading="lazy"`.
