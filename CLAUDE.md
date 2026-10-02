@@ -34,7 +34,11 @@ are skipped.
 
 ### Data-driven content (`_data/`)
 
-All dynamic content lives in YAML data files:
+All dynamic content lives in YAML data files. `_plugins/data_check.rb` checks them on every
+build (local, CI and `sync.sh`) and fails it with a list of problems: author or fellowship
+`link`s that are not in team.yml, unknown categories, a non-boolean `active`, missing photos
+or images, malformed or out-of-order dates. Its rules mirror what the templates read -- when a
+template starts reading a new field or category, update the matching rule.
 
 - **team.yml** — Current members. Key fields: `name`, `link` (URL slug), `category` (principal-investigator/student/postdoc/support/research-assistant), `active` (true/false), `sort-key` (lastname-firstname).
 - **publist.yml** — Publications. Authors reference members via `link` field (matching team.yml) or external authors via `name`. Supports `is_first`/`is_corresponding` markers. `highlight: 1` features a paper in the highlights section.
@@ -107,8 +111,9 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 - Member URL slugs: lowercase hyphenated (`jane-doe`)
 - Sort keys: `lastname-firstname` pattern
 - Publication author superscripts: `<sup>1</sup>` = first author, `<sup>*</sup>` = corresponding
-- The one custom plugin, `_plugins/sri.rb`, adds an `sri` filter that hashes a local file at build
+- Custom plugins: `_plugins/sri.rb` adds an `sri` filter that hashes a local file at build
   time: `<script src="..." integrity="{{ '/js/x.js' | sri }}">`. Use it for every script tag.
+  `_plugins/data_check.rb` validates `_data/` (see above).
 - Homepage carousel configured in `_pages/home.md` with images from `images/home-slider/`.
   Every slide carries its own `width`/`height` (the real pixel size of the file, so the
   browser reserves the right box) and every slide but the first carries `loading="lazy"`.

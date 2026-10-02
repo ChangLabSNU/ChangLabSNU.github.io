@@ -3,7 +3,8 @@
 # the entries appear in the order they are listed here.
 #
 # category:    group to list the entry under -- one of the keys in
-#              _includes/resource_list.html ("software" or "resource").
+#              _includes/resource_list.html ("software" or "resource"),
+#              mirrored in _plugins/data_check.rb.
 #              A group with no entries prints no heading.
 # info:        one-line subtitle shown next to the name.
 # description: a paragraph on what it is and who it is for.
