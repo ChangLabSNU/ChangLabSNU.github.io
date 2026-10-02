@@ -128,6 +128,9 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 GitHub Pages is the live site. `.github/workflows/jekyll.yml` builds every push and pull
 request with `JEKYLL_ENV=production` and link-checks the result; only `main` is deployed.
 Dependabot (`.github/dependabot.yml`) proposes action and gem updates monthly.
+`.github/workflows/external-links.yml` checks outbound links every Monday and keeps a single
+"Broken external links" issue open while any fail (closing it when they recover); it ignores
+403/429, which publishers send to every bot. It never blocks a deploy.
 
 `./sync.sh` keeps a backup mirror on the lab server: `/home/www/qbio.io/`, served by nginx
 as **qbio.snu.ac.kr**, needed for internal operational reasons. It builds an export of

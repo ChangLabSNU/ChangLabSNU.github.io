@@ -1,0 +1,79 @@
+# Weekly check of the links the site makes to other sites. Those break for
+# reasons of their own, so this never blocks a deploy: it keeps one open issue
+# listing what is broken, rewrites it on each run, and closes it once every
+# link resolves again. Status 403 and 429 are ignored: publishers such as
+# Cell, ScienceDirect and OUP send them to every bot, valid link or not.
+name: Check external links
+
+on:
+  schedule:
+    - cron: "23 3 * * 1"  # Mondays 03:23 UTC, 12:23 in Seoul
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          cache-version: 1
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - name: Check external links
+        id: proof
+        continue-on-error: true
+        run: >-
+          bundle exec htmlproofer ./_site
+          --checks Links,Images
+          --no-enforce-https
+          --ignore-status-codes 403,429
+          --typhoeus '{"connecttimeout": 15, "timeout": 60}'
+          --hydra '{"max_concurrency": 8}'
+          --swap-urls '^https\://qbio\.io:'
+          --ignore-urls '/^(https:\/\/qbio\.io)?\/share\//'
+          2>&1 | tee proofer.log
+      - name: Open, update or close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUTCOME: ${{ steps.proof.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Broken external links"
+          issue=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
+            --search "in:title \"$title\"" --json number --jq '.[0].number // empty')
+
+          if [ "$OUTCOME" = success ]; then
+            if [ -n "$issue" ]; then
+              gh issue close "$issue" --repo "$GITHUB_REPOSITORY" \
+                --comment "Every external link resolves again ($RUN_URL)."
+            fi
+            exit 0
+          fi
+
+          {
+            echo "The weekly link check ($RUN_URL) found links on qbio.io that do not work."
+            echo "Fix or remove them in \`_data/\` or \`_pages/\`. This issue is rewritten on"
+            echo "each run and closes itself once they all resolve."
+            echo
+            echo '```'
+            sed -n '/following failures were found/,$p' proofer.log | sed 's|\./_site/||'
+            echo '```'
+          } > body.md
+
+          if [ -n "$issue" ]; then
+            gh issue edit "$issue" --repo "$GITHUB_REPOSITORY" --body-file body.md
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file body.md
+          fi

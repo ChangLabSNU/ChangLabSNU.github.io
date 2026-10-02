@@ -39,6 +39,8 @@ checks these files and stops with a list of problems (an author `link` missing f
 - **Live site:** every push to `main` is built and deployed to GitHub Pages by
   `.github/workflows/jekyll.yml`. Pull requests are built and link-checked, not
   deployed.
+- **Outbound links:** every Monday `.github/workflows/external-links.yml` checks the
+  links to other sites and keeps a "Broken external links" issue open while any fail.
 - **Backup mirror:** `./sync.sh` on the lab server builds the current `origin/main`
   (from an export of that commit, whatever this checkout holds) and rsyncs it to
   `/home/www/qbio.io/`, which nginx serves as <https://qbio.snu.ac.kr>. `-n` shows
