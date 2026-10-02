@@ -6,10 +6,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Jekyll 4 static site for the Hyeshik Chang Lab (Quantitative Molecular Biology) at Seoul National University. Live at **qbio.io**.
 
-Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Bootstrap 3.3.x CSS (vendored SCSS) with no
-jQuery or Bootstrap JS: `js/site.js` is the only script -- carousel, collapsing navbar and
-clickable team cards -- and drives Bootstrap 3's CSS classes directly,
-Font Awesome Free 5.15.3 icons as inline SVG, Kramdown (GFM), Liquid templates, SCSS.
+Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates, Dart Sass.
+
+- CSS: `_sass/_base.scss` is Bootstrap 3.3.7 + Bootswatch Lumen compiled once to plain CSS
+  and pruned to what the site uses (its header says what was kept); edit it directly.
+  `css/main.scss` holds the site's own rules on top and pulls it in with `@use`. No Bootstrap
+  SCSS, mixins or variables remain, and Sass builds with no deprecations silenced -- keep it
+  that way (`@use`, not `@import`). A component Bootstrap had but the site never used
+  (buttons, forms, modals, ...) is not in `_base.scss`.
+- JS: `js/site.js` is the only script -- carousel, collapsing navbar and clickable team
+  cards -- and drives Bootstrap 3's CSS classes directly. No jQuery.
+- Icons: Font Awesome Free 5.15.3 shapes as inline SVG (see Conventions).
 
 ## Build & Serve
 

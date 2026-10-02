@@ -1,8 +1,11 @@
 ---
 ---
-    
-@import "bootstrap";
-@import "fonts_inter";
+
+@use "base";
+@use "fonts_inter";
+
+// The heading face; it used to come from Bootstrap's variables.
+$headings-font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
 
 img {
     margin-bottom: 24px;

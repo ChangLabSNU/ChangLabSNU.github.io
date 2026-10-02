@@ -61,13 +61,6 @@ sass:
   sass_dir: _sass
   style: compressed
   sourcemap: never
-  quiet_deps: true
-  silence_deprecations:
-    - import
-    - global-builtin
-    - color-functions
-    - slash-div
-    - if-function
 
 # Conversion
 markdown: kramdown
