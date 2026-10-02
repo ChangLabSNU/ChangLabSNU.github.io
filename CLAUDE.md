@@ -12,11 +12,18 @@ Font Awesome Free 5.15.3, Kramdown (GFM), Liquid templates, SCSS.
 
 ## Build & Serve
 
+Ruby version is pinned in `.ruby-version` (CI reads it too); `Gemfile.lock` needs Bundler 4.
+
 ```bash
-bundle install              # Install dependencies
-bundle exec jekyll serve --watch  # Dev server at http://localhost:4000
-bundle exec jekyll build -d public  # Production build
+bundle install                      # Install dependencies (vendor/bundle if configured)
+./run.sh                            # Dev server at http://localhost:4000
+JEKYLL_ENV=production bundle exec jekyll build   # Production build into _site/
 ```
+
+CI also runs `htmlproofer` over `_site/` (internal links and images only); the exact
+invocation is in `.github/workflows/jekyll.yml` and README.md. Run it before pushing.
+Links under `qbio.io/share/` point at a separate Pages site on the same domain and
+are skipped.
 
 ## Architecture
 
@@ -107,10 +114,14 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 
 ## Deployment
 
-GitHub Actions (`.github/workflows/jekyll.yml`) builds on push to `main` with Ruby 3.3
-and `JEKYLL_ENV=production`, and deploys to GitHub Pages. Manual deploy via `./sync.sh`,
-which builds and rsyncs to production.
+GitHub Pages is the live site. `.github/workflows/jekyll.yml` builds every push and pull
+request with `JEKYLL_ENV=production` and link-checks the result; only `main` is deployed.
+Dependabot (`.github/dependabot.yml`) proposes action and gem updates monthly.
 
-`.gitlab-ci.yml` is left over from a GitLab Pages setup and cannot succeed: it pins Ruby
-2.6.3 and bundler 2.0.1, while the Gemfile needs Ruby >= 2.7 and `Gemfile.lock` is in a
-format only bundler >= 2.6 can read. There is no GitLab remote. Fix or delete it.
+`./sync.sh` keeps a backup mirror on the lab server (`/home/www/qbio.io/`), needed for
+internal operational reasons. It only publishes a clean checkout of `origin/main`, builds
+into a temp dir so a failed build leaves the mirror alone, then rsyncs `--delete`.
+
+GitHub Pages cannot set response headers, so the live site serves no Content-Security-Policy
+(nothing in the repo sets one either). Comments that mention "this site's CSP" (no inline
+scripts) can only apply to the lab server's web config. Keep to that rule anyway.
