@@ -1,0 +1,24 @@
+# Editor defaults (https://editorconfig.org), matching what most files here
+# already use. They apply to new edits only; nothing is reformatted.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Two trailing spaces are a Markdown line break, and some pages use them.
+[*.md]
+trim_trailing_whitespace = false
+
+[{css/main.scss,*.sh}]
+indent_size = 4
+
+[*.{jpg,jpeg,png,gif,webp,svg,ico,pdf,woff2}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
