@@ -18,9 +18,7 @@ url: "https://qbio.io"
 
 destination: ./_site
 
-# jekyll-sitemap is already resolved in Gemfile.lock (it comes in with
-# minimal-mistakes-jekyll), it just was never loaded: there was no plugins
-# key at all, which is why every page carried a decorative `sitemap: false`.
+# Also listed in the Gemfile's :jekyll_plugins group, which is what pins it.
 plugins:
   - jekyll-sitemap
 

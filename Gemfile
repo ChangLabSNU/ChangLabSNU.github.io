@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
-gem "minimal-mistakes-jekyll"
-gem "kramdown-parser-gfm"
 gem "jekyll", "~> 4.3"
+gem "kramdown-parser-gfm"
 
-gem "tzinfo-data"
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+group :jekyll_plugins do
+  gem "jekyll-sitemap"
+end
+
+group :test do
+  gem "html-proofer", "~> 5.0"
+end
