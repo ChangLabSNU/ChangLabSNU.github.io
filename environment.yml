@@ -1,0 +1,14 @@
+# Conda env for building this site on the lab server (used by run.sh and sync.sh).
+#   conda env create -f environment.yml     # or: conda env update -f environment.yml
+#   cdrun qbiowww "gem install --no-document bundler -v 4.0.6 && bundle install"
+# Keep the Ruby minor version in step with .ruby-version, which CI uses.
+name: qbiowww
+channels:
+  - conda-forge
+  - nodefaults  # keeps the solver off the defaults channel, which is much slower
+dependencies:
+  - ruby=3.4
+  # eventmachine and http_parser.rb (jekyll serve's livereload) build from source
+  - c-compiler
+  - cxx-compiler
+  - make
