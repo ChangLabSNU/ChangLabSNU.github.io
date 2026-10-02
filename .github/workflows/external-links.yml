@@ -3,6 +3,9 @@
 # listing what is broken, rewrites it on each run, and closes it once every
 # link resolves again. Status 403 and 429 are ignored: publishers such as
 # Cell, ScienceDirect and OUP send them to every bot, valid link or not.
+# hyeshik.qbio.io is skipped: it serves its certificate without the
+# intermediate, which browsers repair and this checker does not, and that is
+# known and accepted.
 name: Check external links
 
 on:
@@ -34,16 +37,26 @@ jobs:
       - name: Check external links
         id: proof
         continue-on-error: true
-        run: >-
-          bundle exec htmlproofer ./_site
-          --checks Links,Images
-          --no-enforce-https
-          --ignore-status-codes 403,429
-          --typhoeus '{"connecttimeout": 15, "timeout": 60}'
-          --hydra '{"max_concurrency": 8}'
-          --swap-urls '^https\://qbio\.io:'
-          --ignore-urls '/^(https:\/\/qbio\.io)?\/share\//'
-          2>&1 | tee proofer.log
+        # A link counts as broken only if it fails twice, a minute apart: some
+        # sites (www.snu.ac.kr among them) drop the odd connection. The cache
+        # remembers what passed, so the second pass skips those links.
+        run: |
+          proof() {
+            bundle exec htmlproofer ./_site \
+              --checks Links,Images \
+              --no-enforce-https \
+              --ignore-status-codes 403,429 \
+              --typhoeus '{"connecttimeout": 15, "timeout": 60}' \
+              --hydra '{"max_concurrency": 8}' \
+              --cache '{"timeframe": {"external": "1d"}}' \
+              --swap-urls '^https\://qbio\.io:' \
+              --ignore-urls '/^(https:\/\/qbio\.io)?\/share\//,/^https:\/\/hyeshik\.qbio\.io\//' \
+              > proofer.log 2>&1
+          }
+          status=0
+          proof || { cat proofer.log; echo "Retrying the failures in 60 s"; sleep 60; proof || status=$?; }
+          cat proofer.log
+          exit "$status"
       - name: Open, update or close the issue
         env:
           GH_TOKEN: ${{ github.token }}
