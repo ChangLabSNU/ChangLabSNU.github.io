@@ -26,7 +26,7 @@ diversity in UTRs is even greater. Unlike cellular mRNAs, mRNA vaccines
 are not replicated inside the cell, so optimizing their stability is
 crucial for efficacy.
 
-![]({{ site.url }}{{ site.baseurl }}/images/research/sars-cov-2-codons.jpg){: .qb-fig-wide}
+![]({{ site.baseurl }}/images/research/sars-cov-2-codons.jpg){: .qb-fig-wide}
 
 We are developing methods to rapidly design optimal mRNA sequences
 by considering biological factors that influence RNA stability. RNA
@@ -63,9 +63,9 @@ intricate regulatory mechanisms that bridge genomic DNA and protein
 expression, it is crucial to analyze individual RNA molecules at the
 single-molecule level.
 
-![]({{ site.url }}{{ site.baseurl }}/images/research/nanopore-sm-features.jpg){: .qb-fig-right .qb-fig-right-400}
+![]({{ site.baseurl }}/images/research/nanopore-sm-features.jpg){: .qb-fig-right .qb-fig-right-400}
 
-![]({{ site.url }}{{ site.baseurl }}/images/research/nanopore-polya.jpg){: .qb-fig-right .qb-fig-right-420}
+![]({{ site.baseurl }}/images/research/nanopore-polya.jpg){: .qb-fig-right .qb-fig-right-420}
 
 Nanopore direct sequencing has emerged as a transformative technology
 capable of revealing the complex connections within genetic circuitry. In

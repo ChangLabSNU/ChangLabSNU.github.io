@@ -23,7 +23,7 @@ permalink: /team/
 {% for person in alumni_by_leaving_date -%}
 <div>
 <h5>{% if person.link -%}
-<a href="{{ site.url }}{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>
+<a href="{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>
 {%- else %}{{ person.name }}{% endif %}
 <span>–
 {% if person.position contains ',' -%}
@@ -54,7 +54,7 @@ Both former and current interns are represented on this list.
 {% else -%}
 ;
 {% endif -%}
-{%- if person.link %}<a href="{{ site.url }}{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>{% else -%}
+{%- if person.link %}<a href="{{ site.baseurl }}/team/{{ person.link }}">{{ person.name }}</a>{% else -%}
 {{ person.name }} 
 {%- endif -%}
 {%- if person.year_begin != person.year_end %}
@@ -64,4 +64,4 @@ Both former and current interns are represented on this list.
 {%- endfor %}
 </div>
 
-<script src="{{ site.url }}{{ site.baseurl }}/js/team-list.js" integrity="{{ '/js/team-list.js' | sri }}"></script>
+<script src="{{ site.baseurl }}/js/team-list.js" integrity="{{ '/js/team-list.js' | sri }}"></script>

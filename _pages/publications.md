@@ -24,7 +24,7 @@ permalink: /publications/
 <div class="col-sm-6 clearfix">
  <div class="well">
   <h4>{{ publi.title }}</h4>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/publications/{{ publi.image }}" class="img-responsive qb-float-left" width="33%" />
+  <img src="{{ site.baseurl }}/images/publications/{{ publi.image }}" class="img-responsive qb-float-left" width="33%" />
   <p>{{ publi.description }}</p>
   <p><em>{% include publication_author_list.html %}</em></p>
   <h5><a href="{{ publi.link.url }}">{{ publi.link.display }}</a></h5>
