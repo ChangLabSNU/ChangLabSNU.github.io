@@ -9,7 +9,7 @@ Jekyll 4 static site for the Hyeshik Chang Lab (Quantitative Molecular Biology) 
 Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Bootstrap 3.3.x CSS (vendored SCSS) with no
 jQuery or Bootstrap JS: `js/site.js` is the only script -- carousel, collapsing navbar and
 clickable team cards -- and drives Bootstrap 3's CSS classes directly,
-Font Awesome Free 5.15.3, Kramdown (GFM), Liquid templates, SCSS.
+Font Awesome Free 5.15.3 icons as inline SVG, Kramdown (GFM), Liquid templates, SCSS.
 
 ## Build & Serve
 
@@ -38,8 +38,9 @@ are skipped.
 All dynamic content lives in YAML data files. `_plugins/data_check.rb` checks them on every
 build (local, CI and `sync.sh`) and fails it with a list of problems: author or fellowship
 `link`s that are not in team.yml, unknown categories, a non-boolean `active`, missing photos
-or images, malformed or out-of-order dates. Its rules mirror what the templates read -- when a
-template starts reading a new field or category, update the matching rule.
+or images, malformed or out-of-order dates, icon names missing from `icons.yml`. Its rules
+mirror what the templates read -- when a template starts reading a new field or category,
+update the matching rule.
 
 - **team.yml** — Current members. Key fields: `name`, `link` (URL slug), `category` (principal-investigator/student/postdoc/support/research-assistant), `active` (true/false), `sort-key` (lastname-firstname).
 - **publist.yml** — Publications. Authors reference members via `link` field (matching team.yml) or external authors via `name`. Supports `is_first`/`is_corresponding` markers. `highlight: 1` features a paper in the highlights section.
@@ -125,9 +126,10 @@ Set `active: false` in team.yml. Add entry to `_data/alumni_members.yml` with da
 - Homepage carousel configured in `_pages/home.md` with images from `images/home-slider/`.
   Every slide but the first carries `loading="lazy"`. Slides not currently on the page live
   in `images/_home-slider-archive/`, which is excluded from the build.
-- Icon CSS is subset: `_sass/fontawesome/_icons-subset.scss` and the tail of
-  `_sass/bootstrap/_glyphicons.scss` list only the icons in use. Using a new icon means
-  adding its rule there -- the class alone will render nothing.
+- Icons are inline SVG, not an icon font: `{% include icon.html name="github" %}` (add
+  `class="icon-fw"` for a fixed-width column of them). The shapes live in `_data/icons.yml`,
+  traced from Font Awesome Free 5.15.3 (CC BY 4.0); to add one, copy its `viewBox` and path
+  from that version's SVG. The data check fails the build on a name that is not there.
 
 ## Deployment
 

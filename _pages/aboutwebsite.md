@@ -41,7 +41,8 @@ Many ideas and implementations of aesthetic parts were borrowed from the [Hugo T
 
 #### Font Awesome
 
-Font Awesome was released under [the SIL Open Font License 1.1 and the MIT license](https://fontawesome.com/license/free).
+The icons are from Font Awesome Free 5.15.3 by Fonticons, Inc., used as SVG under the
+[Creative Commons Attribution 4.0 International license](https://fontawesome.com/license/free).
 
 #### Bootstrap
 

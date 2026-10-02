@@ -34,6 +34,7 @@ module Jekyll
         check_fellowships(team_links)
         check_news
         check_resources
+        check_icons
         @problems
       end
 
@@ -207,6 +208,24 @@ module Jekyll
             unless l.is_a?(Hash) && l["title"] && l["url"]
               problem("resources", r, i, "links item #{j + 1} needs both `title` and `url`")
             end
+          end
+        end
+      end
+
+      # _includes/icon.html renders an empty <svg> for an unknown name, so check
+      # the names the templates ask for as well as the entries themselves.
+      def check_icons
+        icons = @data["icons"] || {}
+        icons.each do |name, icon|
+          box = icon.is_a?(Hash) ? icon["viewbox"].to_s.split : []
+          unless box.size == 4 && box.all? { |n| n.match?(/\A\d+(\.\d+)?\z/) } && icon["path"].to_s.start_with?("M")
+            @problems << "_data/icons.yml, #{name}: needs a `viewbox` of four numbers and a `path`"
+          end
+        end
+        Dir.glob(File.join(@site.source, "{_includes,_layouts,_pages}", "**", "*.{html,md}")).sort.each do |file|
+          File.read(file).scan(/include icon\.html name="([^"]+)"/).flatten.uniq.each do |name|
+            next if icons.key?(name)
+            @problems << "#{file.delete_prefix("#{@site.source}/")}: icon #{name.inspect} is not in _data/icons.yml"
           end
         end
       end

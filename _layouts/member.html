@@ -38,7 +38,7 @@ layout: default
     </div>
     <div class="pad-left note">
       <div class="smallspacer"></div>
-      <i class="fas fa-file-alt fa-fw"></i>
+      {% include icon.html name="file-alt" class="icon-fw" %}
       <a class="off" href="{{ member.cv }}">{{ member.cv | split: '/' | last }}</a>
     </div>
     <div class="bigspacer"></div>
@@ -49,7 +49,7 @@ layout: default
     </div>
     <div class="pad-left note">
       <div class="smallspacer"></div>
-      <i class="fab fa-twitter fa-fw"></i>
+      {% include icon.html name="twitter" class="icon-fw" %}
       <a class="off" href="https://twitter.com/{{ member.twitter }}">{{ member.twitter }}</a>
     </div>
     <div class="bigspacer"></div>
@@ -60,7 +60,7 @@ layout: default
     </div>
     <div class="pad-left note">
       <div class="smallspacer"></div>
-      <i class="fab fa-github-alt fa-fw"></i>
+      {% include icon.html name="github-alt" class="icon-fw" %}
       <a class="off" href="https://github.com/{{ member.github }}">{{ member.github }}</a>
     </div>
     <div class="bigspacer"></div>
@@ -71,7 +71,7 @@ layout: default
     </div>
     <div class="pad-left note">
       <div class="smallspacer"></div>
-      <i class="fab fa-orcid fa-fw"></i>
+      {% include icon.html name="orcid" class="icon-fw" %}
       <a class="off" href="https://orcid.org/{{ member.orcid }}">{{ member.orcid }}</a>
     </div>
     <div class="bigspacer"></div>
@@ -82,7 +82,7 @@ layout: default
     </div>
     <div class="pad-left note">
       <div class="smallspacer"></div>
-      <i class="fas fa-book fa-fw"></i>
+      {% include icon.html name="book" class="icon-fw" %}
       <a class="off" href="https://scholar.google.com/citations?user={{ member.scholar }}">{{ member.title }}</a>
     </div>
     <div class="bigspacer"></div>
@@ -94,7 +94,7 @@ layout: default
     </div>
     <div class="pad-left note">
       <div class="smallspacer"></div>
-      <i class="fas fa-inbox fa-fw"></i>
+      {% include icon.html name="inbox" class="icon-fw" %}
       {{ emailarray.first }}<span class="qb-hidden">obfuscate</span>@{{ emailarray.last }}
     </div>
     <div class="bigspacer"></div>

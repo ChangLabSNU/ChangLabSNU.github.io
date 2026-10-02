@@ -1,0 +1,15 @@
+{%- comment -%}
+  An inline SVG icon from _data/icons.yml, drawn like the font icons it
+  replaces: 1em tall, as wide as the glyph, in the text colour, on the
+  baseline (see .icon in css/main.scss).
+
+    {% include icon.html name="github" %}
+    {% include icon.html name="inbox" class="icon-fw" %}   fixed 1.25em width
+
+  The size goes in width/height attributes because the lab server's CSP does
+  not allow inline style attributes.
+{%- endcomment -%}
+{%- assign icon = site.data.icons[include.name] -%}
+{%- assign box = icon.viewbox | split: " " -%}
+{%- assign width = box[2] | times: 1.0 | divided_by: box[3] | round: 4 -%}
+<svg class="icon{% if include.class %} {{ include.class }}{% endif %}" viewBox="{{ icon.viewbox }}" width="{{ width }}em" height="1em" aria-hidden="true" focusable="false"><path d="{{ icon.path }}"/></svg>

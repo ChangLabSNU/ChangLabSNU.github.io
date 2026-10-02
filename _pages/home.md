@@ -61,11 +61,11 @@ examine molecular mechanisms at a systems level.
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    {% include icon.html name="chevron-left" class="glyphicon-chevron-left" %}
     <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    {% include icon.html name="chevron-right" class="glyphicon-chevron-right" %}
     <span class="sr-only">Next</span>
   </a>
 </div>
