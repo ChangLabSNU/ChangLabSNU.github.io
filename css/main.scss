@@ -1100,14 +1100,18 @@ div.footer-left {
 }
 
 #footer .footer-icons .icon {
-    transition: transform .2s;
     opacity: 0.6;
     color: white;
 }
 
-#footer .footer-icons .icon:hover {
-    transform: scale(1.1);
+#footer .footer-icons a:hover .icon, #footer .footer-icons a:focus .icon {
     opacity: 0.85;
+}
+
+/* The link to /aboutwebsite sits on the copyright line, set smaller so the
+   line keeps to one row. */
+.footer-about {
+    font-size: 14px;
 }
 
 div.footer-links img {
@@ -1118,21 +1122,6 @@ div.footer-links img {
     padding: 14px;
     margin-right: 15px;
     margin-bottom: 15px;
-    transition: transform .2s;
-}
-
-div.footer-links img:hover {
-    transform: scale(1.05);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #footer .footer-icons .icon, div.footer-links img {
-        transition: none;
-    }
-
-    #footer .footer-icons .icon:hover, div.footer-links img:hover {
-        transform: none;
-    }
 }
 
 /*

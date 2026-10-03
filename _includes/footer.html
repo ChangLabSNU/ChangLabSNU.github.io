@@ -3,14 +3,15 @@
 	<div class="container-fluid">
 	  <div class="row">
 		<div class="col-sm-5 footer-left">
-		  <p>&copy; 2019–2026 CHANGlab. <a href="{{ site.baseurl }}/aboutwebsite.html">more ›</a></p>
+		  <p>&copy; 2019–{{ site.time | date: "%Y" }} CHANGlab. <a class="footer-about" href="{{ site.baseurl }}/aboutwebsite.html">About this site</a></p>
 		   <p>
-		     203-525, Seoul National University<br>
+		     Building 203, Room 525<br>
+		     Seoul National University<br>
 		     1 Gwanak-ro, Gwanak-gu<br>
 		     Seoul 08826, South Korea
 		   </p>
 		   <p class="footer-icons">
-		     <a href="https://github.com/hyeshik" aria-label="GitHub">{% include icon.html name="github" %}</a>
+		     <a href="https://github.com/ChangLabSNU" aria-label="GitHub">{% include icon.html name="github" %}</a>
 		     <a href="https://x.com/hyeshik" aria-label="X">{% include icon.html name="square-x-twitter" %}</a>
 		     <a href="https://pypi.org/user/hyeshik/" aria-label="PyPI">{% include icon.html name="python" %}</a>
 		   </p>
