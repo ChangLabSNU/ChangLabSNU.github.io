@@ -1,7 +1,7 @@
 ---
 title: "CHANGlab at Seoul National University"
 layout: homelay
-excerpt: "We read RNA one molecule at a time and turn what we learn into better mRNA vaccines and therapeutics."
+excerpt: "The Chang lab at Seoul National University pursues high-throughput biology, combining large-scale experiments with computation to learn how genes are regulated."
 permalink: /
 hero:
   title: We are reverse-engineers.
