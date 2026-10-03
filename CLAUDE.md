@@ -27,6 +27,8 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   back to a system font -- keep the two in step if the files are ever re-cut. The Ubuntu
   Font Licence makes a modified copy carry "derivative" in its name, so the cut is named
   "Ubuntu Sans derivative QBio" inside the files (`fonts/UbuntuSans-LICENCE.txt`).
+  On the text pages (textlay: research, openings, about, news) running text stops at 36em,
+  about 70 characters a line; floated figures keep the column's right-hand side.
 - Content pages share the team page's pieces (the "shared pieces" block in `css/main.scss`):
   `.chip` icon buttons for links (team PI band, member page links, resource links),
   `.team-role` for a bold grey role line, photos with 12px corners and no shadow, and

@@ -51,10 +51,9 @@ pictures:
   member-card:    # team page photos, the PI's and everyone's: up to 180px wide
     widths: [260, 520]
     sizes: "(min-width: 500px) 180px, 42vw"
-  figure-wide:    # full-width figure, at most 280px tall: 702px wide for the
-                  # 2.5:1 codon figure on /research
+  figure-wide:    # a figure as wide as the text (612px at most) and at most 280px tall
     widths: [720, 1440]
-    sizes: "(min-width: 782px) 702px, calc(90vw - 2px)"
+    sizes: "(min-width: 700px) 612px, calc(90vw - 2px)"
   figure-side:    # 400-420px beside the text from 992px; below, full width up to 560px
     widths: [420, 840]
     sizes: "(min-width: 992px) 420px, (min-width: 624px) 560px, calc(90vw - 2px)"

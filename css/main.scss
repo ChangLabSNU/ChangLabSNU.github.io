@@ -454,6 +454,24 @@ div#textid h2 {
     line-height: 1.3;
 }
 
+/* Running text on these pages stops at about 70 characters a line (36em,
+   612px at 17px), where the old 1000px column ran to about 116. Figures keep
+   the column's right-hand side: a paragraph holding a floated figure is
+   exempt, so the float still sits at the column's right edge with the text
+   beside it, and the wide figure lines up with the text's left edge. */
+#textid p, #textid li, #textid blockquote {
+    max-width: 36em;
+}
+
+#textid p:has(> img.qb-fig-right) {
+    max-width: none;
+}
+
+#textid .qb-fig-wide {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 div#textid h2.minor {
     margin-top: 11px;
     font-size: 18px;
