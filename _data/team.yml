@@ -25,7 +25,7 @@
   photo: hjlee-thumb.jpg
   email: dlgks224@snu.ac.kr
   info: Graduate Student
-  intro: "Tracking the evolution of the molecular rules of <i>Coronaviridae</i>"
+  intro: "Speeding up RNA structure prediction"
   link: hanju-lee
   category: student
   sort-key: lee-hanju
@@ -91,7 +91,7 @@
   photo: yjhan-thumb.jpg
   email: hanyj0823@snu.ac.kr
   info: Graduate Student
-  intro: Developing a new technique to prepare high-accuracy nanopore signal models
+  intro: Measuring how codons shape mRNA stability
   link: yoojung-han
   category: student
   sort-key: han-yoojung
@@ -135,7 +135,7 @@
   photo: sjlee-thumb.jpg
   email: lsj975@snu.ac.kr
   info: Graduate Student
-  intro: Inventing a method to decrypt modified bases in heavily modified RNAs
+  intro: Developing new nanopore methods to read RNA molecules as they are
   link: sojeong-lee
   category: student
   sort-key: lee-sojeong
@@ -146,7 +146,7 @@
   photo: cbsheen-thumb.jpg
   email: cauchybs@snu.ac.kr
   info: Research Assistant
-  intro: Improving the stability of mRNA vaccines containing N1-methylpseudouridine
+  intro: Teaching computers to design RNAs that fold the way we want
   link: chaebeom-sheen
   category: research-assistant
   sort-key: sheen-chaebeom
@@ -157,7 +157,7 @@
   photo: hma-thumb.jpg
   email: mahoon2@snu.ac.kr
   info: Graduate Student
-  intro: Improving the manufacturing process of mRNA vaccines
+  intro: Building software that designs better mRNA medicines
   link: hoon-ma
   category: student
   sort-key: ma-hoon
@@ -179,7 +179,7 @@
   photo: dmryu-thumb.jpg
   email: 5252lde@snu.ac.kr
   info: Graduate Student
-  intro: Enhancing the efficacy of mRNA vaccines
+  intro: Finding design rules for better ASO drugs
   link: dongmin-ryu
   category: student
   sort-key: ryu-dongmin
