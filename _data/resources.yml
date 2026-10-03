@@ -6,13 +6,13 @@
 #              _includes/resource_list.html ("software" or "resource"),
 #              mirrored in _plugins/data_check.rb.
 #              A group with no entries prints no heading.
-# info:        one-line subtitle shown next to the name.
+# info:        one-line subtitle shown under the name.
 # description: a paragraph on what it is and who it is for.
-# image:       optional file in images/resources/, shown in the column left of
-#              the text. Rendered 120px wide (240px source, i.e. 2x) and capped
-#              at 160px tall; the aspect ratio is preserved.
+# image:       optional file in images/resources/, shown in a column left of
+#              the text (above it on a phone). At most 120px wide (supply
+#              240px, i.e. 2x) and 160px tall; the aspect ratio is preserved.
 # links:       optional list of `title`/`url` pairs (docs, paper, ...) shown
-#              in small print under the description.
+#              as buttons under the description.
 # license:     optional; shown next to those links.
 
 - name: VaxPress

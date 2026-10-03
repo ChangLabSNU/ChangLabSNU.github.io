@@ -1,25 +1,25 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	
-    <a class="navbar-brand" href="{{ site.baseurl }}/">CHANGlab<sup>SNU</sup></a>
-	</div>
-	<div class="collapse navbar-collapse" id="navbar-collapse-1">
-	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="{{ site.baseurl }}/">Home</a></li>
-		<li><a href="{{ site.baseurl }}/team">Team</a></li>
-		<li><a href="{{ site.baseurl }}/research">Research</a></li>
-		<li><a href="{{ site.baseurl }}/publications">Publications</a></li>
-		<li><a href="{{ site.baseurl }}/resources">Resources</a></li>
-		<li><a href="{{ site.baseurl }}/openings">Openings</a></li>
-	  </ul>
-	</div>
+{%- comment -%}
+  Site header: the wordmark (which is also the way home), the four section
+  links and a button for /openings. aria-current marks the section the page
+  belongs to: "page" on the section's own page, "true" on the pages under it
+  (a member's profile under Team). It wraps onto a second line on a phone
+  rather than collapsing behind a menu button: there are only five targets.
+  The section links end in a slash, as their permalinks do, so following one
+  costs no redirect.
+{%- endcomment -%}
+{%- assign section = page.url | split: "/" | where_exp: "s", "s != ''" | first | default: "" -%}
+{%- assign here = page.url | append: "/" | replace: "//", "/" -%}
+{%- assign section_home = "/" | append: section | append: "/" -%}
+{%- if here == section_home %}{% assign current = "page" %}{% else %}{% assign current = "true" %}{% endif -%}
+<header class="site-header">
+  <a class="wordmark" href="{{ site.baseurl }}/">CHANGlab<sup>SNU</sup></a>
+  <div class="site-nav">
+    <nav aria-label="Main">
+      <a href="{{ site.baseurl }}/team/"{% if section == "team" %} aria-current="{{ current }}"{% endif %}>Team</a>
+      <a href="{{ site.baseurl }}/research/"{% if section == "research" %} aria-current="{{ current }}"{% endif %}>Research</a>
+      <a href="{{ site.baseurl }}/publications/"{% if section == "publications" %} aria-current="{{ current }}"{% endif %}>Publications</a>
+      <a href="{{ site.baseurl }}/resources/"{% if section == "resources" %} aria-current="{{ current }}"{% endif %}>Resources</a>
+    </nav>
+    <a class="button button-solid" href="{{ site.baseurl }}/openings"{% if section == "openings" %} aria-current="{{ current }}"{% endif %}>Join the lab</a>
   </div>
-</div>
-
+</header>

@@ -4,7 +4,7 @@ title: Chae Young Kwon
 position: Research Associate
 handle: kcy
 email: kcy0617@snu.ac.kr
-twitter: 
+x: 
 github: 
 scholar: 
 orcid: 
@@ -13,14 +13,14 @@ cv: /assets/cv/cv-chaeyoung.pdf
 permalink: /team/chaeyoung-kwon
 ---
 
-Chae Young Kwon is a research associate at the Chang lab with interest
+Chae Young Kwon is a research associate at the Chang lab with an interest
 in RNA transcription and regulation. She spent her master's degree
 working on a research project in the field of medicine, specializing in
 the physiology and genetic traits of bacteria. She joined the Chang lab
 with the goal of expanding her understanding of the phenomenon of life
 from DNA to RNA.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2020–2022</span> M.S. in Medical Science, Yonsei University</li>

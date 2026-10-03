@@ -1,10 +1,10 @@
 ---
 layout: member
 title: Junsoo Kim
-position: Alumni (2021–2026)
+position: Former member (2021–2026)
 handle: junsoopablo
 email: 
-twitter: 
+x: 
 github: junsoopablo
 scholar: 
 orcid: 0000-0001-7898-1644
@@ -17,11 +17,11 @@ Junsoo Kim is a computational biologist driven by a deep curiosity to unravel th
 
 Junsoo's journey in bioinformatics began with a master's degree from the University of Oxford, followed by a stint at the Genomic Medicine Institute at Seoul National University (GMI-SNU) as a substitute for national service. There, he worked on [de novo assembly of the Korean reference genome](https://www.nature.com/articles/nature20098), which sparked his fascination with the underlying mechanisms of gene regulation.
 
-After gaining valuable experience as a senior researcher at biotech companies like Seegene and Macrogen, Junsoo joined Chang Lab in 2021 to pursue his Ph.D. in Bioinformatics at Seoul National University. In the lab, he led a study that uncovered the molecular mechanisms by which [SARS-CoV-2 infection disrupts host translation in the lungs](https://www.nature.com/articles/s12276-023-01110-0), providing novel insights into the pathogenesis of COVID-19. 
+After gaining valuable experience as a senior researcher at biotech companies like Seegene and Macrogen, Junsoo joined the Chang lab in 2021 to pursue his Ph.D. in Bioinformatics at Seoul National University. In the lab, he led a study that uncovered the molecular mechanisms by which [SARS-CoV-2 infection disrupts host translation in the lungs](https://www.nature.com/articles/s12276-023-01110-0), providing novel insights into the pathogenesis of COVID-19. 
 
 After completing his Ph.D. in 2026, Junsoo joined Boston Children's Hospital as a postdoctoral researcher, working with Prof. Alice Eunjung Lee. His new research explores the evolution of mobile elements using long-read sequencing technologies.
 
-#### Professional Experiences
+## Professional Experience
 
 <ul class="chronological">
   <li><span>2019–2021</span> Data Strategy Team, Macrogen Inc.</li>
@@ -29,7 +29,7 @@ After completing his Ph.D. in 2026, Junsoo joined Boston Children's Hospital as 
   <li><span>2013–2017</span> Bioinformatics Division, Macrogen Inc.</li>
 </ul>
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2021–2026</span> Ph.D. in Bioinformatics, Seoul National University</li>

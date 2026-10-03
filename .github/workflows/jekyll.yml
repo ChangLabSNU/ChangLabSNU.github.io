@@ -1,5 +1,6 @@
-# Builds the site on every push to main and every pull request; only main is
-# deployed to GitHub Pages, which is the live qbio.io. (./sync.sh refreshes a
+# Builds the site on every push to main and every pull request, and at the turn
+# of each month (see `schedule`); only main is deployed to GitHub Pages, which
+# is the live qbio.io. (./sync.sh refreshes a
 # backup mirror on the lab server from the same commit.)
 name: Build and deploy to Pages
 
@@ -9,11 +10,19 @@ on:
   pull_request:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  # The team page shuffles its members once a month (_plugins/monthly_shuffle.rb,
+  # by the month in Korea), so the site is rebuilt at 00:05 KST on the 29th to
+  # the 1st: the run that lands on the 1st brings in the new month's order, and
+  # the others rebuild what is already there.
+  schedule:
+    - cron: "5 15 28-31 * *"
 
+# The build only reads (configure-pages looks up the Pages site); writing to
+# Pages and the OIDC token are the deploy job's alone, so a pull request's
+# build never holds them.
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  pages: read
 
 # Deployments queue up and are never cancelled midway; a pull request's
 # superseded runs are.
@@ -73,8 +82,13 @@ jobs:
         # Uploads the './_site' directory by default
         uses: actions/upload-pages-artifact@v5
 
+  # Only main is deployed. A manual run on another branch builds and checks
+  # it (Setup Pages included) and stops there.
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

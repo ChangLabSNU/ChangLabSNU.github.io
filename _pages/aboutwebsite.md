@@ -1,19 +1,21 @@
 ---
-title: "About the website"
+title: "About this website"
 layout: textlay
-excerpt: "About the website."
+excerpt: "How this website is built, and the licenses of the code, fonts and icons it uses."
 permalink: /aboutwebsite.html
 ---
 
-## About this website
+# About this website
 
 This website is powered by [Jekyll](https://jekyllrb.com) and uses some [Bootstrap](https://getbootstrap.com). Although we have tinkered a bit with the contents and the design, the site is largely based on [the Allan lab's codebase](https://www.allanlab.org/aboutwebsite.html). Please refer to the following license terms for reusing the components used in this site.
 
-#### Our own contents
+## Our own contents
+{: .minor}
 
-The original contents appearing in this website can be used as indicated by the [Creative Commons Attribution-ShareAlike (CC BY-SA) 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+The original contents appearing on this website can be used as indicated by the [Creative Commons Attribution-ShareAlike (CC BY-SA) 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-#### The Allan lab
+## The Allan lab
+{: .minor}
 
 Most of the structural parts are based on [the Allan lab's site](https://github.com/mpa139/allanlab), which is released under the MIT license.
 
@@ -35,16 +37,20 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 </p>
 </blockquote>
 
-#### Hugo Themes
+## Hugo Themes
+{: .minor}
 
 Many ideas and implementations of aesthetic parts were borrowed from the [Hugo Themes](https://themes.gohugo.io/), which was released under the [Apache License 2.0](https://github.com/gohugoio/hugoThemesSite/blob/master/LICENSE).
 
-#### Font Awesome
+## Font Awesome
+{: .minor}
 
-The icons are from Font Awesome Free 5.15.3 by Fonticons, Inc., used as SVG under the
+The icons are from Font Awesome Free 5.15.3 by Fonticons, Inc. (the X logos from
+version 6.5.2), used as SVG under the
 [Creative Commons Attribution 4.0 International license](https://fontawesome.com/license/free).
 
-#### Bootstrap
+## Bootstrap
+{: .minor}
 
 <blockquote>
 <p>
@@ -77,10 +83,12 @@ THE SOFTWARE.
 </p>
 </blockquote>
 
-#### Inter and Roboto
+## Ubuntu Sans
+{: .minor}
 
-This site includes two sans-serif fonts, [Inter](https://github.com/rsms/inter)
-and [Roboto](https://github.com/google/roboto/). Inter was released under
-[SIL Open Font License 1.1](https://choosealicense.com/licenses/ofl-1.1/)
-and Roboto can be redistributed as indicated by [Apache License 2.0](https://github.com/google/roboto/blob/master/LICENSE).
-
+The text is set in [Ubuntu Sans](https://github.com/canonical/Ubuntu-Sans-fonts),
+Copyright 2011, 2022, 2023 Canonical Ltd., served from this site in a Latin-only cut
+under the [Ubuntu Font Licence 1.0](https://ubuntu.com/legal/font-licence). As that
+license asks of a modified copy, the cut is named "Ubuntu Sans derivative QBio"; what
+was changed, and the full license text, are in
+[fonts/UbuntuSans-LICENCE.txt](/fonts/UbuntuSans-LICENCE.txt).

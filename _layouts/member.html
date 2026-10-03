@@ -1,118 +1,60 @@
 ---
 layout: default
 ---
-
-{% assign member = page %}
-
-<div class="bigspacer"></div>
-
-<div class="row member-pane">
-  <div class="col-md-3 col-sm-12">
-    <div class="media">
-      {% if member.image %}
-      <span class="pull-left pad-right">
-        <img class="big-member-photo" src="{{ member.image }}" alt="{{ member.title | escape }}">
-      </span>
-      {% endif %}
+{%- comment -%}
+  A member's profile, from the page's front matter: photo, name and
+  position, then the links (as the team page's buttons) beside the text.
+  The photo's alt is empty, since the name heading is right beside it.
+  The email address is a button too (_includes/email_chip.html), kept from
+  address harvesters.
+{%- endcomment -%}
+{%- assign member = page -%}
+<div class="col-sm-12">
+  <div class="member-head">
+    {%- if member.image %}
+    <img src="{{ member.image | relative_url }}" alt="">
+    {%- endif %}
+    <div class="member-head-text">
+      <h1>{{ member.title }}</h1>
+      {%- if member.position %}
+      <p class="team-role">{{ member.position }}</p>
+      {%- endif %}
     </div>
   </div>
-  <div class="col-md-9 col-sm-12 member-photo-title">
-    <div class="pull-left pad-right titlebox">
-      <div class="title media-heading">
-        {{ member.title }}
+
+  {%- comment -%} The buttons are captured first, so a member with none gets no empty column. {%- endcomment -%}
+  {%- capture chips -%}
+        {%- if member.cv %}
+        <a class="chip" href="{{ member.cv | relative_url }}">{% include icon.html name="file-alt" %}CV</a>
+        {%- endif %}
+        {%- if member.x %}
+        <a class="chip" href="https://x.com/{{ member.x }}">{% include icon.html name="x-twitter" %}X</a>
+        {%- endif %}
+        {%- if member.github %}
+        <a class="chip" href="https://github.com/{{ member.github }}">{% include icon.html name="github-alt" %}GitHub</a>
+        {%- endif %}
+        {%- if member.orcid %}
+        <a class="chip" href="https://orcid.org/{{ member.orcid }}">{% include icon.html name="orcid" %}ORCID</a>
+        {%- endif %}
+        {%- if member.scholar %}
+        <a class="chip" href="https://scholar.google.com/citations?user={{ member.scholar }}">{% include icon.html name="book" %}Google Scholar</a>
+        {%- endif %}
+        {%- if member.email %}
+        {% include email_chip.html address=member.email %}
+        {%- endif %}
+  {%- endcapture %}
+
+  <div class="member-body">
+    {%- assign chips_text = chips | strip %}
+    {%- if chips_text != "" %}
+    <div class="member-links">
+      <div class="chip-row">
+        {{- chips }}
       </div>
-      <div class="smallhead">
-        {{ member.position }}
-      </div>
-      <br/>
     </div>
-  </div>
-</div>
-
-<div class="bigspacer"></div>
-<div class="row member-pane">
-  <div class="col-md-3 col-sm-12">
-    {% if member.cv %}
-    <div class="smallhead">
-      CV
-    </div>
-    <div class="pad-left note">
-      <div class="smallspacer"></div>
-      {% include icon.html name="file-alt" class="icon-fw" %}
-      <a class="off" href="{{ member.cv }}">{{ member.cv | split: '/' | last }}</a>
-    </div>
-    <div class="bigspacer"></div>
-    {% endif %}
-    {% if member.twitter %}
-    <div class="smallhead">
-      Twitter
-    </div>
-    <div class="pad-left note">
-      <div class="smallspacer"></div>
-      {% include icon.html name="twitter" class="icon-fw" %}
-      <a class="off" href="https://twitter.com/{{ member.twitter }}">{{ member.twitter }}</a>
-    </div>
-    <div class="bigspacer"></div>
-    {% endif %}
-    {% if member.github %}
-    <div class="smallhead">
-      GitHub
-    </div>
-    <div class="pad-left note">
-      <div class="smallspacer"></div>
-      {% include icon.html name="github-alt" class="icon-fw" %}
-      <a class="off" href="https://github.com/{{ member.github }}">{{ member.github }}</a>
-    </div>
-    <div class="bigspacer"></div>
-    {% endif %}
-    {% if member.orcid %}
-    <div class="smallhead">
-      ORCID
-    </div>
-    <div class="pad-left note">
-      <div class="smallspacer"></div>
-      {% include icon.html name="orcid" class="icon-fw" %}
-      <a class="off" href="https://orcid.org/{{ member.orcid }}">{{ member.orcid }}</a>
-    </div>
-    <div class="bigspacer"></div>
-    {% endif %}
-    {% if member.scholar %}
-    <div class="smallhead">
-      Google Scholar
-    </div>
-    <div class="pad-left note">
-      <div class="smallspacer"></div>
-      {% include icon.html name="book" class="icon-fw" %}
-      <a class="off" href="https://scholar.google.com/citations?user={{ member.scholar }}">{{ member.title }}</a>
-    </div>
-    <div class="bigspacer"></div>
-    {% endif %}
-    {% if member.email %}
-    {% assign emailarray = member.email | split: '@' %}
-    <div class="smallhead">
-      Email
-    </div>
-    <div class="pad-left note">
-      <div class="smallspacer"></div>
-      {% include icon.html name="inbox" class="icon-fw" %}
-      {{ emailarray.first }}<span class="qb-hidden">obfuscate</span>@{{ emailarray.last }}
-    </div>
-    <div class="bigspacer"></div>
-    {% endif %}
-  </div>
-  <div class="col-md-8 col-sm-12">
+    {%- endif %}
     <div class="post">
       {{ content }}
     </div>
-
-{%- comment -%}
-  A "Papers" and a "Posts" block used to sit here, looping over
-  site.categories.papers and site.categories.blog. This site has no _posts
-  directory and defines no collections, so both categories were always empty
-  and neither block ever rendered. A member's publications come from
-  _includes/publication_in_profile.html, included by the profile page itself.
-{%- endcomment -%}
-
   </div>
-  <div class="col-md-1"></div>
 </div>

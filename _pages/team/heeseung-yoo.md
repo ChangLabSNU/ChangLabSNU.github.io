@@ -1,10 +1,10 @@
 ---
 layout: member
 title: Heeseung Yoo
-position: Alumni (2021–2024)
+position: Former member (2022–2024)
 handle: heeseung
 email: 
-twitter: 
+x: 
 github: heeseungYoo
 scholar: 
 orcid: 0000-0002-4814-0315
@@ -13,17 +13,17 @@ cv:
 permalink: /team/heeseung-yoo
 ---
 
-Heeseung Yoo was a graduate student under M.S. program in Bioinformatics
+Heeseung Yoo was a graduate student in the M.S. program in Bioinformatics
 at Seoul National University. She studied Computer Engineering and
 Data Analytics during her B.S. at Sookmyung Women’s University. She
 also studied Biological Science as a double major, which became an
 opportunity to get interested in bioinformatics. In 2022, she joined
-Dr. Hyeshik Chang's lab to expand her work into an in-depth study of
-bioinformatics. She did excellent works in algorithm development and
+the Chang lab to expand her work into an in-depth study of
+bioinformatics. She did excellent work in algorithm development and
 software implementation to reveal internal information in nanopore
-sequencing data and detecting RNA modification.
+sequencing data and detect RNA modifications.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2022–2024</span> M.S. in Bioinformatics, Seoul National University</li>

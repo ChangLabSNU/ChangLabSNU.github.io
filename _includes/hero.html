@@ -1,0 +1,31 @@
+{%- comment -%}
+  The home page's opening: a headline, a line under it, two buttons and the
+  pixel scene (js/ribosome.js), all on the masthead's tint. Driven by the
+  page's front matter:
+
+    hero:
+      title: We are reverse-engineers.
+      text: ...
+      buttons:
+        - { label: See our research, url: /research/ }
+        - { label: Meet the team, url: /team/, style: outline }
+{%- endcomment -%}
+<section class="hero" aria-labelledby="hero-title">
+  {%- comment -%}
+    A hyphenated word ("reverse-engineers.") is kept whole, so a phone breaks
+    the line between words rather than at the hyphen. The space goes out as
+    {{ " " }}: Liquid drops a block that holds nothing but whitespace.
+  {%- endcomment %}
+  {%- assign hero_words = page.hero.title | split: " " %}
+  <h1 id="hero-title">{% for word in hero_words %}{% if word contains "-" %}<span class="nowrap">{{ word }}</span>{% else %}{{ word }}{% endif %}{% unless forloop.last %}{{ " " }}{% endunless %}{% endfor %}</h1>
+  <p>{{ page.hero.text }}</p>
+  {%- if page.hero.buttons %}
+  <div class="hero-buttons">
+    {%- for b in page.hero.buttons %}
+    <a class="button {% if b.style == 'outline' %}button-outline{% else %}button-solid{% endif %}" href="{{ b.url | relative_url }}">{{ b.label }}</a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</section>
+<canvas class="scene" data-scene="ribosome" aria-hidden="true"></canvas>
+<script src="{{ '/js/ribosome.js' | relative_url }}" integrity="{{ '/js/ribosome.js' | sri }}" defer></script>

@@ -1,9 +1,8 @@
 /*
- * The site's only script: the home page carousel, the navbar that collapses
- * on narrow screens, and team cards that open the profile wherever they are
- * clicked. It replaces jQuery 1.11 and Bootstrap 3's JS, and drives the same
- * Bootstrap 3 CSS classes they did, so the markup, the look and the
- * animations are unchanged.
+ * The site's script: the home page photo carousel, and the email buttons on
+ * the team and member pages. It replaced jQuery 1.11 and Bootstrap 3's JS and drives the
+ * Bootstrap 3 carousel classes they did.
+ * (The home page's pixel scene is js/ribosome.js.)
  *
  * Loaded with `defer` from _includes/head.html, so it runs once the document
  * is parsed. It lives in a file because the lab server's Content-Security-
@@ -32,10 +31,11 @@
     const items = root.querySelectorAll('.carousel-inner > .item');
     const dots = root.querySelectorAll('.carousel-indicators [data-slide-to]');
     const interval = parseInt(root.dataset.interval, 10) || 5000;
-    const stillMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)');
     let current = Math.max(0, [...items].findIndex((item) => item.classList.contains('active')));
     let sliding = false;
     let hovered = false;
+    let focused = false;
     let timer = null;
 
     // Every slide but the first is loading="lazy", and a lazy image inside a
@@ -79,7 +79,7 @@
     // prefers-reduced-motion the slides only move when asked to.
     function start() {
       stop();
-      if (!hovered && !stillMotion) timer = setInterval(() => step(1), interval);
+      if (!hovered && !focused && !still.matches) timer = setInterval(() => step(1), interval);
     }
 
     root.addEventListener('click', (e) => {
@@ -93,10 +93,32 @@
 
     root.addEventListener('keydown', (e) => {
       if (/^(input|textarea)$/i.test(e.target.tagName)) return;
+      // The arrows are links with role="button", and a button answers Space
+      // as well as the Enter a link already does.
+      if (e.key === ' ' && e.target.matches('[data-slide]')) {
+        e.preventDefault();
+        e.target.click();
+        return;
+      }
       if (e.key === 'ArrowLeft') step(-1);
       else if (e.key === 'ArrowRight') step(1);
       else return;
       e.preventDefault();
+      start();
+    });
+
+    // Keyboard focus anywhere in the carousel holds it still, as the mouse
+    // does, so a keyboard user can stop it (WCAG 2.2.2). Only focus the
+    // browser shows counts: a mouse click on an arrow focuses it too, and
+    // should not stop the carousel once the mouse moves away.
+    root.addEventListener('focusin', (e) => {
+      if (!e.target.matches(':focus-visible')) return;
+      focused = true;
+      stop();
+    });
+    root.addEventListener('focusout', (e) => {
+      if (root.contains(e.relatedTarget)) return;
+      focused = false;
       start();
     });
 
@@ -117,50 +139,21 @@
 
     preload((current + 1) % items.length);
     start();
+    still.addEventListener('change', start);
   }
-
-  // Navbar: <button data-toggle="collapse" data-target="#..."> opens and
-  // closes the target with Bootstrap 3's .collapsing height transition.
-  function toggleCollapse(button) {
-    const panel = document.querySelector(button.dataset.target);
-    if (!panel || panel.classList.contains('collapsing')) return;
-    const opening = !panel.classList.contains('in');
-    button.classList.toggle('collapsed', !opening);
-    button.setAttribute('aria-expanded', String(opening));
-
-    if (opening) {
-      panel.classList.remove('collapse');
-      panel.classList.add('collapsing');
-      panel.style.height = '0px';
-      panel.style.height = `${panel.scrollHeight}px`;
-    } else {
-      panel.style.height = `${panel.offsetHeight}px`;
-      void panel.offsetHeight;  // start the shrink from the current height
-      panel.classList.add('collapsing');
-      panel.classList.remove('collapse', 'in');
-      panel.style.height = '0px';
-    }
-    afterTransition(panel, 350, () => {
-      panel.classList.remove('collapsing');
-      panel.classList.add('collapse');
-      panel.classList.toggle('in', opening);
-      panel.style.height = '';
-    });
-  }
-
-  document.addEventListener('click', (e) => {
-    const toggle = e.target.closest('[data-toggle="collapse"]');
-    if (toggle) {
-      e.preventDefault();
-      toggleCollapse(toggle);
-      return;
-    }
-    // Team page: a click anywhere on a member card opens the profile. Clicks
-    // on a real link inside are left to the link, so ctrl/cmd-click still
-    // opens a new tab.
-    const card = e.target.closest('.member-list-item[data-href]');
-    if (card && !e.target.closest('a')) window.location.href = card.dataset.href;
-  });
 
   document.querySelectorAll('[data-ride="carousel"]').forEach(carousel);
+
+  // An email button holds the address as text with a hidden word inside it
+  // (_includes/email_chip.html), which address harvesters reading the HTML
+  // pick up as is. Here it becomes a mailto link like the buttons beside it.
+  document.querySelectorAll('span.email-chip').forEach((chip) => {
+    const copy = chip.cloneNode(true);
+    copy.querySelectorAll('.qb-hidden').forEach((el) => el.remove());
+    const link = document.createElement('a');
+    link.className = chip.className;
+    link.href = 'mailto:' + copy.textContent.trim();
+    link.append(...chip.childNodes);
+    chip.replaceWith(link);
+  });
 })();

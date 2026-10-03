@@ -10,7 +10,7 @@
   reserved before it loads. Any other attribute (alt, class, loading, ...) is
   passed through. Liquid in the tag is rendered first, so this works in a loop:
 
-    {% picture member-thumb images/members/{{ member.photo }} alt="{{ member.name }}" %}
+    {% picture member-card images/members/{{ member.photo }} alt="{{ member.name }}" %}
 
   The copies are made with libvips (the ruby-vips gem), resized, converted to
   sRGB and stripped of metadata (camera EXIF and GPS included), and cached in

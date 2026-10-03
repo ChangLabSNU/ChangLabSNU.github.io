@@ -3,7 +3,8 @@
 # nginx from $DEST) with what GitHub Pages serves: the current origin/main,
 # built the same way as .github/workflows/jekyll.yml builds it. The build runs
 # on an export of that commit, not on this working tree, so local edits or
-# another checked-out branch never reach the mirror. Cron runs it hourly.
+# another checked-out branch never reach the mirror. Meant to run hourly from
+# cron (the line is in CLAUDE.md).
 #
 #   ./sync.sh       fetch, build, publish, and list what changed
 #   ./sync.sh -n    the same, but only show what would change
@@ -40,6 +41,10 @@ OUT=$(mktemp -d)
 trap 'rm -rf "$SRC" "$OUT"' EXIT
 chmod 755 "$OUT"  # rsync -p copies this mode onto $DEST itself
 git archive origin/main | tar -x -C "$SRC"
+# The WebP copies of the photos are cached by their source's digest, so the
+# export shares this checkout's cache instead of re-encoding every one.
+mkdir -p .jekyll-cache/pictures "$SRC/.jekyll-cache"
+ln -s "$PWD/.jekyll-cache/pictures" "$SRC/.jekyll-cache/pictures"
 [ -n "$QUIET" ] || echo "Building $COMMIT"
 cdrun qbiowww "cd '$SRC' && JEKYLL_ENV=production bundle exec jekyll build $QUIET -d '$OUT'"
 

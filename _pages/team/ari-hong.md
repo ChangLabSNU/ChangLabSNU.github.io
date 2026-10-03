@@ -1,10 +1,10 @@
 ---
 layout: member
 title: Ari Hong
-position: Alumni (2019–2023)
+position: Former member (2020–2023)
 handle: ari
 email: 
-twitter: 
+x: 
 github: AriHong
 scholar: 
 orcid: 
@@ -20,7 +20,7 @@ Bio-Medical Informatics Lab of SNU Hospital,
 she is now a postdoctoral researcher at the Max Planck Institute of
 Molecular Physiology in Germany.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2022–2026</span> Ph.D. in Bioinformatics, Interdisciplinary Program in Bioinformatics, Seoul National University</li>

@@ -1,10 +1,10 @@
 ---
 layout: member
 title: Keewon Sung
-position: Alumni (2021–2026)
+position: Former member (2021–2026)
 handle: keewon
 email: 
-twitter: 
+x: 
 github: keewonsung
 scholar: 
 orcid: 0000-0002-2733-556X
@@ -35,7 +35,7 @@ the single-molecule level.
 Keewon is now an Assistant Professor in the Department of Convergence 
 Pharmaceutical Science at Korea University, where he leads his own research group.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2017–2021</span> Ph.D. in Chemistry, Seoul National University</li>

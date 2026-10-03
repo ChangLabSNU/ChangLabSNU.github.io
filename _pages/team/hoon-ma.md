@@ -4,7 +4,7 @@ title: Hoon Ma
 position: Graduate Student
 handle: mahoon2
 email: mahoon2@snu.ac.kr
-twitter: 
+x: 
 github: mahoon2
 scholar: 
 orcid: 0009-0003-3816-9282
@@ -17,9 +17,9 @@ Hoon Ma is a hacker who's interested in the secrets of life. He studied
 diverse computing skills from low-level assembly to high-level data
 structures and algorithms. Now he is ready to apply his knowledge to
 solve fascinating questions from the field of biology, such as designing
-optimal sequence for mRNA vaccines.
+optimal sequences for mRNA vaccines.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2025–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>

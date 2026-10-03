@@ -4,7 +4,7 @@ title: Sojeong Lee
 position: Graduate Student
 handle: sojeong
 email: lsj975@snu.ac.kr
-twitter: 
+x: 
 github: sojeong-L
 scholar: 
 orcid: 
@@ -19,12 +19,12 @@ chromatin regulation related to fly growth hormone signaling as an
 undergraduate. This exploration continued during her internship at the
 Chang lab, where she discovered a passion and aptitude for biochemical
 technique development, mainly through optimizing *in vitro* experiments.
-As she starts her graduate studies at Seoul National University in 2024,
-Sojeong is poised to further her research. Her primary focus will be the
+Since 2024 she has been a graduate student in the integrated M.S./Ph.D.
+program at Seoul National University, where she focuses on
 high-throughput technologies aimed at elucidating the complex regulatory
 mechanisms governed by RNA-binding proteins.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2024–present</span> MS/PhD Student, School of Biological Sciences, Seoul National University</li>

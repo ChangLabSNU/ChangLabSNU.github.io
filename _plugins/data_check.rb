@@ -71,7 +71,7 @@ module Jekyll
       def check_team
         links = {}
         list("team").each_with_index do |m, i|
-          require_fields("team", m, i, "name", "link", "category", "sort-key", "photo")
+          require_fields("team", m, i, "name", "link", "category", "sort-key", "photo", "info")
           unless [true, false].include?(m["active"])
             problem("team", m, i, "`active` must be true or false, not #{m["active"].inspect}")
           end
@@ -92,7 +92,7 @@ module Jekyll
 
       def check_publist(team_links)
         list("publist").each_with_index do |p, i|
-          require_fields("publist", p, i, "title", "journal")
+          require_fields("publist", p, i, "title", "journal", "vip")
           problem("publist", p, i, "missing `link.url`") unless p["link"].is_a?(Hash) && p["link"]["url"]
           date = p["pubdate"]
           if !date.is_a?(Hash) || !date["year"].is_a?(Integer)

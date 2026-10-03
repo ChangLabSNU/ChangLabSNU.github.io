@@ -1,0 +1,10 @@
+{%- comment -%}
+  An email address as a button (.chip) that address harvesters reading the
+  HTML cannot use: the page holds it as text with a hidden word inside it,
+  and js/site.js turns it into a mailto link once the page loads. Without
+  scripts it stays a box with the address in it.
+
+    {% include email_chip.html address=member.email %}
+{%- endcomment -%}
+{%- assign parts = include.address | split: "@" -%}
+<span class="chip email-chip">{% include icon.html name="inbox" %}<span>{{ parts.first }}<span class="qb-hidden">obfuscate</span>@{{ parts.last }}</span></span>

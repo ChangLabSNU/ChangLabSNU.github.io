@@ -1,63 +1,75 @@
 ---
-title: "CHANGlab - Home"
+title: "CHANGlab at Seoul National University"
 layout: homelay
-excerpt: "Chang Lab at Seoul National University."
+excerpt: "We read RNA one molecule at a time and turn what we learn into better mRNA vaccines and therapeutics."
 permalink: /
+hero:
+  title: We are reverse-engineers.
+  text: >-
+    Cells regulate their genes with code written in RNA. We crack that code
+    with high-throughput experiments, nanopore sequencing and machine
+    learning, and exploit what we learn to build better mRNA.
+  buttons:
+    - { label: See our research, url: /research/ }
+    - { label: Meet the team, url: /team/, style: outline }
 ---
 
-We are reverse-engineers. Our goal is to unravel the intricate mechanisms
-by which key regulatory components govern the complex gene regulation
-network. To accomplish this, we employ a combination of high-throughput
-biochemistry, bioinformatics data analysis, and machine learning to
-examine molecular mechanisms at a systems level.
+We love RNA, and we live for the moment when a strange squiggle in the
+data turns out to be a rule of biology nobody had noticed before. We chase
+those moments from both ends at once: at the bench with pipettes and
+nanopore sequencers, and at the keyboard with code and GPUs. And then
+there is the moment we love most, when a rule we learned from those
+squiggles travels all the way into an mRNA vaccine that could one day help
+someone beat cancer.
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover" >
-    <!-- Menu -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-        <li data-target="#carousel" data-slide-to="4"></li>
-        <li data-target="#carousel" data-slide-to="5"></li>
-        <li data-target="#carousel" data-slide-to="6"></li>
-        <li data-target="#carousel" data-slide-to="7"></li>
-        <li data-target="#carousel" data-slide-to="8"></li>
-        <li data-target="#carousel" data-slide-to="9"></li>
+    <!-- Dots under the photo: for the mouse only, so screen readers skip
+         them; the arrows (and the arrow keys) do the same job. -->
+    <ol class="carousel-indicators" aria-hidden="true">
+        <li data-slide-to="0" class="active"></li>
+        <li data-slide-to="1"></li>
+        <li data-slide-to="2"></li>
+        <li data-slide-to="3"></li>
+        <li data-slide-to="4"></li>
+        <li data-slide-to="5"></li>
+        <li data-slide-to="6"></li>
+        <li data-slide-to="7"></li>
+        <li data-slide-to="8"></li>
+        <li data-slide-to="9"></li>
     </ol>
 
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
 
         <div class="item active">
-            {% picture slide images/home-slider/lablogo-slider.jpg alt="Slide 1" %}
+            {% picture slide images/home-slider/lablogo-slider.jpg alt="CHANGlab logo" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2604-02.jpg alt="Slide 2" loading="lazy" %}
+            {% picture slide images/home-slider/2604-02.jpg alt="Lab members by a stream under spring blossoms, April 2026" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2402-01.jpg alt="Slide 3" loading="lazy" %}
+            {% picture slide images/home-slider/2402-01.jpg alt="Lab members celebrating with a bouquet, February 2024" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2105-06.jpg alt="Slide 4" loading="lazy" %}
+            {% picture slide images/home-slider/2105-06.jpg alt="Loading a nanopore sequencer" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2105-05.jpg alt="Slide 5" loading="lazy" %}
+            {% picture slide images/home-slider/2105-05.jpg alt="Lab members on a wooden bridge, May 2021" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2105-03.jpg alt="Slide 6" loading="lazy" %}
+            {% picture slide images/home-slider/2105-03.jpg alt="Two lab members going over data on a tablet" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2105-04.jpg alt="Slide 7" loading="lazy" %}
+            {% picture slide images/home-slider/2105-04.jpg alt="Pipetting at the bench" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2504-02.jpg alt="Slide 8" loading="lazy" %}
+            {% picture slide images/home-slider/2504-02.jpg alt="Lab members in a wooded park, April 2025" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2402-02.jpg alt="Slide 9" loading="lazy" %}
+            {% picture slide images/home-slider/2402-02.jpg alt="Lab members out for dinner, February 2024" loading="lazy" %}
         </div>
         <div class="item">
-            {% picture slide images/home-slider/2107-01.jpg alt="Slide 10" loading="lazy" %}
+            {% picture slide images/home-slider/2107-01.jpg alt="Group photo of the IBS Center for RNA Research, July 2021" loading="lazy" %}
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
@@ -70,17 +82,10 @@ examine molecular mechanisms at a systems level.
   </a>
 </div>
 
-With a primary focus on developing large-scale experimental methods
-and novel data analytic toolchains, we strive to gain a more profound
-understanding of the quantitative nature of post-transcriptional gene
-regulation. By utilizing single-molecule-level measurements of various
-RNA states—including RNA modifications, chemical adducts, and poly(A)
-tail lengths—at a transcriptome scale, we can uncover the hidden rules
-shaped by multiple cis-regulatory factors.
-
-We are currently seeking motivated graduate students and postdocs to
-join our collaborative research efforts in this exciting field
-[(more info)]({{ site.baseurl }}/openings)!
+If RNA makes your heart beat a little faster, we want to meet you,
+whether you come from biology, computer science, statistics or
+engineering. Graduate students, postdocs and undergraduate interns:
+[come and join us]({{ site.baseurl }}/openings)!
 
 Our lab is affiliated with the [School of Biological Sciences](https://biosci.snu.ac.kr)
 at [Seoul National University](https://www.snu.ac.kr).
@@ -89,3 +94,4 @@ from the [Center for RNA Research](https://rna.ibs.re.kr) in the
 [Institute for Basic Science (IBS)](https://www.ibs.re.kr) and the
 [National Research Foundation of Korea](https://www.nrf.re.kr)'s
 Excellent Young Researcher program.
+{: .fineprint}

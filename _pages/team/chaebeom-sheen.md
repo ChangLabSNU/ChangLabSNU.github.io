@@ -4,7 +4,7 @@ title: Chaebeom Sheen
 position: Research Assistant
 handle: cbsheen
 email: cauchybs@snu.ac.kr
-twitter: 
+x: 
 github: Cauch-BS
 scholar: 
 orcid: 0009-0003-0846-5072 
@@ -14,7 +14,7 @@ permalink: /team/chaebeom-sheen
 ---
 
 Chaebeom joined as a visiting member while on leave
-from medical school. He is participating on developing
+from medical school. He is taking part in developing
 [VaxPress](https://github.com/ChangLabSNU/VaxPress), an advanced genetic
 algorithm approach for codon optimization for mRNA vaccines. Chaebeom
 focused on <i>N</i><sup>1</sup>-methylpseudouridine, a modified nucleotide
@@ -30,7 +30,7 @@ biology, potentially in areas like personalized medicine or computational
 pathology.
 
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2020–present</span> M.D. student, College of Medicine, Seoul National University</li>

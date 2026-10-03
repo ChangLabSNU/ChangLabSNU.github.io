@@ -1,0 +1,23 @@
+{%- comment -%}
+  The team page's opening band: the principal investigator, with a large
+  photo and buttons to the profile and for email (_includes/email_chip.html,
+  kept from address harvesters as on the profile). The photo's alt is empty:
+  the name is the heading beside it, and would otherwise be read twice.
+{%- endcomment -%}
+{%- assign leads = site.data.team | where: "category", "principal-investigator" | where_exp: "memb", "memb.active" | sort: "sort-key" -%}
+{%- for member in leads %}
+<section class="team-lead" aria-label="{{ member.info }}" markdown="0">
+{% picture member-card images/members/{{ member.photo }} alt="" %}
+<div class="team-lead-text">
+<p class="team-role">{{ member.info }}</p>
+<h2>{{ member.name }}</h2>
+{%- if member.intro %}
+<p class="team-lead-intro">{{ member.intro }}</p>
+{%- endif %}
+<div class="chip-row">
+{%- if member.link %}<a class="chip" href="{{ site.baseurl }}/team/{{ member.link }}">{% include icon.html name="user" %}Full profile</a>{% endif %}
+{%- if member.email %}{% include email_chip.html address=member.email %}{% endif %}
+</div>
+</div>
+</section>
+{%- endfor %}

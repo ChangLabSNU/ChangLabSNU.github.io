@@ -4,7 +4,7 @@ title: Dongmin Ryu
 position: Graduate Student
 handle: dongmin
 email: 5252lde@snu.ac.kr
-twitter: 
+x: 
 github: jimmyryu04
 scholar: 
 orcid: 
@@ -15,7 +15,7 @@ permalink: /team/dongmin-ryu
 
 Dongmin is a graduate student at the School of Biological Sciences, Seoul National University. With a passion for both vaccine development and bioinformatics, he joined the Chang lab to explore mRNA vaccine research. By leveraging computational methods and biological insights, he seeks to advance mRNA-based therapeutics.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2025–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>

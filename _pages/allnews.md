@@ -1,13 +1,14 @@
 ---
 title: "News"
 layout: textlay
-excerpt: "Chang Lab at Seoul National University."
+excerpt: "News from the Chang lab: papers, talks, awards, and people joining and moving on."
 permalink: /allnews.html
 ---
 
 # News
 
-{% for article in site.data.news %}
-<p>{{ article.date }} <br>
-<em>{{ article.headline }}</em></p>
-{% endfor %}
+<ul class="news-list news-list-full" markdown="0">
+{%- for article in site.data.news %}
+<li><span class="news-date">{{ article.date }}</span> {{ article.headline }}</li>
+{%- endfor %}
+</ul>

@@ -1,10 +1,10 @@
 ---
 layout: member
 title: Yongkuk Choi
-position: Alumni (2022)
+position: Former member (2022)
 handle: ykchoi
 email: 
-twitter: 
+x: 
 github: yongkuk
 scholar: 
 orcid: 
@@ -27,7 +27,7 @@ sequencing. He earned his M.D. in 2026 and is now a medical intern at
 St. Vincent's Hospital in Suwon, exploring the non-molecular aspects of
 human biology firsthand.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2020–2026</span> M.D., College of Medicine, The Catholic University of Korea</li>

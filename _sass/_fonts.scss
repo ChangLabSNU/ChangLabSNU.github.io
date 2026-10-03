@@ -1,0 +1,29 @@
+// Ubuntu Sans, served from this site rather than from Google Fonts (no
+// cross-domain request, and the lab server's CSP stays as it is): one
+// variable file per style, weight 400-800 at normal width, Latin only.
+// What was cut, and the licence: fonts/UbuntuSans-LICENCE.txt.
+//
+// unicode-range lists exactly the characters the files have (fontTools,
+// from their cmap), so the browser falls back to a system font for the
+// rest -- Korean, emoji -- instead of drawing an empty box.
+$latin: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+        U+0329, U+2009, U+2013-2015, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2032-2033,
+        U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+2215;
+
+@font-face {
+  font-family: 'Ubuntu Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/UbuntuSans-latin.woff2") format("woff2");
+  unicode-range: $latin;
+}
+
+@font-face {
+  font-family: 'Ubuntu Sans';
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/UbuntuSans-Italic-latin.woff2") format("woff2");
+  unicode-range: $latin;
+}

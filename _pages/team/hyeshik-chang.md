@@ -4,7 +4,7 @@ title: Hyeshik Chang
 position: Principal Investigator
 handle: hyeshik
 email: hyeshik@snu.ac.kr
-twitter: 
+x: 
 github: hyeshik
 scholar: hRdQANcAAAAJ
 orcid: 0000-0002-9812-8015
@@ -51,7 +51,7 @@ Seoul National University. The group currently works on generating and
 interpreting informative signals to identify distinct parts within the
 nucleic acids.
 
-#### Education
+## Education
 
 <ul class="chronological">
   <li><span>2009–2014</span> Ph.D., School of Biological Sciences, Seoul National University</li>

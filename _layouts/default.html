@@ -3,17 +3,29 @@
 
   {% include head.html %}
 
-  <body>
+  {%- comment -%}
+    The masthead is the band at the top: the header on every page, and on a
+    page with `hero:` front matter (the home page) the hero and its pixel
+    scene as well. That page has the redesign's colours (the pale tint the
+    scene's sky is drawn in, the ink footer); every other page is an "inner"
+    one and keeps the old site's colours: navy header and footer, grey text.
+  {%- endcomment %}
+  <body{% unless page.hero %} class="inner"{% endunless %}>
 
-    {% include header.html %}
+    <div class="masthead{% if page.hero %} masthead-hero{% endif %}">
+      {% include header.html %}
+      {%- if page.hero %}
+      {% include hero.html %}
+      {%- endif %}
+    </div>
 
-    <div class="body-container">
+    <main class="body-container">
       <div class="container-fluid">
         <div class="row">
           {{ content }}
         </div>
       </div>
-    </div>
+    </main>
 
     {% include footer.html %}
 

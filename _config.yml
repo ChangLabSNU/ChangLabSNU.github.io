@@ -1,12 +1,8 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Site-wide settings. `jekyll serve` does not reload this file: restart the
+# server (./run.sh) after changing it.
 
 # Site settings
-title: The Chang Lab
+title: CHANGlab
 email: hyeshik@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hyeshik Chang's Quantitative Molecular Biology Laboratory in the School of Biological
@@ -41,21 +37,24 @@ exclude:
 # Presets for {% picture %} (_plugins/picture.rb). `widths` are the WebP
 # copies to make, in pixels; `sizes` tells the browser how wide the image is
 # drawn, so it can pick one before layout. Both were measured from the
-# rendered pages (the layout stops growing at a 1000px viewport): widths cover
-# the largest drawn size at 1x and 2x. Re-measure if a layout changes width.
+# rendered pages: the content stops growing at a 1100px viewport (--page in
+# css/main.scss), and below 960px its side gutters are 5vw each, hence the
+# 90vw. widths cover the largest drawn size at 1x and 2x. Re-measure if a
+# layout changes width.
 pictures:
-  slide:          # home carousel, 283-675px wide
-    widths: [600, 1200]
-    sizes: "(min-width: 1000px) 575px, (min-width: 768px) calc(66.67vw - 92px), calc(100vw - 92px)"
-  member-thumb:   # team page photos, 85-183px wide
-    widths: [180, 360]
-    sizes: "(min-width: 1000px) 117px, (min-width: 768px) calc(12.5vw - 8px), calc(25vw - 8px)"
-  figure-wide:    # full-width figure in a text page, up to 968px
-    widths: [1000, 2000]
-    sizes: "(min-width: 1000px) 968px, calc(100vw - 32px)"
-  figure-side:    # .qb-fig-right-400/420 floats
+  slide:          # home carousel: 449-657px beside the news, up to 688px above it
+    widths: [660, 1320]
+    sizes: "(min-width: 1100px) 657px, (min-width: 960px) calc(66.67vw - 76px), (min-width: 768px) calc(60vw - 12px), calc(90vw - 2px)"
+  member-card:    # team page photos, the PI's and everyone's: up to 180px wide
+    widths: [260, 520]
+    sizes: "(min-width: 500px) 180px, 42vw"
+  figure-wide:    # full-width figure, at most 280px tall: 702px wide for the
+                  # 2.5:1 codon figure on /research
+    widths: [720, 1440]
+    sizes: "(min-width: 782px) 702px, calc(90vw - 2px)"
+  figure-side:    # 400-420px beside the text from 992px; below, full width up to 560px
     widths: [420, 840]
-    sizes: "420px"
+    sizes: "(min-width: 992px) 420px, (min-width: 624px) 560px, calc(90vw - 2px)"
 
 sass:
   sass_dir: _sass

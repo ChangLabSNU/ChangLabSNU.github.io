@@ -1,38 +1,28 @@
-{% assign number_printed = 0 %}
-{% assign active_members = site.data.team | where_exp:"memb", "memb.active" %}
-{% assign member_list = active_members | where_exp:"memb", "selected_categories contains memb.category" %}
-{% assign members_by_name = member_list | sort: "sort-key" %}
+{%- comment -%}
+  The team page's member cards: the active members whose category is in
+  selected_categories, by sort-key, each a link to the profile. Photos are
+  cropped to 4:5 by CSS, whatever shape the file is. With order="monthly"
+  the cards are shuffled into an order that changes every month
+  (_plugins/monthly_shuffle.rb).
 
-{% for member in members_by_name %}
-{% assign even_odd = number_printed | modulo: 2 %}
+    {% assign selected_categories = "student,postdoc" | split: ',' %}
+    {% include team_list.html order="monthly" %}
 
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix member-list-item" {% if member.link %}data-href="{{ member.link }}"{% endif %}>
-  {% picture member-thumb images/members/{{ member.photo }} alt="{{ member.name }}" class="img-responsive qb-float-left" width="25%" %}
-  {% if member.link %}
-  <h4><a href="{{ member.link }}" class="member-link">{{ member.name }}</a></h4>
-  {% else %}
-  <h4>{{ member.name }}</h4>
-  {% endif %}
-  <i>{{ member.info }}</i>
-  {% if member.intro %}
-  <p class="member-intro">{{ member.intro }}</p>
-  {% endif %}
-  <p></p>
+  Kramdown runs over this output, so the tags stay unindented.
+{%- endcomment -%}
+{%- assign active_members = site.data.team | where_exp: "memb", "memb.active" -%}
+{%- assign member_list = active_members | where_exp: "memb", "selected_categories contains memb.category" -%}
+{%- assign members_by_name = member_list | sort: "sort-key" -%}
+{%- if include.order == "monthly" %}{% assign members_by_name = members_by_name | monthly_shuffle %}{% endif -%}
+<div class="team-grid" markdown="0">
+{%- for member in members_by_name %}
+{% if member.link %}<a class="team-card" href="{{ site.baseurl }}/team/{{ member.link }}">{% else %}<div class="team-card">{% endif %}
+{% picture member-card images/members/{{ member.photo }} alt="" %}
+<span class="team-card-name">{{ member.name }}</span>
+<span class="team-role">{{ member.info }}</span>
+{%- if member.intro %}
+<span class="team-card-intro">{{ member.intro }}</span>
+{%- endif %}
+{% if member.link %}</a>{% else %}</div>{% endif %}
+{%- endfor %}
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}

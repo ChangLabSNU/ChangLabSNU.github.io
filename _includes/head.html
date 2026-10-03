@@ -9,9 +9,20 @@
     that _layouts/member.html already reads; everything else falls back to
     the lab photo.
   {%- endcomment -%}
-  {%- assign page_title = page.title | default: site.title -%}
+  {%- comment -%}
+    A page's front matter `title` is its short name ("Team"); the tab title
+    adds the site's name after it ("Team | CHANGlab"). The home page's
+    title is already the lab's full name and stands alone. Open Graph gets
+    the short name, with the site's name in og:site_name.
+  {%- endcomment -%}
+  {%- assign short_title = page.title | default: site.title -%}
+  {%- if page.url == "/" or page.title == nil -%}
+    {%- assign page_title = short_title -%}
+  {%- else -%}
+    {%- capture page_title -%}{{ short_title }} | {{ site.title }}{%- endcapture -%}
+  {%- endif -%}
   {%- if page.layout == "member" -%}
-    {%- capture page_desc -%}{{ page.title }} — {{ page.position }}, {{ site.title }} at Seoul National University.{%- endcapture -%}
+    {%- capture page_desc -%}{{ page.title }}{% if page.position %}, {{ page.position }}{% endif %} {% if page.position contains "Former member" %}of{% else %}in{% endif %} the Chang lab at Seoul National University.{%- endcapture -%}
   {%- else -%}
     {%- assign page_desc = page.excerpt | default: site.description -%}
   {%- endif -%}
@@ -30,12 +41,13 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.title | escape }}">
-  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:title" content="{{ short_title | escape }}">
   <meta property="og:description" content="{{ page_desc | escape }}">
   <meta property="og:url" content="{{ page_url }}">
   <meta property="og:image" content="{{ page_image | absolute_url }}">
   <meta name="twitter:card" content="{{ card }}">
 
+  <link rel="preload" href="{{ '/fonts/UbuntuSans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
   <script src="{{ '/js/site.js' | relative_url }}" integrity="{{ '/js/site.js' | sri }}" defer></script>

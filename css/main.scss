@@ -2,10 +2,83 @@
 ---
 
 @use "base";
-@use "fonts_inter";
+@use "fonts";
 
-// The heading face; it used to come from Bootstrap's variables.
-$headings-font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+/*
+ * The site's own look, on top of the Bootstrap 3 base in _sass/_base.scss.
+ * One family (Ubuntu Sans, _sass/_fonts.scss) and one palette, kept as
+ * custom properties here so a colour changes in one place. The home page's
+ * pixel scene (js/ribosome.js) draws with the same tint, ground and ink.
+ *
+ * No style="..." attributes anywhere: the lab server's Content-Security-
+ * Policy has no 'unsafe-inline' in style-src, so the browser drops them. A
+ * page that needs a one-off style gets a class in this file.
+ */
+:root {
+    --ink: #1a1f3a;            /* text, rails, the footer */
+    --muted: #4a5070;          /* secondary text, 6.6:1 on the tint */
+    --faint: #5a607e;          /* fine print */
+    --accent: #4b3fc4;         /* buttons: 7.5:1 on white */
+    --accent-blue: #0e5d7c;    /* news dates, the current section: the old link blue darkened, 7.3:1 */
+    --link: #0544ab;           /* links, team names, resource subtitles, intern years, inner news dates: 8.7:1 on white */
+    --tint: #e8ebfb;           /* the masthead, the scene's sky */
+    --ground: #b3bbe9;         /* the scene's ground */
+    --rule: #d6daf2;
+    --hairline: #e3e6ee;       /* rows (team, publications, resources, all news), fine print, thumbnails */
+    --band: #f1f4fc;           /* the PI band, the member page head, photo placeholders */
+    --chip-rule: #d3d9e8;      /* .chip borders */
+    --on-ink: #e8ebfb;         /* footer text */
+    --on-ink-link: #0594cb;    /* footer links on ink, as on the old site: 4.7:1 */
+    --on-ink-link-hover: #96ccff;
+    --page: 1100px;            /* content width */
+    --gutter: clamp(20px, 5vw, 48px);
+    --sans: 'Ubuntu Sans', 'Helvetica Neue', Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+body {
+    font-size: 17px;
+    line-height: 1.57;
+    color: var(--ink);
+    background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ink);
+    letter-spacing: -0.02em;
+}
+
+h1 { font-weight: 720; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.05; letter-spacing: -0.03em; }
+h2 { font-weight: 680; font-size: 28px; line-height: 1.2; }
+h3 { font-weight: 650; font-size: 22px; line-height: 1.3; }
+h4 { font-weight: 600; font-size: 18px; line-height: 1.35; }
+
+/* Hovering keeps a link's colour and underlines it (the base's a:hover), or
+   thickens the underline of one that has it. */
+a {
+    color: var(--link);
+    -webkit-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+}
+
+/* Korean breaks lines between words, as Korean text is set, rather than
+   anywhere inside one. */
+:lang(ko) {
+    word-break: keep-all;
+}
+
+/* Links inside running text are underlined, so they do not rely on colour
+   alone (WCAG 1.4.1). */
+.body-container p a, .body-container li a, .body-container dd a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.body-container p a:hover, .body-container li a:hover, .body-container dd a:hover,
+.body-container p a:focus, .body-container li a:focus, .body-container dd a:focus,
+.intern-names a:hover, .intern-names a:focus {
+    text-decoration-thickness: 2px;
+}
 
 img {
     margin-bottom: 24px;
@@ -15,7 +88,7 @@ img {
 
 /* The picture tag (_plugins/picture.rb) writes the file's width and height so
    the browser can reserve the box, but CSS sets only the width of most images
-   (.qb-fig-wide is 100%, .qb-fig-right-400 is 400px, ...). Without this the
+   (.qb-fig-wide is up to 100%, .qb-fig-right-400 is 400px, ...). Without this the
    height attribute would apply as is and squash the picture; with it, the
    attributes only give the aspect ratio. */
 img[width][height] {
@@ -33,96 +106,797 @@ img[width][height] {
     fill: currentColor;
 }
 
-.icon-fw {
-    width: 1.25em;
-}
-
 /* The chevron glyphs had the controls' text-shadow; an SVG needs a filter. */
 .carousel-control .icon {
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .6));
 }
 
-
-body {
-    padding-top: 92px;
-}
-
-figcaption {
-    text-align: right;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-
-h1, h2, h3, h4, h5, h6, h7 {
-    letter-spacing: -0.03em;
-}
-
-
-
-/* Top navigation bar */
-
-
-p.byline {
-	text-align: center;
-	font-size: 18px;
-	line-height: 36px;
-	margin-top: -24px;
-	margin-bottom: 48px;
-}
-
-
-firstp {
-}
-
 .container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1000px; /* or 950px */
+    max-width: var(--page);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
 }
 
-/* Home, News */
-#newsid p {
-	text-align: left;
+/* ------------------------------------------------------------ masthead */
+
+.masthead {
+    background: var(--tint);
 }
 
-#homeidtmp h1 {
-	text-align: center;
+.site-header {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 20px var(--gutter);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 28px;
 }
 
-#newsid img {
-	margin-top: 6px;
-	margin-bottom: 6px;
+.wordmark {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
 }
 
-/* Team & Publications */
-#gridid img { margin: 16px 22px 6px 0; border-radius:10%; box-shadow: 2px 2px 5px #888888 }
-#homeid img { margin: 0 0 0 0; border-radius:5%; box-shadow: 0px 0px 0px #888888 }
-#picid img { margin: 6px 3px 60px 6px; border-radius:1%; box-shadow: 2px 2px 5px #888888 }
-#gridid .row { margin-bottom: 24px; }
-
-
-/* Grid overrides */
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6,
-.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-	padding-left: 16px;
-	padding-right: 16px;
+.wordmark:hover, .wordmark:focus {
+    text-decoration: none;
 }
 
-/* Grid overrides */
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+}
+
+.site-nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 22px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.site-nav nav a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+/* Below 800px, where one row no longer holds everything, the header takes
+   two: the wordmark and the "Join the lab" button on the first, the section
+   links on the second. display: contents makes the links and the button
+   items of the header itself so they can be placed in that order; the
+   markup keeps links first, the order a keyboard visits them. */
+@media (max-width: 799px) {
+    .site-header {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        gap: 10px 16px;
+    }
+
+    .site-nav {
+        display: contents;
+    }
+
+    .site-header .button {
+        order: 1;
+        margin-left: auto;
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+
+    .site-nav nav {
+        order: 2;
+        flex-basis: 100%;
+        gap: 4px 16px;          /* all four links fit one line down to 360px */
+    }
+}
+
+.site-nav nav a:hover, .site-nav nav a:focus,
+.site-nav nav a[aria-current] {
+    color: var(--accent-blue);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.button {
+    display: inline-block;
+    padding: 9px 18px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.button-solid {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.button-solid:hover, .button-solid:focus {
+    background: var(--ink);
+    border-color: var(--ink);
+    text-decoration: none;
+}
+
+.button-outline {
+    background: #ffffff;
+    color: var(--accent);
+}
+
+.button-outline:hover, .button-outline:focus {
+    color: var(--ink);
+    border-color: var(--ink);
+    text-decoration: none;
+}
+
+/* Inner pages (every page but home, see _layouts/default.html) keep the old
+   site's colours: a navy header bar and footer, grey section links, #555
+   text and #333 headings. The redesign's palette is the home page's. The
+   tokens below repoint every rule that uses them; the rest are named here
+   and further down. */
+body.inner {
+    --ink: #333333;            /* headings, names */
+    --muted: #555555;
+    --faint: #767676;          /* the old #909090, darkened to 4.5:1 on white */
+    --rule: #d0d0d0;
+    --navy: #0a1922;           /* the header and footer */
+    color: var(--muted);
+}
+
+.inner .masthead {
+    background: var(--navy);
+}
+
+.inner .wordmark {
+    color: #ffffff;
+}
+
+.inner .wordmark:hover, .inner .wordmark:focus {
+    color: #888888;
+}
+
+.inner .site-nav nav a {
+    color: #aaaaaa;
+}
+
+.inner .site-nav nav a:hover, .inner .site-nav nav a:focus {
+    color: #888888;
+}
+
+.inner .site-nav nav a[aria-current] {
+    color: #ffffff;
+}
+
+/* The old site had no button; it keeps the accent, and turns white on hover
+   because the default hover colour is lost on the navy. */
+.inner .button-solid:hover, .inner .button-solid:focus {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--accent);
+}
+
+.inner .news-date { color: var(--link); }
+
+/* The home page's opening (_includes/hero.html). */
+.hero {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 0 var(--gutter);         /* top and bottom: .masthead-hero .hero */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* At least 40px, except where the column is too narrow for the title's
+   longest unbreakable word ("reverse-engineers.", about 8.3 times the font
+   size): below 375px the size follows the column so that word still fits. */
+.hero h1 {
+    margin: 0;
+    max-width: 12em;
+    font-size: clamp(min(40px, calc((100vw - 40px) / 8.5)), min(6.6vw, 9.5svh), 92px);
+    line-height: 1;
+}
+
+.hero p {
+    margin: 24px 0 0;
+    max-width: 34em;
+    font-size: clamp(17px, 1.6vw, 20px);
+    line-height: 1.52;
+    color: var(--muted);
+}
+
+.hero-buttons {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-buttons .button {
+    padding: 12px 22px;
+    font-size: 17px;
+}
+
+/* Home, after railcode.dev: the masthead fills the window, the hero's text is
+   centred in it and the pixel scene sits on the window's bottom edge; the page
+   goes on below, a scroll away. svh is the height with a phone's browser bars
+   showing, so the scene is not tucked under them. A window too short for the
+   text -- a phone, as a rule -- lets the masthead grow, and the scene moves
+   below the fold instead of covering anything. */
+.masthead-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* On touch screens the browser may float its toolbar over the bottom of the
+   page (Safari on iOS draws its address bar there, inside 100svh), which hid
+   the ribosome. There the masthead still fills the window, but the scene's
+   ground continues for another 88px below it, so the ribosome sits above
+   the toolbar and only ground lies under it. */
+@media (hover: none) and (pointer: coarse) {
+    .masthead-hero::after {
+        content: "";
+        flex: none;
+        height: 88px;
+        background: var(--ground);
+    }
+}
+
+/* A phone has little height to spare above the scene: the two buttons
+   share one row. */
+@media (max-width: 699px) {
+    .hero-buttons {
+        margin-top: 24px;
+        gap: 10px;
+    }
+
+    .hero-buttons .button {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+}
+
+.masthead-hero .site-header {
+    width: 100%;               /* a flex item with auto margins would shrink to its content */
+}
+
+.masthead-hero .hero {
+    flex: 1 0 auto;
+    width: 100%;
+    padding-top: clamp(20px, 5svh, 96px);
+    padding-bottom: clamp(20px, 5svh, 96px);
+}
+
+/* The space the text leaves goes 7:3 above and below it rather than evenly,
+   so the buttons sit about a line closer to the scene. With no space to
+   share -- a phone -- the spacers are empty. */
+.masthead-hero .hero::before, .masthead-hero .hero::after {
+    content: "";
+}
+
+.masthead-hero .hero::before {
+    flex: 7 1 0;
+}
+
+.masthead-hero .hero::after {
+    flex: 3 1 0;
+}
+
+/* The pixel scene's canvas: 72 scene pixels tall, each 4, 3 or 2 screen
+   pixels square, whichever height is set here (js/ribosome.js reads it), so
+   a shorter window gets a smaller scene rather than a cut-off one. Its width
+   is always the window's. */
+.scene {
+    flex: none;
+    display: block;
+    width: 100%;
+    height: 288px;
+    image-rendering: pixelated;
+    background: var(--ground);
+}
+
+@media (max-width: 699px), (max-height: 860px) {
+    .scene {
+        height: 216px;
+    }
+}
+
+/* Phones keep the 3x scene: their text is taller than the screen anyway,
+   so the scene is a scroll away whatever its size. */
+@media (min-width: 700px) and (max-height: 700px) {
+    .scene {
+        height: 144px;
+    }
+}
+
+/* ------------------------------------------------------------ body */
+
+.body-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/* The home page's text runs the full width of its column, the same as the
+   photos between the paragraphs. */
+div#homeid > p {
+    line-height: 1.6;
+}
+
+/* The affiliation and funding note: set apart from the text above by a
+   hairline, like a footnote, in smaller grey type. */
+div#homeid > p.fineprint, .fineprint {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--faint);
+}
+
+/* Section headings in the text pages (research, openings, about) are h2,
+   right under the page's h1, but set at the size they had as h3. About's
+   licence notes keep their former h4 size (.minor). */
+div#textid h2 {
+    margin-top: 35px;
+    font-size: 22px;
+    font-weight: 650;
+    line-height: 1.3;
+}
+
+div#textid h2.minor {
+    margin-top: 11px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* Grid overrides: the columns the layouts and footer use. */
+.col-sm-5, .col-sm-7, .col-sm-8, .col-sm-12 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* The news column keeps a wider gap from the text beside it. Stacked under
+   the text on a narrow screen, it lines up with it instead. */
 .col-sm-4 {
-	padding-left: 26px;
-	padding-right: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
+@media (min-width: 768px) {
+    .col-sm-4 {
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+}
 
-/* Carusel */
+/* Home: photos and news */
 
+/* The photo itself has the rounded corners (.carousel-inner already clips),
+   so the dots can sit under it rather than on it, where they crossed the
+   logo's lettering; the bottom margin makes their room. */
 .carousel {
-    border-radius: 3px 3px 3px 3px;
+    margin: 32px 0 60px;
+}
+
+.carousel-inner {
+    border-radius: 12px;
+}
+
+.carousel-indicators {
+    top: 100%;
+    bottom: auto;
+    margin-top: 14px;
+}
+
+.carousel-indicators li {
+    border-color: var(--faint);
+}
+
+.carousel-indicators .active {
+    border-color: var(--muted);
+    background-color: var(--muted);
+}
+
+/* The base drops the arrows' focus outline; a keyboard user needs to see it. */
+.carousel-control:focus-visible {
+    outline: 3px solid var(--link);
+    outline-offset: -3px;
+}
+
+/* With reduced motion asked for, js/site.js stops the carousel's autoplay;
+   this makes the moves that remain jump instead of slide. */
+@media (prefers-reduced-motion: reduce) {
+    .carousel-inner > .item {
+        transition: none;
+    }
+}
+
+#homeid img { margin: 0; border-radius: 0; }
+
+.news h2 {
+    margin: 0 0 18px;
+    font-size: 26px;
+}
+
+.news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-list li {
     margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    font-size: 16px;
+    line-height: 1.47;
+}
+
+.news-list-full li {
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 17px;
+}
+
+.news-list-full .news-date {
+    font-size: 14px;
+}
+
+.news-date {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+.news-more {
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------ shared pieces */
+/* From the team page and carried to the member, publication, resource and
+   news pages: photos with 12px corners and no shadow, a bold grey line for
+   a role, icon buttons (.chip), and rows split by hairlines. */
+
+/* --muted, the inner pages' #555555: the role reads as a label, not a link. */
+.team-role {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 16px;
+    border: 1px solid var(--chip-rule);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.chip:hover, .chip:focus {
+    border-color: var(--link);
+    text-decoration: none;
+}
+
+.chip .icon {
+    color: var(--link);
+}
+
+/* ------------------------------------------------------------ team page */
+
+#gridid h2 {
+    margin-top: 64px;
+    margin-bottom: 20px;
+}
+
+#gridid h1 + h2 {
+    margin-top: 0;
+}
+
+/* Capped at about three member cards wide, with a photo the size of
+   theirs, so the PI opens the page without towering over it. */
+.team-lead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 32px;
+    max-width: 720px;
+    padding: clamp(20px, 3vw, 28px);
+    border-radius: 16px;
+    background: var(--band);
+}
+
+.team-lead img {
+    flex: none;
+    width: min(100%, 180px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 12px;
+}
+
+.team-lead-text {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.team-lead .team-role {
+    font-size: 15px;
+}
+
+#gridid .team-lead h2 {
+    margin: 4px 0 0;
+    font-size: clamp(26px, 2.6vw, 32px);
+    font-weight: 720;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--link);
+}
+
+.team-lead-intro {
+    margin: 10px 0 0;
+}
+
+/* Photos are capped at 180px, the PI's size, narrower than their column,
+   so the space between members grows with the window instead of the
+   photos. */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(44%, 190px), 1fr));
+    gap: 48px clamp(28px, 5vw, 56px);
+}
+
+/* The card -- the link -- is only as wide as its photo; the rest of the
+   column is plain grid space, so a click or focus ring frames the photo
+   instead of running past it. */
+.team-card, a.team-card:hover, a.team-card:focus {
+    display: block;
+    max-width: 180px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.team-card img {
+    display: block;
+    width: min(100%, 180px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 12px;
+    background: var(--band);
+}
+
+.team-card-name {
+    display: block;
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--link);
+}
+
+/* The name is already blue, so hovering underlines it instead. */
+a.team-card:hover .team-card-name, a.team-card:focus .team-card-name {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* The base sets focus rings 2px inside the link, over the text here. */
+a.team-card:focus {
+    outline-offset: 4px;
+}
+
+.team-card .team-role {
+    margin-top: 2px;
+}
+
+.team-card-intro {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.alumni-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+    column-gap: 48px;
+}
+
+.alumni-item {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 15px;
+}
+
+.alumni-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+/* A former member with a profile has the members' blue name; the others
+   stay plain. */
+.alumni-name a {
+    text-decoration: none;
+}
+
+.alumni-name a:hover, .alumni-name a:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.alumni-now {
+    margin-top: 4px;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+.alumni-now span {
+    color: var(--faint);
+}
+
+.intern-year {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 24px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--hairline);
+}
+
+.intern-year-label {
+    flex: 0 0 64px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--link);
+}
+
+.intern-names {
+    flex: 1 1 300px;
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.intern-names a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+/* ------------------------------------------------------------ member pages */
+
+/* The same band as the PI's on the team page. */
+.member-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px 40px;
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 16px;
+    background: var(--band);
+}
+
+.member-head img {
+    flex: none;
+    width: min(100%, 200px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 12px;
+}
+
+.member-head-text {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+.member-head h1 {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 48px);
+}
+
+.member-head .team-role {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.member-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px 40px;
+    margin-top: 40px;
+}
+
+.member-links {
+    flex: 0 0 220px;
+    max-width: 100%;
+}
+
+.member-links .chip-row {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0;
+}
+
+/* An email button (_includes/email_chip.html): a long address wraps inside
+   it instead of widening the column. */
+.email-chip {
+    overflow-wrap: anywhere;
+}
+
+.email-chip .icon {
+    flex: none;
+}
+
+.member-body .post {
+    flex: 1 1 480px;
+    min-width: 0;
+    max-width: 44em;
+}
+
+/* "Education", "Publications with Our Lab", ...: h2 under the member's
+   name, at the size they had as h4. */
+.post h2 {
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.post > h2:first-child {
+    margin-top: 0;
+}
+
+ul.chronological span {
+    color: var(--faint);
+}
+
+/* ------------------------------------------------------------ publications */
+
+/* Every entry is indented by the same 1.2em, highlighted or not, and the
+   highlight triangle (.qb-marked, below) hangs in that indent, level with
+   the title's first line. */
+.publication-list > p {
+    position: relative;
+    margin: 0;
+    padding: 14px 0 14px 1.2em;
+    border-bottom: 1px solid var(--hairline);
 }
 
 ul.publications_in_profile li {
@@ -130,88 +904,210 @@ ul.publications_in_profile li {
     line-height: 130%;
 }
 
+/* The author line sits a step below the title and journal (about 15%
+   smaller), so each entry reads title first. It is a block so that its
+   lines take their height from its own size: as an inline span it kept
+   the paragraph's 17px line boxes and only the letters shrank. */
+span.publi_authors {
+    display: block;
+    margin: calc(2px + 0.1em) 0 calc(2px - 0.05em);
+    font-size: 0.85em;
+    line-height: 1.2;
+}
+
 span.publi_journal {
-    font-family: $headings-font-family;
     font-style: italic;
-    color: #222;
+    color: #222222;
 }
 
 a.publi_author { /* Internal authors */
     font-weight: 600;
-    color: #0544ab;
 }
 
-span.publi_author { /* External authors */
+/* Lab authors are told apart by weight and colour, so their links go
+   without the underline running-text links get (an id-free selector that
+   still outranks ".body-container p a"); it comes back on hover. */
+.body-container a.publi_author {
+    text-decoration: none;
+}
+
+.body-container a.publi_author:hover, .body-container a.publi_author:focus {
+    text-decoration: underline;
 }
 
 a.publi_title {
-    font-family: $headings-font-family;
-    font-weight: bold;
-    color: #0544ab;
+    font-weight: 700;
 }
 
+blockquote {
+    font-size: 16px;
+    background-color: #f8f8f8;
+    border-left-color: var(--rule);
+}
+
+/* ------------------------------------------------------------ resources */
+
+div.resource-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--hairline);
+}
+
+div.resource-item + div.resource-item {
+    margin-top: 0;          /* Bootstrap's .media adds 15px here */
+}
+
+img.resource-thumb {
+    max-width: 120px;
+    max-height: 160px;
+    margin: 0;              /* the gutter is .media-left's padding, below */
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+}
+
+div.resource-item .media-left {
+    padding-right: 24px;
+}
+
+div.resource-item .media-body > :last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    img.resource-thumb {
+        max-width: 90px;
+        max-height: 120px;
+    }
+
+    div.resource-item .media-left {
+        padding-right: 14px;
+    }
+}
+
+/* Groups ("Software", "Other resources") are h2 and the entries h3, at
+   about the sizes they had as h3 and h4. */
+#gridid h2.resource-group {
+    margin: 45px 0 8px;
+    font-size: 22px;
+    font-weight: 650;
+    line-height: 1.3;
+}
+
+div.resource-item h3 {
+    margin: 0 0 2px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+div.resource-item h3 a {
+    text-decoration: none;
+}
+
+div.resource-item h3 a:hover, div.resource-item h3 a:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* The one-line subtitle sits under the name, outside the heading, so the
+   name is the heading's only text and its link needs no underline. */
+div.resource-item p.resource-info {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--link);
+}
+
+/* On a phone the thumbnail goes above the text instead of beside it,
+   where it left the text a 180px column. */
+@media (max-width: 599px) {
+    div.resource-item .media-left, div.resource-item .media-body {
+        display: block;
+        width: auto;
+    }
+
+    div.resource-item .media-left {
+        padding: 0 0 14px;
+    }
+}
+
+div.resource-item .chip-row {
+    align-items: center;
+    margin-top: 14px;
+}
+
+div.resource-item .chip {
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+span.resource-license {
+    font-size: 14px;
+    color: var(--faint);
+}
+
+/* ------------------------------------------------------------ footer */
+/* The original footer's layout, in the new colours. */
+
+#footer {
+    margin-bottom: 0px;
+    border-width: 0px;
+}
+
+/* No side padding of its own (the base gives it 15px): the container inside
+   sets the edges, so the footer lines up with the page on a phone too. */
 .panel-footer {
-    color: #eee;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--ink);
+    color: var(--on-ink);
+    font-size: 16px;
 }
 
-.panel-footer a:link, .panel-footer a:active {
-    color: #0594cb;
-    text-decoration: none;
+.panel-footer a:link, .panel-footer a:visited, .panel-footer a:active {
+    color: var(--on-ink-link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-.panel-footer a:hover {
-    color: #96ccff;
-    text-decoration: none;
+.panel-footer a:hover, .panel-footer a:focus {
+    color: var(--on-ink-link-hover);
 }
 
-a {
-    -webkit-transition: color .15s ease-in;
-    transition: color .15s ease-in;
-}
-
-div#footer {
-    border-width: 0px;
-}
-
-.footer-icons {
-    font-size: 26px;
-}
-
-div#footer .footer-icons .icon {
-    transition: transform .2s;
-    opacity: 0.6;
-    color: white;
-}
-
-div#footer .footer-icons .icon:hover {
-    transform: scale(1.1);
-    opacity: 0.85;
-}
-
-div.navbar div.container-fluid {
-    padding: 20px 30px 20px 30px;
-}
-
-div.navbar {
-    font-family: $headings-font-family;
-    border-width: 0px;
-}
-
-div.body-container {
-    background-color: white;
-    padding-bottom: 30px;
+/* The inner pages' footer, as on the old site; its links are the same blues. */
+.inner .panel-footer {
+    background-color: var(--navy);
+    color: #eeeeee;
 }
 
 div.footer-left {
     padding-bottom: 25px;
 }
 
-div.footer-links {
-    padding-left: 26px;
+@media (min-width: 768px) {
+    div.footer-links {
+        padding-left: 26px;
+    }
 }
 
-div#footer {
-    margin-bottom: 0px;
+.footer-icons {
+    font-size: 26px;
+}
+
+.footer-icons a:link, .footer-icons a:visited {
+    text-decoration: none;
+}
+
+#footer .footer-icons .icon {
+    transition: transform .2s;
+    opacity: 0.6;
+    color: white;
+}
+
+#footer .footer-icons .icon:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
 }
 
 div.footer-links img {
@@ -229,239 +1125,110 @@ div.footer-links img:hover {
     transform: scale(1.05);
 }
 
-blockquote {
-    font-size: 16px;
-    background-color: #f8f8f8;
-}
-
-div#homeid, div#textid {
-    line-height: 1.65;
-}
-
-div#textid h3 {
-    margin-top: 35px;
-}
-
-div#gridid h3 {
-    margin-top: 45px;
-    margin-bottom: 8px;
-}
-
-/* Member pages */
-.hugespacer {
-    height: 50px;
-}
-
-.bigspacer {
-    height: 20px;
-}
-
-.spacer {
-    height: 10px;
-}
-
-.smallspacer {
-    height: 5px;
-}
-
-.titlebox {
-    min-width: 300px;
-}
-
-.pad-right {
-    padding-right: 10px;
-}
-
-.pad-left {
-    padding-left: 10px;
-}
-
-.smallhead {
-    font-size: 19px;
-    line-height: 19px;
-}
-
-img.big-member-photo {
-    margin-bottom: 24px; 
-    margin-top: 17px; 
-    border-radius: 10px 10px 10px 10px;
-    max-width: 170px;
-}
-
-.member-photo-title {
-    margin-top: 24px;
-}
-
-.member-photo-title .media-heading {
-    font-size: 200%;
-    font-weight: bold;
-}
-
-.member-photo-title .smallhead {
-    font-weight: 200;
-}
-
-.post h4 {
-    margin-top: 25px;
-}
-
-ul.chronological span {
-    color: #909090;
-}
-
-a.member-link {
-    color: #333333;
-}
-
-.member-pane .col-sm-12 {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.member-pane .post {
-    line-height: 1.65;
-}
-
-div#intern_list h4 {
-    padding-top: 6px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-
-div#intern_list small {
-    color: #a0a0a0;
-}
-
-div#alumni_list {
-    padding-top: 3px;
-    padding-bottom: 15px;
-}
-
-div#alumni_list div.current_position {
-    padding-top: 0px;
-}
-
-div#alumni_list h5 span {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 90%;
-}
-
-div#alumni_list h5 {
-    margin-bottom: 2px;
-}
-
-div#alumni_list h5 a {
-    color: #404040;
-}
-
-@media only screen and (max-width: 768px) {
-    #gridid .row {
-        margin-bottom: 0px;
-    }
-}
-
-/* Software & resources */
-
-div.resource-item {
-    /* Bootstrap's .media already adds 15px above every entry but the first,
-       so this only has to top up the gap to the page's ~24px rhythm. */
-    padding-bottom: 12px;
-}
-
-/* An id in the selector, to outrank the "#gridid img" photo styling above. */
-#gridid img.resource-thumb {
-    max-width: 120px;
-    max-height: 160px;
-    margin: 0; /* the gutter is .media-left's padding, below */
-    /* Bootstrap's own $thumbnail-border (#eee) disappears against the pale
-       specimen sheet, so this sits a few steps darker. */
-    border: 1px solid #d0d0d0;
-    border-radius: 4px;
-    /* Same down-right direction as the "#gridid img" photo shadow, at about a
-       third of its weight -- the border already carries the edge. */
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.13);
-}
-
-div.resource-item .media-left {
-    padding-right: 20px;
-}
-
-div.resource-item .media-body > p:last-child {
-    margin-bottom: 0;
-}
-
-@media only screen and (max-width: 768px) {
-    #gridid img.resource-thumb {
-        max-width: 90px;
-        max-height: 120px;
+@media (prefers-reduced-motion: reduce) {
+    #footer .footer-icons .icon, div.footer-links img {
+        transition: none;
     }
 
-    div.resource-item .media-left {
-        padding-right: 14px;
+    #footer .footer-icons .icon:hover, div.footer-links img:hover {
+        transform: none;
     }
-}
-
-div.resource-item h4 {
-    margin-bottom: 4px;
-}
-
-div.resource-item h4 span.resource-info {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 80%;
-    color: #606060;
-}
-
-div.resource-item p.resource-meta {
-    font-size: 90%;
-}
-
-div.resource-item p.resource-meta span.resource-license {
-    color: #909090;
-}
-
-.member-list-item[data-href]:hover {
-    background: #f1f4fc;
-    cursor: pointer; 
 }
 
 /*
- * Utility classes standing in for inline style="..." attributes.
- * The Content-Security-Policy served for this site has no 'unsafe-inline'
- * in style-src, so a style attribute in the markup is dropped by the browser
- * rather than applied. Anything that used to be inline lives here instead.
+ * Utility classes standing in for inline style="..." attributes (see the
+ * note at the top of this file).
  */
 
 .qb-hidden {
     display: none;
 }
 
-.qb-float-left {
-    float: left;
+.nowrap {
+    white-space: nowrap;
 }
 
-.qb-float-right {
-    float: right;
-}
 
+// A small triangle ahead of the title, drawn rather than typed: Ubuntu Sans
+// has no U+2023, and not every fallback font does either. It sits in the
+// entry's left indent, centred on the first line (14px is the entry's top
+// padding, 1.57em its line height).
 .qb-marked {
-    color: crimson;
+    position: absolute;
+    left: 0.1em;
+    top: calc(14px + (1.57em - 0.6em) / 2);
+    border-left: 0.5em solid crimson;
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.3em solid transparent;
 }
 
-.qb-home-spacer {
-    height: 40px;
+/* Text with a figure in a column of its own beside it (the comic on
+   /openings). Below 992px the column is too narrow to share, and the figure
+   follows the text instead, at a size that leaves it readable without
+   taking over the screen. */
+.qb-beside {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 400px;
+    gap: 0 40px;
+    align-items: start;
 }
 
-.qb-fig-wide {
+.qb-beside-figure img {
+    display: block;
     width: 100%;
-    margin: 5px 0px;
+    height: auto;
+    margin: 24px 0 16px;
+    border-radius: 0;
 }
 
+@media (max-width: 991px) {
+    .qb-beside {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .qb-beside-figure {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+/* A wide figure spans the column but stops at 280px tall, shrinking to keep
+   its proportions and centring itself, so a banner-shaped image does not
+   take over the page. */
+.qb-fig-wide {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 280px;
+    margin: 5px auto;
+}
+
+/* A figure beside the paragraph that follows it, flush with the column's
+   right edge. clear: right starts each one below the previous figure, so
+   figures never squeeze in beside each other and every paragraph keeps
+   its own. Below 992px the column is too narrow to share: the figure
+   stops floating and sits full width between paragraphs (a video keeps
+   16:9). */
 .qb-fig-right {
-    margin: 20px;
     float: right;
-    border: 10px;
+    clear: right;
+    margin: 4px 0 16px 32px;
+}
+
+@media (max-width: 991px) {
+    img.qb-fig-right, iframe.qb-fig-right {     /* outranks .qb-fig-right-400 etc. */
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        margin: 8px auto 20px;
+    }
+
+    iframe.qb-fig-right {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 .qb-fig-right-400 {
@@ -474,13 +1241,4 @@ div.resource-item p.resource-meta span.resource-license {
 
 .qb-fig-right-480 {
     width: 480px;
-}
-
-/* With reduced motion asked for, js/site.js stops the carousel's autoplay;
-   this makes the moves that remain (and the navbar) jump instead of slide. */
-@media (prefers-reduced-motion: reduce) {
-    .carousel-inner > .item,
-    .collapsing {
-        transition: none;
-    }
 }
