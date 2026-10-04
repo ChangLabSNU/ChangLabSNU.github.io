@@ -27,5 +27,9 @@
   </div>
   {%- endif %}
 </section>
-<canvas class="scene" data-scene="ribosome" aria-hidden="true"></canvas>
+{%- comment -%}
+  The scene's hidden game (js/ribosome-game.js) is fetched only when someone starts it, so its
+  address and SRI hash ride on the canvas for js/ribosome.js to load it with.
+{%- endcomment %}
+<canvas class="scene" data-scene="ribosome" data-game="{{ '/js/ribosome-game.js' | relative_url }}" data-game-integrity="{{ '/js/ribosome-game.js' | sri }}" aria-hidden="true"></canvas>
 <script src="{{ '/js/ribosome.js' | relative_url }}" integrity="{{ '/js/ribosome.js' | sri }}" defer></script>

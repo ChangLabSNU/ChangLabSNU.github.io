@@ -37,9 +37,22 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   jQuery), and makes the email buttons a mailto link. The carousel holds still
   while the mouse is over it or keyboard focus is in it (WCAG 2.2.2), and its arrows answer
   Enter and Space. `js/ribosome.js` draws the pixel scene under the home page hero (a
-  ribosome translating an mRNA, 12 fps on a `<canvas>`). Both respect
+  ribosome translating an mRNA, 12 fps on a `<canvas>`), and draws nothing while the scene
+  is out of view or the tab is hidden. Both respect
   `prefers-reduced-motion`, and follow it if it changes while the page is open: the scene
   shows one still frame, the carousel stops autoplaying and its slides jump instead of glide.
+- Hidden game: on a desktop (a fine pointer and at least 800px wide), Space while the scene is
+  mostly in view and focus is on the page or in the masthead sends the ribosome running; jump
+  the stop codon and it is read through into an endless RNA with hairpins and RNA-binding
+  proteins to jump. The score is the peptide's weight in daltons since the readthrough; the
+  best is kept in localStorage. `js/ribosome.js` holds the scene and the trigger, and fetches
+  `js/ribosome-game.js` only then, from the canvas's `data-game` address with its
+  `data-game-integrity` SRI hash (`_includes/hero.html`); phones never fetch it. The game's
+  knobs are constants at the top of that file (jump, speed and acceleration, `LOOK`, the
+  75000/100000 Da thresholds for the two-jump hairpin pairs). The pairs' spacing comes from
+  a frame-by-frame simulation of the jump: change the physics and re-derive it (the comment
+  above `pairSpacing` says how), or a pair may become clearable in one jump or not at all.
+  Elsewhere, and on any page but home, Space scrolls as always.
 - Icons: Font Awesome Free 5.15.3 shapes (the X logos from 6.5.2) as inline SVG (see Conventions).
   The site's own icon is the hero's ribosome on a 24x24 pixel grid, in a pinker purple
   than the scene's (#c045d3), light enough for black tab bars and dark enough for white
