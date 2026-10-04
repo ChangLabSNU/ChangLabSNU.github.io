@@ -11,10 +11,12 @@
  *
  * A hidden game lives in js/ribosome-game.js. On a desktop, Space while the
  * scene is in view (and keyboard focus is on the page or in the masthead)
- * sends the ribosome running at the stop codon; jump it and the RNA grows on
- * without end. That file is fetched only then, from the canvas's data-game
- * address with its data-game-integrity hash, and this one hands it the scene
- * through `api` below.
+ * sends the ribosome running at the stop codon; on a touch screen, a
+ * deliberate tap on the scene itself does (never a swipe, a tap that stops a
+ * scroll, a long press, or a tap anywhere else). Jump the stop codon and the
+ * RNA grows on without end. That file is fetched only then, from the canvas's
+ * data-game address with its data-game-integrity hash, and this one hands it
+ * the scene through `api` below.
  *
  * Loaded with defer, from _includes/hero.html, only on pages with a hero.
  */
@@ -137,7 +139,7 @@
   }
 
   const still = window.matchMedia('(prefers-reduced-motion: reduce)');
-  // The game is for a keyboard and a large screen.
+  // Space starts the game only where there is a keyboard and a large screen; touch screens tap.
   const desktop = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 800px)');
 
   function start(canvas) {
@@ -319,6 +321,8 @@
       if (playing()) { last = performance.now(); acc = 0; raf = requestAnimationFrame(frame); }
       else if (S.mode !== 'ambient' || !still.matches) timer = setInterval(slowTick, 1000 / 12);
     }
+    // While the game runs, touches on the scene are jumps, not scrolls.
+    function markPlaying() { canvas.classList.toggle('playing', playing()); }
     function slowTick() {
       if (S.mode === 'ambient') { ambientTick(); draw(); }
       else if (game) { S.frame += 5; if (game.slow()) draw(); }
@@ -327,18 +331,20 @@
       acc += Math.min(100, now - last);
       last = now;
       let stepped = false;
-      while (acc >= STEP && playing()) { acc -= STEP; game.step(); stepped = true; }
+      const step = STEP / game.rate();                         // a narrow scene runs a little slower: see rate()
+      while (acc >= step && playing()) { acc -= step; game.step(); stepped = true; }
       if (stepped) draw();
       if (playing()) { raf = requestAnimationFrame(frame); return; }
       if (S.mode === 'ambient' && still.matches) { fresh(); draw(); }   // missed the stop codon: the still again
+      markPlaying();
       schedule();                                              // game over, or the scene again: the slow clock
     }
-    function backToAmbient() { fresh(); draw(); schedule(); }
+    function backToAmbient() { fresh(); draw(); markPlaying(); schedule(); }
 
     new IntersectionObserver((entries) => {
       const ratio = entries[entries.length - 1].intersectionRatio;
       const away = S.mode === 'over' && ratio < 0.3;           // the game-over screen scrolled away: the scene again
-      if (away) { fresh(); draw(); }
+      if (away) { fresh(); draw(); markPlaying(); }
       const was = inView;
       inView = ratio > 0;
       if (away || inView !== was) schedule();
@@ -350,8 +356,8 @@
     // ---- The game: fetched on first use ---------------------------------------
     const api = { S, RAIL, START, PAUSE, INK, WHITE, BASE, rect, text, hash, translate, readCodon, terminate };
     function withGame(then) {
-      if (game) { then(); return; }
-      pending = then;
+      if (game) { if (then) then(); return; }
+      if (then) pending = then;
       if (loading) return;
       loading = true;
       const s = document.createElement('script');
@@ -389,16 +395,52 @@
         e.preventDefault();
         if (e.repeat || S.splitT > 0) return;
         S.held = true;
-        withGame(() => { if (S.mode === 'ambient' && S.splitT === 0) { game.begin(); schedule(); } });
+        S.touch = false;
+        withGame(begin);
         return;
       }
       e.preventDefault();
       if (e.repeat || !game) return;
       S.held = true;
-      game.press();
-      if (playing() && !raf) schedule();                       // Space on the game-over screen: back to the game clock
+      press();
     });
     window.addEventListener('keyup', (e) => { if (e.code === 'Space' || e.key === ' ') S.held = false; });
+    function begin() { if (S.mode === 'ambient' && S.splitT === 0) { game.begin(); markPlaying(); schedule(); } }
+    function press() {
+      game.press();
+      markPlaying();
+      if (playing() && !raf) schedule();                       // a new run from the game-over screen: back to the game clock
+    }
+
+    // Touch: only a deliberate tap on the scene itself starts the game (or a new run from the
+    // game-over screen). Not a swipe (the finger moves, or the browser takes the touch to scroll
+    // and cancels it), not a tap that stops a scroll still coasting, not a long press, not with
+    // the scene half out of view; links and buttons are elsewhere, so tapping them never reaches
+    // this. Once a run is going, every touch on the scene is a jump.
+    let tap = null, lastScroll = 0;
+    window.addEventListener('scroll', () => { lastScroll = performance.now(); }, { passive: true });
+    canvas.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'mouse') return;
+      if (playing()) { e.preventDefault(); S.held = true; press(); return; }
+      tap = null;
+      if (!canvas.dataset.game || shownFraction() < 0.6 || performance.now() - lastScroll < 400) return;
+      if (S.mode !== 'ambient' && S.mode !== 'over') return;
+      tap = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), scroll: window.scrollY };
+      if (S.mode === 'ambient') withGame(null);                // fetch it now, so the tap need not wait for it
+    });
+    canvas.addEventListener('pointerup', (e) => {
+      if (e.pointerType === 'mouse') return;
+      S.held = false;
+      const t = tap;
+      tap = null;
+      if (!t || t.id !== e.pointerId) return;
+      if (Math.hypot(e.clientX - t.x, e.clientY - t.y) > 10 || performance.now() - t.t > 500
+          || window.scrollY !== t.scroll || lastScroll > t.t) return;
+      S.touch = true;
+      if (S.mode === 'ambient') { if (S.splitT === 0) withGame(begin); }
+      else if (S.mode === 'over' && game) press();
+    });
+    canvas.addEventListener('pointercancel', () => { tap = null; S.held = false; });
 
     size();
     draw();

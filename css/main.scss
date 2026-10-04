@@ -404,6 +404,18 @@ body.inner {
     height: 288px;
     image-rendering: pixelated;
     background: var(--ground);
+    /* The hidden game (js/ribosome-game.js) is played by tapping here: no double-tap zoom, no
+       callout or selection on a long press, no tap flash. While it runs, touches on the scene
+       jump instead of scrolling (.playing); everywhere else the page scrolls as ever. */
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.scene.playing {
+    touch-action: none;
 }
 
 @media (max-width: 699px), (max-height: 860px) {

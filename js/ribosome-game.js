@@ -1,20 +1,22 @@
 /*
  * The hidden game on the home page's pixel scene. js/ribosome.js fetches this
- * file the first time someone presses Space on a desktop with the scene in
- * view, then calls the factory below with the scene's state and drawing
- * helpers (`api`); the object it returns answers the scene's calls.
+ * file the first time someone starts it (Space on a desktop with the scene in
+ * view, or a deliberate tap on the scene on a touch screen), then calls the
+ * factory below with the scene's state and drawing helpers (`api`); the
+ * object it returns answers the scene's calls.
  *
- * Space sends the ribosome running at the stop codon. Jump clear of it and
- * the codon is read through: the RNA grows on past its old 3' end, without
- * end, from sense codons only, and hairpins and RNA-binding proteins rise out
- * of it to be jumped (hold Space to jump higher). Past 75000 Da come pairs of
- * hairpins too far apart for one jump and too close for comfort, closer
+ * The ribosome runs at the stop codon. Jump clear of it and the codon is read
+ * through: the RNA grows on past its old 3' end, without end, from sense
+ * codons only, and hairpins and RNA-binding proteins rise out of it to be
+ * jumped (Space or a touch; hold it to jump higher). Past 75000 Da come pairs
+ * of hairpins too far apart for one jump and too close for comfort, closer
  * still past 100000. The score is the weight of the peptide made since the
  * readthrough, in daltons; the best one stays in this browser (localStorage).
- * A crash ends it with the scene's own termination. Space plays again; Esc,
- * or scrolling the scene away, goes back to the scene.
+ * A crash ends it with the scene's own termination. Space or a tap plays
+ * again; Esc, or scrolling the scene away, goes back to the scene.
  *
- * Distances are in scene pixels and times in steps, 60 a second.
+ * Distances are in scene pixels and times in steps, 60 a second (fewer on a
+ * scene too narrow to show what is coming: see rate()).
  */
 window.qbioRibosomeGame = (api) => {
   'use strict';
@@ -28,6 +30,10 @@ window.qbioRibosomeGame = (api) => {
   // stretch to be on screen.
   const LOOK = 180;
   function anchor() { return Math.max(16, Math.min(S.W * 0.25, S.W - LOOK - 12)); }
+  // A scene too narrow to show LOOK ahead (a phone held upright shows about 100) runs the whole
+  // game a little slower, down to 0.7 of the usual pace, so there is about as much time to see
+  // what is coming. Distances and the jump's shape stay the same, and with them every spacing.
+  function rate() { return Math.max(0.7, Math.min(1, (S.W - anchor() - 15) / LOOK)); }
 
   // Average residue masses in daltons; a peptide weighs their sum plus one water.
   const MASS = { A: 71.08, R: 156.19, N: 114.10, D: 115.09, C: 103.14, E: 129.12, Q: 128.13, G: 57.05, H: 137.14, I: 113.16,
@@ -213,7 +219,8 @@ window.qbioRibosomeGame = (api) => {
     const W = S.W;
     if (S.mode === 'runup' && (S.frame % 30) < 20) {           // a nudge: jump the stop codon
       const stopX = START + S.stopTie * 3 - cam;
-      text(ctx, 'SPACE', stopX - 7, RAIL - 34, ACCENT);
+      const cue = S.touch ? 'TAP' : 'SPACE';
+      text(ctx, cue, stopX + 3 - cue.length * 2, RAIL - 34, ACCENT);
       rect(ctx, stopX + 3, RAIL - 27, 3, 1, ACCENT); rect(ctx, stopX + 4, RAIL - 26, 1, 1, ACCENT);
     }
     if (S.mode === 'game' || S.mode === 'crash' || S.mode === 'over') {   // the score, and the best on this browser
@@ -228,7 +235,7 @@ window.qbioRibosomeGame = (api) => {
     if (S.mode === 'over') {                                   // the protein's weight, under GAME OVER
       const lines = [['GAME OVER', INK], [daltons(S.score), INK]];
       if (S.record) lines.push(['NEW HI', ACCENT]);
-      lines.push(['SPACE', S.blink ? MUTED : null]);
+      lines.push([S.touch ? 'TAP' : 'SPACE', S.blink ? MUTED : null]);
       // Centred, unless the ribosome stopped near the middle: then beside it, clear of the
       // subunits and the peptide rising from where it stopped.
       const rib = S.pos - cam + 7;
@@ -238,5 +245,5 @@ window.qbioRibosomeGame = (api) => {
     }
   }
 
-  return { begin, press, playing, step, slow, tie, codon, tailX, drawWorld, drawOverlay };
+  return { begin, press, playing, rate, step, slow, tie, codon, tailX, drawWorld, drawOverlay };
 };
