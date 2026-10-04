@@ -321,8 +321,18 @@
       if (playing()) { last = performance.now(); acc = 0; raf = requestAnimationFrame(frame); }
       else if (S.mode !== 'ambient' || !still.matches) timer = setInterval(slowTick, 1000 / 12);
     }
-    // While the game runs, touches on the scene are jumps, not scrolls.
-    function markPlaying() { canvas.classList.toggle('playing', playing()); }
+    // While the game runs, touches on the scene are jumps, not scrolls, and iOS starts none of
+    // its own gestures on them either (see the touch handlers below).
+    let guarded = false;
+    function markPlaying() {
+      const on = playing();
+      canvas.classList.toggle('playing', on);
+      if (on !== guarded) {
+        guarded = on;
+        if (on) canvas.addEventListener('touchstart', cancelTouch, { passive: false });
+        else canvas.removeEventListener('touchstart', cancelTouch, { passive: false });
+      }
+    }
     function slowTick() {
       if (S.mode === 'ambient') { ambientTick(); draw(); }
       else if (game) { S.frame += 5; if (game.slow()) draw(); }
@@ -441,6 +451,20 @@
       else if (S.mode === 'over' && game) press();
     });
     canvas.addEventListener('pointercancel', () => { tap = null; S.held = false; });
+
+    // iOS zooms in on a double tap whatever touch-action says. So a touch that ends on the scene
+    // within 0.35 s of the last one has its default cancelled, and no two taps make a double tap;
+    // whether a touch scrolls is settled before it ends, so swipes are untouched. While a run is
+    // going, touches are cancelled as they start too (markPlaying adds that): no zoom, magnifier
+    // or callout. Only the browser's own handling is cancelled: the pointer events above, which
+    // the game listens to, still come.
+    function cancelTouch(e) { if (e.cancelable) e.preventDefault(); }
+    let lastEnd = -1e9;
+    canvas.addEventListener('touchend', (e) => {
+      const now = performance.now();
+      if (now - lastEnd < 350 || playing()) cancelTouch(e);
+      lastEnd = now;
+    }, { passive: false });
 
     size();
     draw();

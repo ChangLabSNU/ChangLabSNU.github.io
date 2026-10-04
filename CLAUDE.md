@@ -60,7 +60,10 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   (over 0.5 s), a finger that slides (over 10px) or a scene less than 60% in view starts
   nothing, and links are outside the scene. Only while a run is going does the scene take
   `touch-action: none` (`.scene.playing`), so a swipe on it jumps instead of scrolling; the
-  game-over screen scrolls again, and only a tap plays again.
+  game-over screen scrolls again, and only a tap plays again. iOS zooms in on a double tap
+  despite touch-action, so `js/ribosome.js` cancels the default of a touch ending on the scene
+  within 0.35 s of the last, and of every touch on it during a run; the rest of the page
+  keeps the browser's double-tap zoom.
 - Icons: Font Awesome Free 5.15.3 shapes (the X logos from 6.5.2) as inline SVG (see Conventions).
   The site's own icon is the hero's ribosome on a 24x24 pixel grid, in a pinker purple
   than the scene's (#c045d3), light enough for black tab bars and dark enough for white
