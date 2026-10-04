@@ -853,6 +853,14 @@ a.team-card:focus {
     font-size: 16px;
 }
 
+.member-intro {
+    margin: 14px 0 0;
+    max-width: 28em;
+    font-size: 19px;
+    line-height: 1.45;
+    text-wrap: balance;
+}
+
 .member-body {
     display: flex;
     flex-wrap: wrap;

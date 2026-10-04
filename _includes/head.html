@@ -49,6 +49,10 @@
 
   <link rel="preload" href="{{ '/fonts/UbuntuSans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+  {%- comment -%} The icon is the hero's pixel ribosome: SVG where browsers take it, the
+      .ico (32 and 48px) where they do not, and a 180px PNG on the scene's sky for iOS. {%- endcomment %}
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
   <script src="{{ '/js/site.js' | relative_url }}" integrity="{{ '/js/site.js' | sri }}" defer></script>
 </head>

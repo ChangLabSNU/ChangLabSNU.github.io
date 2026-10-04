@@ -22,7 +22,7 @@ there is the moment we love most, when a rule we learned from those
 squiggles travels all the way into an mRNA vaccine that could one day help
 someone beat cancer.
 
-<div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover" >
+<div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000" data-pause="hover" >
     <!-- Dots under the photo: for the mouse only, so screen readers skip
          them; the arrows (and the arrow keys) do the same job. -->
     <ol class="carousel-indicators" aria-hidden="true">
@@ -42,10 +42,7 @@ someone beat cancer.
     <div class="carousel-inner" markdown="0">
 
         <div class="item active">
-            {% picture slide images/home-slider/lablogo-slider.jpg alt="CHANGlab logo" %}
-        </div>
-        <div class="item">
-            {% picture slide images/home-slider/2604-02.jpg alt="Lab members by a stream under spring blossoms, April 2026" loading="lazy" %}
+            {% picture slide images/home-slider/2604-02.jpg alt="Lab members by a stream under spring blossoms, April 2026" %}
         </div>
         <div class="item">
             {% picture slide images/home-slider/2402-01.jpg alt="Lab members celebrating with a bouquet, February 2024" loading="lazy" %}
@@ -70,6 +67,9 @@ someone beat cancer.
         </div>
         <div class="item">
             {% picture slide images/home-slider/2107-01.jpg alt="Group photo of the IBS Center for RNA Research, July 2021" loading="lazy" %}
+        </div>
+        <div class="item">
+            {% picture slide images/home-slider/lablogo-slider.jpg alt="CHANGlab logo" loading="lazy" %}
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">

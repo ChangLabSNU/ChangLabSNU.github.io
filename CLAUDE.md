@@ -41,6 +41,10 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   `prefers-reduced-motion`, and follow it if it changes while the page is open: the scene
   shows one still frame, the carousel stops autoplaying and its slides jump instead of glide.
 - Icons: Font Awesome Free 5.15.3 shapes (the X logos from 6.5.2) as inline SVG (see Conventions).
+  The site's own icon is the hero's ribosome on a 24x24 pixel grid, in js/ribosome.js's
+  colours: `favicon.svg` is the drawing; `favicon.ico` (32 and 48px) and
+  `apple-touch-icon.png` (180px, on the sky tint, since iOS fills transparency with black)
+  are pixel-exact renders of it, to be redrawn together.
 
 ## Build & Serve
 

@@ -4,11 +4,16 @@ layout: default
 {%- comment -%}
   A member's profile, from the page's front matter: photo, name and
   position, then the links (as the team page's buttons) beside the text.
+  A current member's one-line intro from _data/team.yml (the one on their
+  team card) goes under the position; a former member's is left out, as it
+  describes work they have since left.
   The photo's alt is empty, since the name heading is right beside it.
   The email address is a button too (_includes/email_chip.html), kept from
   address harvesters.
 {%- endcomment -%}
 {%- assign member = page -%}
+{%- assign slug = page.name | split: "." | first -%}
+{%- assign card = site.data.team | where: "link", slug | first -%}
 <div class="col-sm-12">
   <div class="member-head">
     {%- if member.image %}
@@ -18,6 +23,9 @@ layout: default
       <h1>{{ member.title }}</h1>
       {%- if member.position %}
       <p class="team-role">{{ member.position }}</p>
+      {%- endif %}
+      {%- if card.active and card.intro %}
+      <p class="member-intro">{{ card.intro }}</p>
       {%- endif %}
     </div>
   </div>
