@@ -65,9 +65,9 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   within 0.35 s of the last, and of every touch on it during a run; the rest of the page
   keeps the browser's double-tap zoom.
 - Icons: Font Awesome Free 5.15.3 shapes (the X logos from 6.5.2) as inline SVG (see Conventions).
-  The site's own icon is the hero's ribosome on a 24x24 pixel grid, in a pinker purple
-  than the scene's (#c045d3), light enough for black tab bars and dark enough for white
-  ones: `favicon.svg` is the drawing; `favicon.ico` (32 and 48px) and
+  The site's own icon is the hero's ribosome on a 24x24 pixel grid, in sky blue
+  (#1f93d6) rather than the scene's purple, light enough for black tab bars and dark
+  enough for white ones: `favicon.svg` is the drawing; `favicon.ico` (32 and 48px) and
   `apple-touch-icon.png` (180px, on the sky tint, since iOS fills transparency with black)
   are pixel-exact renders of it, to be redrawn together.
 
