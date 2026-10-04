@@ -10,8 +10,9 @@
  * codons only, and hairpins and RNA-binding proteins rise out of it to be
  * jumped (Space or a touch; hold it to jump higher). Past 75000 Da come pairs
  * of hairpins too far apart for one jump and too close for comfort, closer
- * still past 100000. The score is the weight of the peptide made since the
- * readthrough, in daltons; the best one stays in this browser (localStorage).
+ * still past 100000, and past 200000 some come in threes. The score is the
+ * weight of the peptide made since the readthrough, in daltons; the best one
+ * stays in this browser (localStorage).
  * A crash ends it with the scene's own termination. Space or a tap plays
  * again; Esc, or scrolling the scene away, goes back to the scene.
  *
@@ -24,7 +25,7 @@ window.qbioRibosomeGame = (api) => {
   const ACCENT = '#4b3fc4', MUTED = '#7b80a0';
 
   const JUMP_V = 4.2, G_HOLD = 0.22, G = 0.5;                  // take-off speed; gravity while Space is held on the way up, and otherwise
-  const RUN_SPEED = 2.2, SPEED0 = 1.8, SPEED_MAX = 4.0, ACCEL = 0.0003;   // about 2.7 by 75000 Da, 2.9 by 100000
+  const RUN_SPEED = 2.2, SPEED0 = 1.8, SPEED_MAX = 4.0, ACCEL = 0.0003;   // about 2.75 by 75000 Da, 3.0 by 100000, 3.7 by 200000
   // Obstacles take shape this far ahead of the ribosome whatever the window's width, so a wide
   // window gives no more warning than a narrow one; the ribosome stands far enough left for that
   // stretch to be on screen.
@@ -81,18 +82,22 @@ window.qbioRibosomeGame = (api) => {
       banner: null, crashT: 0, overT: 0 });
   }
 
-  // Two hairpins too far apart for one jump however long, near enough to need two short ones.
-  // One jump clears up to about 26.9 x speed - 19.5 px between them (worked out step by step with
-  // this physics); past 75000 Da a pair stands 12 px beyond that, past 100000 Da only 3, which
-  // leaves about 10 and 6 steps to time the second jump.
-  function pairSpacing(hard) { return Math.ceil(26.9 * (S.speed + 0.05) - 19.5) + (hard ? 3 : 12); }
+  // Hairpins in a row too far apart for one jump however long, near enough to need a short one
+  // each. One jump clears up to about 26.9 x speed - 19.5 px between two (worked out step by
+  // step with this physics); past 75000 Da they stand 12 px beyond that, past 100000 Da only 3,
+  // and both spacings are then widened by a fifth. That leaves about 17 and 13 steps in which the
+  // second press works (12 and 9 before the widening), and a third press, past 200000 Da, about
+  // as many as the second.
+  function runSpacing(hard) { return Math.round(1.2 * (Math.ceil(26.9 * (S.speed + 0.05) - 19.5) + (hard ? 3 : 12))); }
   function hairpinAt(x, h, lead) { return { kind: 'hairpin', x, w: 7, h, seed: Math.floor(Math.random() * 1e6), form: 0, lead }; }
   function spawn() {
     const x = S.nextObs, gap = 80 + S.speed * 26;
     if (S.score >= 75000 && Math.random() < (S.score >= 100000 ? 0.45 : 0.35)) {
-      const d = pairSpacing(S.score >= 100000), first = hairpinAt(x, 10);
-      S.obstacles.push(first, hairpinAt(x + d, 10, first));   // the second takes shape with the first: one obstacle
-      S.nextObs = x + d + gap + Math.random() * gap;
+      const d = runSpacing(S.score >= 100000), n = S.score >= 200000 && Math.random() < 0.5 ? 3 : 2;
+      const first = hairpinAt(x, 10);
+      S.obstacles.push(first);
+      for (let k = 1; k < n; k++) S.obstacles.push(hairpinAt(x + k * d, 10, first));   // the rest take shape with the first: one obstacle
+      S.nextObs = x + (n - 1) * d + gap + Math.random() * gap;
       return;
     }
     const roll = Math.random();

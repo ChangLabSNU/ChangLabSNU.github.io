@@ -50,9 +50,10 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   on first use (a touch fetches it on the finger going down), from the canvas's `data-game`
   address with its `data-game-integrity` SRI hash (`_includes/hero.html`). The game's knobs
   are constants at the top of that file (jump, speed and acceleration, `LOOK`, the
-  75000/100000 Da thresholds for the two-jump hairpin pairs). The pairs' spacing comes from
-  a frame-by-frame simulation of the jump: change the physics and re-derive it (the comment
-  above `pairSpacing` says how), or a pair may become clearable in one jump or not at all.
+  75000/100000/200000 Da thresholds for the hairpins that take a jump each: pairs, closer
+  pairs, then triples at the closer spacing). Their spacing comes from a frame-by-frame
+  simulation of the jump, widened by a fifth: change the physics and re-derive it (the comment
+  above `runSpacing` says how), or a run may become clearable in fewer jumps or not at all.
   A scene too narrow to show `LOOK` ahead (a phone held upright) runs slower, down to 0.7 of
   the pace (`rate()`), with the same distances.
   Elsewhere, and on any page but home, Space scrolls as always. A touch must never start the
