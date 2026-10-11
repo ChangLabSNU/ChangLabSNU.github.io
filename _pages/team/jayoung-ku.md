@@ -7,7 +7,7 @@ email: jayoung0115@snu.ac.kr
 x: 
 github: jayoung0115
 scholar: 
-orcid:
+orcid: 0009-0007-7100-7487
 image: /images/members/jku-thumb.jpg
 cv:
 permalink: /team/jayoung-ku
